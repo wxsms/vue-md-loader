@@ -7,6 +7,11 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'build.js'
   },
+  resolve: {
+    alias: {
+      vue: 'vue/dist/vue.js'
+    }
+  },
   module: {
     rules: [
       {
@@ -29,7 +34,14 @@ module.exports = {
         test: /\.md$/,
         loaders: [
           'vue-loader',
-          path.resolve(__dirname, '../index.js')
+          {
+            loader: path.resolve(__dirname, '../index.js'),
+            options: {
+              liveWrapper: function (template) {
+                return `<div class="live-wrapper">${template}</div>`
+              }
+            }
+          }
         ]
       }
     ]

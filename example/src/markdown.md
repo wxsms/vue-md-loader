@@ -17,8 +17,18 @@
 
 ```html
 <template>
-  <div>This is a test block!</div>
+  <div>This is a test block! {{msg}}</div>
 </template>
+<script>
+  let a = 1
+  export default {
+    data () {
+      return {
+        msg: 'Hello world!'
+      }
+    }
+  }
+</script>
 <style scoped>
   div {
     color: green;
@@ -31,8 +41,17 @@
 
 ```html
 <template>
-  <div>This is a live demo test block!</div>
+  <div>This is a test block! {{msg}}</div>
 </template>
+<script>
+  export default {
+    data () {
+      return {
+        msg: 'test test test'
+      }
+    }
+  }
+</script>
 <style scoped>
   div {
     color: red;

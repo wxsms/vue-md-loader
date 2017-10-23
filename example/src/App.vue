@@ -14,5 +14,8 @@
 </script>
 
 <style>
-
+  .live-wrapper {
+    background: #eee;
+    padding: 10px;
+  }
 </style>
