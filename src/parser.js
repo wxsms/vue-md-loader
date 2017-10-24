@@ -3,6 +3,7 @@ const hljs = require('highlight.js')
 
 const NEW_LINE = '\r\n'
 
+// https://github.com/QingWei-Li/vue-markdown-loader/blob/master/lib/markdown-compiler.js
 const ensureVPre = function (md) {
   if (md && md.renderer && md.renderer.rules) {
     let rules = ['code_inline', 'code_block', 'fence']
@@ -134,11 +135,13 @@ Parser.prototype.assembleLiveTemplates = function () {
   let template = this.source
   for (let i = this.lives.length - 1; i >= 0; i--) {
     let live = this.lives[i]
-    // Insert real template before it's live block
+    // Replace the original template with the created component and add refs
+    let _template = `<${live._templateName} ref="${live._templateName}"/>`
+    // Insert component before it's live block
     template =
       template.slice(0, live.index) +
       NEW_LINE + NEW_LINE +
-      live._template +
+      _template +
       NEW_LINE + NEW_LINE +
       template.slice(live.index)
   }
@@ -159,26 +162,24 @@ Parser.prototype.assembleLiveScripts = function () {
   let beforeExports = []
   let self = this
   this.lives.forEach(function (live, index) {
-    // Do not have a script in live block
-    if (!live._script) {
-      return
+    let componentOptions = null
+    if (live._script) {
+      let _script = live._script[1]
+      // Anything before `export default` will append in front
+      let _before = /([\s\S]*?)export[\s]+?default/.exec(_script)
+      if (_before) {
+        beforeExports.push(_before[1])
+      }
+      // Anything inside `export default` will be created as a new component with it's template string
+      componentOptions = /export[\s]+?default[\s]*?{([\s\S]*)}/.exec(_script)
     }
-    let _script = live._script[1]
-    // Anything before `export default` will append in front
-    let _before = /([\s\S]*?)export[\s]+?default/.exec(_script)
-    if (_before) {
-      beforeExports.push(_before[1])
-    }
-    // Anything inside `export default` will be created as a new component with it's template string
-    let _after = /export[\s]+?default[\s]*?{([\s\S]*)}/.exec(_script)
     // Get "template": "......"
     let _template = /^{([\s\S]*?)}$/.exec(JSON.stringify({template: live._template}))
-    if (_after && _template) {
-      // For example: vue-md-live-0
-      exports += `'${live._templateName}':{${_template[1]},${_after[1]}}`
+    if (_template) {
+      componentOptions = componentOptions ? `,${componentOptions[1]}` : ``
+      exports += `'${live._templateName}':{${_template[1]}${componentOptions}}`
+      // Add ',' if not the last live component
       exports += index === self.lives.length - 1 ? '' : ','
-      // Replace the original template with the created component and add refs
-      live._template = `<${live._templateName} ref="${live._templateName}"/>`
     }
   })
   exports = `export default {components:{${exports}}}`
@@ -187,7 +188,6 @@ Parser.prototype.assembleLiveScripts = function () {
   })
   script += exports
   script += '</script>'
-  // console.log('-----------------', NEW_LINE, script, NEW_LINE, '-----------------')
   return script
 }
 
@@ -197,7 +197,6 @@ Parser.prototype.parse = function (source) {
   let result = this.options.live ? this.parseLives() : {template: source, script: '', style: ''}
   let html = this.options.md.render(result.template)
   let vueFile = `<template><${this.options.wrapper}>${html}</${this.options.wrapper}></template>${result.style}${result.script}`
-  // console.log('-----------------', NEW_LINE, vueFile, NEW_LINE, '-----------------')
   return vueFile
 }
 

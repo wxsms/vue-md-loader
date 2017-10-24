@@ -29,6 +29,8 @@ yarn add vue-md-loader --dev
 
 ## Usage
 
+[Example project](https://github.com/wxsms/vue-md-loader/tree/master/example)
+
 ### Basic
 
 Simply **use `vue-md-loader`** to load `.md` files and **chain it with your `vue-loader`**.
@@ -108,16 +110,15 @@ becomes something like:
 
 A **Vue component** with all it's `<template>`, `<script>` and `<style>` settled will be **inserted before it's source code block**.
 
-Multiple lives inside a single markdown file is supported with following conditions:
+Multiple lives inside a single markdown file is supported by:
 
 * All `<script>` from different code blocks:
-  * code before `export default` will be extract into the same top-level component. Which means they should not be conflict with each others.
-  * code inside `export default` will be extract into it's own Vue component with no conflicts.
-* All `<style>` from different code blocks will be extract into the same top-level component. Which means they should not be conflict with each others.
+  * code **inside** `export default` will be extract into it's own Vue component with no conflicts.
+  * code **before** `export default` will be extract into the same top-level component.
+* All `<style>` from different code blocks will be extract into the same top-level component.
 
 **Note:** 
 
-* Loader will simply insert the template (no new components) if no `<script>` found in live block.
 * Loader will treat the entire block as template if no `<template>` found in live block.
 * You will need runtime + compiler build of Vue.js for this feature. For example:
 
@@ -205,6 +206,19 @@ plugins: [
 String. Default: `section`
 
 The wrapper of entire markdown content, can be HTML tag name or Vue component name.
+
+## Build Setup
+
+```bash
+# install dependencies
+npm install
+
+# serve example with hot reload at localhost:8888
+npm run dev
+
+# run all tests
+npm test
+```
 
 ## License
 

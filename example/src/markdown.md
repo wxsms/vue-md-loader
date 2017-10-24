@@ -2,7 +2,7 @@
 
 Just testing...
 
-## Simple Code Block 1
+## Simple Code Block
 
 ```html
 <template>
@@ -15,26 +15,27 @@ Just testing...
 </style>
 ```
 
-## Simple Code Block 2
-
-```html
-<div>Nothing happends, too...</div>
-```
-
 ## Live 0
 
-A live block without scripts & styles.
+#### Live blocks without scripts & styles.
 
 ```html
 <template>
   <div>This <template>is</template> a Live block!</div>
 </template>
-<!-- live-0.vue -->
+<!-- live-0-0.vue -->
+```
+
+#### Another
+
+```html
+<div>An other! This one got no template tag.</div>
+<!-- live-0-1.vue -->
 ```
 
 ## Live 1
 
-A Vue live block with template & script & style.
+#### A Vue live block with template & script & style
 
 ```html
 <template>
@@ -54,18 +55,17 @@ A Vue live block with template & script & style.
     color: green;
   }
 </style>
-<!-- live-1.vue -->
+<!-- live-1-0.vue -->
 ```
 
-## Live 2
-
-Another Vue live block with same data as `Live 1`.
+#### Another with same data as `live-1-0.vue`.
 
 ```html
 <template>
   <div class="cls1">{{msg}}</div>
 </template>
 <script>
+  let a = 0
   export default {
     data () {
       return {
@@ -80,12 +80,12 @@ Another Vue live block with same data as `Live 1`.
     background: green;
   }
 </style>
-<!-- live-2.vue -->
+<!-- live-1-1.vue -->
 ```
 
-## Live 3
+## Live 2
 
-Live block with methods.
+#### Live block with methods
 
 ```html
 <template>
@@ -94,6 +94,7 @@ Live block with methods.
   <button type="button" @click="minus">-1</button>
 </template>
 <script>
+  let b = 'testing...'
   export default {
     data () {
       return {
@@ -110,5 +111,5 @@ Live block with methods.
     }
   }
 </script>
-<!-- live-3.vue -->
+<!-- live-2.vue -->
 ```
