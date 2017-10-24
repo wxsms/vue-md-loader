@@ -8,13 +8,12 @@ module.exports = {
   },
   env: {
     browser: true,
+    jasmine: true
   },
   // https://github.com/feross/standard/blob/master/RULES.md#javascript-standard-style
-  extends: 'standard',
+  extends: ['standard', 'plugin:jasmine/recommended'],
   // required to lint *.vue files
-  plugins: [
-    'html'
-  ],
+  plugins: ['html', 'import', 'node', 'promise', 'standard', 'jasmine'],
   // add your custom rules here
   'rules': {
     // allow paren-less arrow functions
