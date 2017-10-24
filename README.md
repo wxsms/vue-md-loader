@@ -6,7 +6,7 @@
 
 ## Introduction
 
-Webpack loader to convert Markdown files to Vue Components.
+Webpack loader for converting Markdown files to Vue components.
 
 * Configurable **[Markdown-It](https://github.com/markdown-it/markdown-it)** parser.
 * Built-in **syntax highlighter** with **[highlightjs](https://highlightjs.org/)**.

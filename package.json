@@ -1,7 +1,7 @@
 {
   "name": "vue-md-loader",
   "version": "0.0.2",
-  "description": "Webpack loader for converting Markdown files to Vue files.",
+  "description": "Webpack loader for converting Markdown files to Vue components.",
   "main": "index.js",
   "scripts": {
     "dev": "cd example && webpack-dev-server --hot --inline --port 8888",
@@ -14,8 +14,11 @@
   "keywords": [
     "vue",
     "markdown",
+    "md",
     "webpack",
     "loader",
+    "live",
+    "demo",
     "document"
   ],
   "author": "wxsm",
