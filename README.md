@@ -27,6 +27,52 @@ Yarn:
 yarn add vue-md-loader --dev
 ```
 
+## Usage
+
+### Basic
+
+Simply **use `vue-md-loader`** to load `.md` files and **chain it with your `vue-loader`**.
+
+```javascript
+module.exports = {
+  // ...
+  module: {
+    rules: [
+      // ...
+      {
+        test: /\.md$/,
+        loader: 'vue-loader!vue-md-loader'
+      }
+    ]
+  }
+}
+```
+
+### With Options
+
+```javascript
+module.exports = {
+  // ...
+  module: {
+    rules: [
+      // ...
+      {
+        test: /\.md$/,
+        loaders: [
+          'vue-loader',
+          {
+            loader: 'vue-md-loader',
+            options: {
+              // your preferred options
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
 ## Markdown Alive!
 
 A live demo is:
@@ -82,52 +128,6 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js' // 'vue/dist/vue.common.js' for webpack 1
     }
-  }
-}
-```
-
-## Usage
-
-### Basic
-
-Simply **use `vue-md-loader`** to load `.md` files and **chain it with your `vue-loader`**.
-
-```javascript
-module.exports = {
-  // ...
-  module: {
-    rules: [
-      // ...
-      {
-        test: /\.md$/,
-        loader: 'vue-loader!vue-md-loader'
-      }
-    ]
-  }
-}
-```
-
-### With Options
-
-```javascript
-module.exports = {
-  // ...
-  module: {
-    rules: [
-      // ...
-      {
-        test: /\.md$/,
-        loaders: [
-          'vue-loader',
-          {
-            loader: 'vue-md-loader',
-            options: {
-              // your preferred options
-            }
-          }
-        ]
-      }
-    ]
   }
 }
 ```
