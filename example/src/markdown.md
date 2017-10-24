@@ -89,9 +89,11 @@ Just testing...
 
 ```html
 <template>
-  <p>count: {{count}}</p>
-  <button type="button" @click="add">+1</button>
-  <button type="button" @click="minus">-1</button>
+  <section>
+    <p>count: {{count}}</p>
+    <button type="button" @click="add">+1</button>
+    <button type="button" @click="minus">-1</button>
+  </section>
 </template>
 <script>
   let b = 'testing...'

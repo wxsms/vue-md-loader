@@ -91,7 +91,7 @@ Parser.prototype.fetchLiveTemplates = function () {
     let template = /<template>([\s\S]*)<\/template>/.exec(live[1])
     if (template) {
       // <template> founded, using it
-      template = template[0]
+      template = template[1]
     } else {
       // <template> not found, using the entire code block as template
       template = live[1]

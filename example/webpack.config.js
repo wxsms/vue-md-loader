@@ -35,14 +35,7 @@ module.exports = {
         test: /\.md$/,
         loaders: [
           'vue-loader',
-          {
-            loader: path.resolve(__dirname, '../index.js'),
-            options: {
-              liveTemplateProcessor: function (template) {
-                return `<div class="live-wrapper">${template}</div>`
-              }
-            }
-          }
+          path.resolve(__dirname, '../index.js')
         ]
       }
     ]
