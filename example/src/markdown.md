@@ -90,6 +90,7 @@ Just testing...
 ```html
 <template>
   <section>
+    <h1>Test title</h1>
     <p>count: {{count}}</p>
     <button type="button" @click="add">+1</button>
     <button type="button" @click="minus">-1</button>

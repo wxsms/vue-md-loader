@@ -35,7 +35,20 @@ module.exports = {
         test: /\.md$/,
         loaders: [
           'vue-loader',
-          path.resolve(__dirname, '../index.js')
+          {
+            loader: path.resolve(__dirname, '../index.js'),
+            options: {
+              plugins: [
+                [
+                  require('markdown-it-anchor'),
+                  {
+                    permalink: true,
+                    permalinkSymbol: '&#128279;'
+                  }
+                ]
+              ]
+            }
+          }
         ]
       }
     ]

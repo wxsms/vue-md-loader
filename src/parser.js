@@ -50,7 +50,13 @@ function Parser (_options) {
   ensureVPre(md)
   // Apply plugins to md instance
   this.options.plugins.forEach(function (p) {
-    Array.isArray(p) ? md.use.apply(md, p) : md.use(p)
+    if (Array.isArray(p)) {
+      if (p[0]) {
+        md.use.apply(md, p)
+      }
+    } else if (p) {
+      md.use(p)
+    }
   })
   this.reset()
 }
