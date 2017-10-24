@@ -135,49 +135,11 @@ module.exports = {
 
 ## Options
 
-### live
+### wrapper
 
-Boolean. Default: `true`
+String. Default: `section`
 
-Enable / Disable live detecting and assembling.
-
-### livePattern
-
-Regex. Default: `/<!--[\s]*?([-\w]+?).vue[\s]*?-->/i`
-
-A code block with `livePattern` inside itself becomes a live block. The matched body will become the live Vue component's name and reference.
-
-### liveTemplateProcessor
-
-Function. Default: `null`
-
-Use this if you wish to change the live template manually (e.g. add wrappers). For example:
-
-```javascript
-function wrapIt (template) {
-  return `<div class="live-wrapper">${template}</div>`
-}
-```
-
-### md
-
-Object. Default:
-
-```javascript
-new MarkdownIt({
-  html: true,
-  highlight: function (str, lang) {
-    if (lang && hljs.getLanguage(lang)) {
-      try {
-        return hljs.highlight(lang, str).value
-      } catch (__) {}
-    }
-    return '' // use external default escaping
-  }
-})
-```
-
-Use this to replace the Markdown-It instance inside the loader.
+The wrapper of entire markdown content, can be HTML tag name or Vue component name.
 
 ### plugins
 
@@ -201,11 +163,41 @@ plugins: [
 // ...
 ```
 
-### wrapper
+### md
 
-String. Default: `section`
+Object.
 
-The wrapper of entire markdown content, can be HTML tag name or Vue component name.
+Use this to replace the Markdown-It instance inside the loader. For example:
+
+```javascript
+new MarkdownIt({
+  // options
+})
+```
+
+### live
+
+Boolean. Default: `true`
+
+Enable / Disable live detecting and assembling.
+
+### livePattern
+
+Regex. Default: `/<!--[\s]*?([-\w]+?).vue[\s]*?-->/i`
+
+A code block with `livePattern` inside itself becomes a live block. The matched body will become the live Vue component's name and reference.
+
+### liveTemplateProcessor
+
+Function. Default: `null`
+
+Use this if you wish to change the live template manually (e.g. add wrappers). For example:
+
+```javascript
+function wrapIt (template) {
+  return `<div class="live-wrapper">${template}</div>`
+}
+```
 
 ## Build Setup
 
