@@ -26,7 +26,9 @@ Just testing...
 A live block without scripts & styles.
 
 ```html
-<div>This is a Live block!</div>
+<template>
+  <div>This <template>is</template> a Live block!</div>
+</template>
 <!-- live-0.vue -->
 ```
 

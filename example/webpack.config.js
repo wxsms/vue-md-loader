@@ -7,9 +7,10 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'build.js'
   },
+  devtool: '#cheap-module-eval-source-map',
   resolve: {
     alias: {
-      vue: 'vue/dist/vue.js'
+      'vue$': 'vue/dist/vue.esm.js'
     }
   },
   module: {

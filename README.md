@@ -69,6 +69,23 @@ Multiple lives inside a single markdown file is supported with following conditi
   * code inside `export default` will be extract into it's own Vue component with no conflicts.
 * All `<style>` from different code blocks will be extract into the same top-level component. Which means they should not be conflict with each others.
 
+**Note:** 
+
+* Loader will simply insert the template (no new components) if no `<script>` found in live block.
+* Loader will treat the entire block as template if no `<template>` found in live block.
+* You will need runtime + compiler build of Vue.js for this feature. For example:
+
+```javascript
+module.exports = {
+  // ...
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js' // 'vue/dist/vue.common.js' for webpack 1
+    }
+  }
+}
+```
+
 ## Usage
 
 ### Basic
