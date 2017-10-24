@@ -23,9 +23,8 @@ function Parser (_options) {
   this.options = {
     // live options
     live: true,
-    livePattern: /<!-- Live demo -->/i,
+    livePattern: /<!--[\s]*?([-\w]+?).vue[\s]*?-->/i,
     liveWrapper: null,
-    liveComponentName: 'vue-md-live',
     // md instance
     md: new MarkdownIt({
       html: true,
@@ -68,16 +67,17 @@ Parser.prototype.parseLives = function () {
 Parser.prototype.fetchLives = function () {
   const PRE_REGEX = /```.*?[\n\r]([\S\s]+?)[\n\r]```/igm
   this.lives = []
-  let match = null
+  let live = null
   do {
-    match = PRE_REGEX.exec(this.source)
-    if (match &&
-      this.options.livePattern &&
-      this.options.livePattern.exec &&
-      this.options.livePattern.exec(match[0])) {
-      this.lives.push(match)
+    live = PRE_REGEX.exec(this.source)
+    if (live) {
+      let liveName = this.options.livePattern.exec(live[1])
+      if (liveName) {
+        live._templateName = liveName[1]
+        this.lives.push(live)
+      }
     }
-  } while (match)
+  } while (live)
   this.fetchLiveTemplates()
   this.fetchLiveStyles()
   this.fetchLiveScripts()
@@ -156,7 +156,6 @@ Parser.prototype.assembleLiveStyles = function () {
 Parser.prototype.assembleLiveScripts = function () {
   let script = '<script>'
   let exports = ''
-  let currentIndex = 0
   let beforeExports = []
   let self = this
   this.lives.forEach(function (live, index) {
@@ -176,13 +175,10 @@ Parser.prototype.assembleLiveScripts = function () {
     let _template = /^{([\s\S]*?)}$/.exec(JSON.stringify({template: live._template}))
     if (_after && _template) {
       // For example: vue-md-live-0
-      let name = `${self.options.liveComponentName}-${currentIndex}`
-      exports += `'${name}':{${_template[1]},${_after[1]}}`
+      exports += `'${live._templateName}':{${_template[1]},${_after[1]}}`
       exports += index === self.lives.length - 1 ? '' : ','
       // Replace the original template with the created component and add refs
-      live._template = `<${name} ref="live${currentIndex}"/>`
-      // Done
-      ++currentIndex
+      live._template = `<${live._templateName} ref="${live._templateName}"/>`
     }
   })
   exports = `export default {components:{${exports}}}`

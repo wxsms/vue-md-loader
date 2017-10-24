@@ -27,7 +27,7 @@ A live block without scripts & styles.
 
 ```html
 <div>This is a Live block!</div>
-<!-- live demo -->
+<!-- live-0.vue -->
 ```
 
 ## Live 1
@@ -52,7 +52,7 @@ A Vue live block with template & script & style.
     color: green;
   }
 </style>
-<!-- Live demo -->
+<!-- live-1.vue -->
 ```
 
 ## Live 2
@@ -78,7 +78,7 @@ Another Vue live block with same data as `Live 1`.
     background: green;
   }
 </style>
-<!-- live demo -->
+<!-- live-2.vue -->
 ```
 
 ## Live 3
@@ -108,5 +108,5 @@ Live block with methods.
     }
   }
 </script>
-<!-- live demo -->
+<!-- live-3.vue -->
 ```
