@@ -25,6 +25,7 @@ function Parser (_options) {
     live: true,
     livePattern: /<!-- Live demo -->/i,
     liveWrapper: null,
+    liveComponentName: 'vue-md-live',
     // md instance
     md: new MarkdownIt({
       html: true,
@@ -153,28 +154,34 @@ Parser.prototype.assembleLiveStyles = function () {
 }
 
 Parser.prototype.assembleLiveScripts = function () {
-  const COMPONENT_NAME = 'vue-md-live'
   let script = '<script>'
   let exports = ''
   let currentIndex = 0
   let beforeExports = []
   let self = this
   this.lives.forEach(function (live, index) {
+    // Do not have a script in live block
     if (!live._script) {
       return
     }
     let _script = live._script[1]
+    // Anything before `export default` will append in front
     let _before = /([\s\S]*?)export[\s]+?default/.exec(_script)
     if (_before) {
       beforeExports.push(_before[1])
     }
+    // Anything inside `export default` will be created as a new component with it's template string
     let _after = /export[\s]+?default[\s]*?{([\s\S]*)}/.exec(_script)
+    // Get "template": "......"
     let _template = /^{([\s\S]*?)}$/.exec(JSON.stringify({template: live._template}))
     if (_after && _template) {
-      let name = `${COMPONENT_NAME}-${currentIndex}`
+      // For example: vue-md-live-0
+      let name = `${self.options.liveComponentName}-${currentIndex}`
       exports += `'${name}':{${_template[1]},${_after[1]}}`
       exports += index === self.lives.length - 1 ? '' : ','
-      live._template = `<${name}/>`
+      // Replace the original template with the created component and add refs
+      live._template = `<${name} ref="live${currentIndex}"/>`
+      // Done
       ++currentIndex
     }
   })

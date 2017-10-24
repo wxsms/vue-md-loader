@@ -21,7 +21,18 @@ Just testing...
 <div>Nothing happends, too...</div>
 ```
 
+## Live 0
+
+A live block without scripts & styles.
+
+```html
+<div>This is a Live block!</div>
+<!-- live demo -->
+```
+
 ## Live 1
+
+A Vue live block with template & script & style.
 
 ```html
 <template>
@@ -45,6 +56,8 @@ Just testing...
 ```
 
 ## Live 2
+
+Another Vue live block with same data as `Live 1`.
 
 ```html
 <template>
@@ -70,17 +83,27 @@ Just testing...
 
 ## Live 3
 
+Live block with methods.
+
 ```html
 <template>
   <p>count: {{count}}</p>
-  <button type="button" @click="++count">+1</button>
-  <button type="button" @click="--count">-1</button>
+  <button type="button" @click="add">+1</button>
+  <button type="button" @click="minus">-1</button>
 </template>
 <script>
   export default {
     data () {
       return {
         count: 0
+      }
+    },
+    methods: {
+      add () {
+        this.count++ 
+      },
+      minus () {
+        this.count--
       }
     }
   }
