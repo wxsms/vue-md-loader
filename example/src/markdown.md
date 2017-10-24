@@ -1,6 +1,8 @@
 # Hello World!
 
-## Simple Code Block
+Just testing...
+
+## Simple Code Block 1
 
 ```html
 <template>
@@ -13,14 +15,19 @@
 </style>
 ```
 
-## Live Code Block 1
+## Simple Code Block 2
+
+```html
+<div>Nothing happends, too...</div>
+```
+
+## Live 1
 
 ```html
 <template>
-  <div>This is a test block! {{msg}}</div>
+  <div id="test-block">This is a test block! {{msg}}</div>
 </template>
 <script>
-  let a = 1
   export default {
     data () {
       return {
@@ -29,19 +36,19 @@
     }
   }
 </script>
-<style scoped>
-  div {
+<style>
+  #test-block {
     color: green;
   }
 </style>
 <!-- Live demo -->
 ```
 
-## Live Code Block 2
+## Live 2
 
 ```html
 <template>
-  <div>This is a test block! {{msg}}</div>
+  <div class="cls1">{{msg}}</div>
 </template>
 <script>
   export default {
@@ -52,10 +59,31 @@
     }
   }
 </script>
-<style scoped>
-  div {
+<style>
+  .cls1 {
     color: red;
+    background: green;
   }
 </style>
-<!-- Live demo -->
+<!-- live demo -->
+```
+
+## Live 3
+
+```html
+<template>
+  <p>count: {{count}}</p>
+  <button type="button" @click="++count">+1</button>
+  <button type="button" @click="--count">-1</button>
+</template>
+<script>
+  export default {
+    data () {
+      return {
+        count: 0
+      }
+    }
+  }
+</script>
+<!-- live demo -->
 ```

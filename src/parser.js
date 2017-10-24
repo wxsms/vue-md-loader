@@ -3,18 +3,6 @@ const hljs = require('highlight.js')
 
 const NEW_LINE = '\r\n'
 
-const md = new MarkdownIt({
-  html: true,
-  highlight: function (str, lang) {
-    if (lang && hljs.getLanguage(lang)) {
-      try {
-        return hljs.highlight(lang, str).value
-      } catch (__) {}
-    }
-    return '' // use external default escaping
-  }
-})
-
 const ensureVPre = function (md) {
   if (md && md.renderer && md.renderer.rules) {
     let rules = ['code_inline', 'code_block', 'fence']
@@ -31,28 +19,49 @@ const ensureVPre = function (md) {
 }
 
 function Parser (_options) {
+  // default options
   this.options = {
-    livePattern: /<!-- Live demo -->/,
-    liveScriptPattern: /<!-- Live demo script([\S\s]+?)-->/,
+    // live options
+    live: true,
+    livePattern: /<!-- Live demo -->/i,
     liveWrapper: null,
-    md: md
+    // md instance
+    md: new MarkdownIt({
+      html: true,
+      highlight: function (str, lang) {
+        if (lang && hljs.getLanguage(lang)) {
+          try {
+            return hljs.highlight(lang, str).value
+          } catch (__) {}
+        }
+        return '' // use external default escaping
+      }
+    }),
+    // md plugins
+    plugins: [],
+    // others
+    wrapper: 'section'
   }
+  // merge user options into defaults
   Object.assign(this.options, _options)
-  ensureVPre(this.options.md)
+  let md = this.options.md
+  // Apply `v-pre` to `<pre>` and `<code>` tags
+  ensureVPre(md)
+  // Apply plugins to md instance
+  this.options.plugins.forEach(function (p) {
+    Array.isArray(p) ? md.use.apply(md, p) : md.use(p)
+  })
   this.reset()
 }
 
 Parser.prototype.reset = function () {
   this.source = ''
-  this.result = ''
   this.lives = []
-  this.script = ''
-  this.style = ''
 }
 
 Parser.prototype.parseLives = function () {
   this.fetchLives()
-  this.assembleLives()
+  return this.assembleLives()
 }
 
 Parser.prototype.fetchLives = function () {
@@ -61,59 +70,78 @@ Parser.prototype.fetchLives = function () {
   let match = null
   do {
     match = PRE_REGEX.exec(this.source)
-    if (match && this.options.livePattern.exec(match[0])) {
+    if (match &&
+      this.options.livePattern &&
+      this.options.livePattern.exec &&
+      this.options.livePattern.exec(match[0])) {
       this.lives.push(match)
     }
   } while (match)
   this.fetchLiveTemplates()
   this.fetchLiveStyles()
   this.fetchLiveScripts()
-  // console.log('fetchLiveBlocks:', this.lives.length, this.lives)
 }
 
 Parser.prototype.fetchLiveTemplates = function () {
-  // Loop code blocks for operations
   let self = this
   this.lives.forEach(function (live) {
-    // Fetch template string in code block
+    // greedy
     let template = /<template>([\s\S]*)<\/template>/.exec(live[1])
     if (template) {
+      // <template> founded, using it
       template = template[0]
     } else {
+      // <template> not found, using the entire code block as template
       template = live[1]
     }
+    // Wrap it by options
     if (self.options.liveWrapper && typeof self.options.liveWrapper === 'function') {
       template = self.options.liveWrapper(template)
     }
+    // mount it to the live obj
     live._template = template
   })
-  // console.log('fetchLiveTemplates:', this.liveTemplates.length, this.liveTemplates)
 }
 
 Parser.prototype.fetchLiveScripts = function () {
   this.lives.forEach(function (live) {
+    // mount script inside live block
     live._script = /<script.*?>([\S\s]+?)<\/script>/.exec(live[1])
   })
 }
 
 Parser.prototype.fetchLiveStyles = function () {
   this.lives.forEach(function (live) {
+    // mount style inside live block
     live._style = /<style.*?>([\S\s]+?)<\/style>/.exec(live[1])
   })
 }
 
 Parser.prototype.assembleLives = function () {
-  this.script = this.assembleLiveScripts()
-  this.style = this.assembleLiveStyles()
-  this.assembleLiveTemplates()
+  // Scripts goes first because it will change templates if live block found
+  let script = this.assembleLiveScripts()
+  let style = this.assembleLiveStyles()
+  let template = this.assembleLiveTemplates()
+  return {
+    script: script,
+    style: style,
+    template: template
+  }
 }
 
 Parser.prototype.assembleLiveTemplates = function () {
+  let template = this.source
   for (let i = this.lives.length - 1; i >= 0; i--) {
     let live = this.lives[i]
-    this.result = this.result.slice(0, live.index) + live._template + NEW_LINE + NEW_LINE + this.result.slice(live.index)
+    // Insert real template before it's live block
+    template =
+      template.slice(0, live.index) +
+      NEW_LINE + NEW_LINE +
+      live._template +
+      NEW_LINE + NEW_LINE +
+      template.slice(live.index)
   }
-  // console.log('assembleLiveTemplates:\n\r', this.result)
+  return template
 }
 
 Parser.prototype.assembleLiveStyles = function () {
@@ -125,52 +153,49 @@ Parser.prototype.assembleLiveStyles = function () {
 }
 
 Parser.prototype.assembleLiveScripts = function () {
-  const COMPONENT_NAME = 'MarkdownLiveDemo'
-  const COMPONENT_NAME_TAG = 'markdown-live-demo'
-  let script = '<script>import Vue from \'vue\''
-  let before = []
-  let after = []
-  this.lives.forEach(function (live) {
+  const COMPONENT_NAME = 'vue-md-live'
+  let script = '<script>'
+  let exports = ''
+  let currentIndex = 0
+  let beforeExports = []
+  let self = this
+  this.lives.forEach(function (live, index) {
     if (!live._script) {
       return
     }
     let _script = live._script[1]
     let _before = /([\s\S]*?)export[\s]+?default/.exec(_script)
     if (_before) {
-      before.push(_before[1])
+      beforeExports.push(_before[1])
     }
     let _after = /export[\s]+?default[\s]*?{([\s\S]*)}/.exec(_script)
-    if (_after) {
-      let template = live._template.replace(/[\n\r]/g, '')
-      after.push('let __' + COMPONENT_NAME + after.length + '=Vue.extend({template:\'' + template + '\',' + _after[1] + '})')
-      live._template = '<' + COMPONENT_NAME_TAG + '-' + (after.length - 1) + '/>'
+    let _template = /^{([\s\S]*?)}$/.exec(JSON.stringify({template: live._template}))
+    if (_after && _template) {
+      let name = `${COMPONENT_NAME}-${currentIndex}`
+      exports += `'${name}':{${_template[1]},${_after[1]}}`
+      exports += index === self.lives.length - 1 ? '' : ','
+      live._template = `<${name}/>`
+      ++currentIndex
     }
   })
-  before.forEach(function (code) {
+  exports = `export default {components:{${exports}}}`
+  beforeExports.forEach(function (code) {
     script += code + NEW_LINE
   })
-  after.forEach(function (code) {
-    script += code + NEW_LINE
-  })
-  script += 'export default {components:{'
-  after.forEach(function (code, index) {
-    script += COMPONENT_NAME + index + ': __' + COMPONENT_NAME + index
-    if (index !== after.length - 1) {
-      script += ','
-    }
-  })
-  script += '}}'
+  script += exports
   script += '</script>'
-  // console.log(script)
+  // console.log('-----------------', NEW_LINE, script, NEW_LINE, '-----------------')
   return script
 }
 
 Parser.prototype.parse = function (source) {
   this.reset()
-  this.source = this.result = source
-  this.parseLives()
-  let html = this.options.md.render(this.result)
-  return '<template><section>' + html + '</section></template>' + this.style + this.script
+  this.source = source
+  let result = this.options.live ? this.parseLives() : {template: source, script: '', style: ''}
+  let html = this.options.md.render(result.template)
+  let vueFile = `<template><${this.options.wrapper}>${html}</${this.options.wrapper}></template>${result.style}${result.script}`
+  // console.log('-----------------', NEW_LINE, vueFile, NEW_LINE, '-----------------')
+  return vueFile
 }
 
 module.exports = Parser
