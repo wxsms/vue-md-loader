@@ -188,3 +188,7 @@ plugins: [
 String. Default: `section`
 
 The wrapper of entire markdown content, can be HTML tag name or Vue component name.
+
+## License
+
+MIT
