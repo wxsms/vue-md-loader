@@ -37,7 +37,7 @@ module.exports = {
           {
             loader: path.resolve(__dirname, '../index.js'),
             options: {
-              liveWrapper: function (template) {
+              liveTemplateProcessor: function (template) {
                 return `<div class="live-wrapper">${template}</div>`
               }
             }

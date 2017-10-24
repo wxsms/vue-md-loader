@@ -24,7 +24,7 @@ function Parser (_options) {
     // live options
     live: true,
     livePattern: /<!--[\s]*?([-\w]+?).vue[\s]*?-->/i,
-    liveWrapper: null,
+    liveTemplateProcessor: null,
     // md instance
     md: new MarkdownIt({
       html: true,
@@ -96,8 +96,8 @@ Parser.prototype.fetchLiveTemplates = function () {
       template = live[1]
     }
     // Wrap it by options
-    if (self.options.liveWrapper && typeof self.options.liveWrapper === 'function') {
-      template = self.options.liveWrapper(template)
+    if (self.options.liveTemplateProcessor && typeof self.options.liveTemplateProcessor === 'function') {
+      template = self.options.liveTemplateProcessor(template)
     }
     // mount it to the live obj
     live._template = template

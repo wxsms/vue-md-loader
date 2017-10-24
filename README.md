@@ -13,28 +13,6 @@ Convert Markdown file to Vue Component.
 * **Live demo** support. Extremely useful for document examples.
 * Hot reload.
 
-## Markdown Alive!
-
-A live demo is :
-
-```markdown
-You markdown with some Vue code blocks that wanted to showcase...
-```
-
-becomes something like:
-
-```html
-<Markdown>
-  ...
-  <Live0></Live0>
-  ...
-  <Live1></Live1>
-  ...
-</Markdown>
-```
-
-with all the things settled for you!
-
 ## Install
 
 NPM:
@@ -48,6 +26,48 @@ Yarn:
 ```bash
 yarn add vue-md-loader --dev
 ```
+
+## Markdown Alive!
+
+A live demo is:
+
+```html
+<template>
+  <div class="cls">{{msg}}</div>
+</template>
+<script>
+  export default {
+    data () {
+      return {
+        msg: 'Hello world!'
+      }
+    }
+  }
+</script>
+<style>
+  .cls {
+    color: red;
+    background: green;
+  }
+</style>
+<!-- some-live-demo.vue -->
+```
+
+becomes something like:
+
+```html
+<some-live-demo/>
+<pre><code>...</code></pre>
+```
+
+A **Vue component** with all it's `<template>`, `<script>` and `<style>` settled will be **inserted before it's source code block**.
+
+Multiple lives inside a single markdown file is supported with some conditions:
+
+* All `<script>` from different code blocks:
+  * code before `export default` will be extract into the same top-level component. Which means they should not be conflict with each others.
+  * code inside `export default` will be extract into it's own Vue component with no conflicts.
+* All `<style>` from different code blocks will be extract into the same top-level component. Which means they should not be conflict with each others.
 
 ## Usage
 
@@ -85,7 +105,7 @@ module.exports = {
           {
             loader: 'vue-md-loader',
             options: {
-              // You prefer options
+              // your preferred options
             }
           }
         ]
@@ -97,4 +117,74 @@ module.exports = {
 
 ## Options
 
-Coming soon...
+### live
+
+Boolean. Default: `true`
+
+Enable / Disable live detecting and assembling.
+
+### livePattern
+
+Regex. Default: `/<!--[\s]*?([-\w]+?).vue[\s]*?-->/i`
+
+A code block with `livePattern` inside itself becomes a live block. The matched body will become the live Vue component's name and reference.
+
+### liveTemplateProcessor
+
+Function. Default: `null`
+
+Use this if you wish to change the live template manually (e.g. add wrappers). For example:
+
+```javascript
+function wrapIt (template) {
+  return `<div class="live-wrapper">${template}</div>`
+}
+```
+
+### md
+
+Object. Default:
+
+```javascript
+new MarkdownIt({
+  html: true,
+  highlight: function (str, lang) {
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        return hljs.highlight(lang, str).value
+      } catch (__) {}
+    }
+    return '' // use external default escaping
+  }
+})
+```
+
+Use this to replace the Markdown-It instance inside the loader.
+
+### plugins
+
+Array. Default: `[]`
+
+Markdown-It plugins list. For example:
+
+```javascript
+// ...
+plugins: [
+  // Without option
+  require('markdown-it-plugin-1'),
+  // With options
+  [
+    require('markdown-it-plugin-2'),
+    {
+      // ...
+    }
+  ]
+]
+// ...
+```
+
+### wrapper
+
+String. Default: `section`
+
+The wrapper of entire markdown content, can be HTML tag name or Vue component name.
