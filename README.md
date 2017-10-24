@@ -6,7 +6,7 @@
 
 ## Introduction
 
-Convert Markdown file to Vue Component.
+Webpack loader to convert Markdown files to Vue Components.
 
 * Configurable **[Markdown-It](https://github.com/markdown-it/markdown-it)** parser.
 * Built-in **syntax highlighter** with **[highlightjs](https://highlightjs.org/)**.
@@ -62,7 +62,7 @@ becomes something like:
 
 A **Vue component** with all it's `<template>`, `<script>` and `<style>` settled will be **inserted before it's source code block**.
 
-Multiple lives inside a single markdown file is supported with some conditions:
+Multiple lives inside a single markdown file is supported with following conditions:
 
 * All `<script>` from different code blocks:
   * code before `export default` will be extract into the same top-level component. Which means they should not be conflict with each others.
