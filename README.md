@@ -163,16 +163,24 @@ plugins: [
 // ...
 ```
 
-### md
+### markdown
 
 Object.
 
-Use this to replace the Markdown-It instance inside the loader. For example:
+Markdown-It options. Default:
 
 ```javascript
-new MarkdownIt({
-  // options
-})
+{
+  html: true,
+  highlight: function (str, lang) {
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        return hljs.highlight(lang, str).value
+      } catch (__) {}
+    }
+    return ''
+  }
+}
 ```
 
 ### live

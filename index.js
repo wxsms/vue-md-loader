@@ -3,5 +3,6 @@ const Parser = require('./src/parser')
 
 module.exports = function (source) {
   this.cacheable && this.cacheable()
-  return new Parser(loaderUtils.getOptions(this)).parse(source)
+  const options = loaderUtils.getOptions(this)
+  return new Parser(options).parse(source)
 }

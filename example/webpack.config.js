@@ -38,6 +38,9 @@ module.exports = {
           {
             loader: path.resolve(__dirname, '../index.js'),
             options: {
+              liveTemplateProcessor: function (template) {
+                return `<div class="live-wrapper">${template}</div>`
+              },
               plugins: [
                 [
                   require('markdown-it-anchor'),

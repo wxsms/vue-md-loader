@@ -2,12 +2,24 @@ const MarkdownIt = require('markdown-it')
 const hljs = require('highlight.js')
 
 const NEW_LINE = '\r\n'
+const DEFAULT_MARKDOWN_OPTIONS = {
+  html: true,
+  highlight: function (str, lang) {
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        return hljs.highlight(lang, str).value
+      } catch (__) {}
+    }
+    return '' // use external default escaping
+  }
+}
 
 // https://github.com/QingWei-Li/vue-markdown-loader/blob/master/lib/markdown-compiler.js
-const ensureVPre = function (md) {
-  if (md && md.renderer && md.renderer.rules) {
+// Apply `v-pre` to `<pre>` and `<code>` tags
+const ensureVPre = function (markdown) {
+  if (markdown && markdown.renderer && markdown.renderer.rules) {
     let rules = ['code_inline', 'code_block', 'fence']
-    let rendererRules = md.renderer.rules
+    let rendererRules = markdown.renderer.rules
     rules.forEach(function (rule) {
       if (rendererRules.hasOwnProperty(rule) && typeof rendererRules[rule] === 'function') {
         let saved = rendererRules[rule]
@@ -19,45 +31,37 @@ const ensureVPre = function (md) {
   }
 }
 
-function Parser (_options) {
+function Parser (options) {
   // default options
-  this.options = {
+  const defaultOptions = {
     // live options
     live: true,
     livePattern: /<!--[\s]*?([-\w]+?).vue[\s]*?-->/i,
     liveTemplateProcessor: null,
-    // md instance
-    md: new MarkdownIt({
-      html: true,
-      highlight: function (str, lang) {
-        if (lang && hljs.getLanguage(lang)) {
-          try {
-            return hljs.highlight(lang, str).value
-          } catch (__) {}
-        }
-        return '' // use external default escaping
-      }
-    }),
-    // md plugins
+    // markdown options
+    markdown: Object.assign({}, DEFAULT_MARKDOWN_OPTIONS),
+    // markdown plugins
     plugins: [],
     // others
     wrapper: 'section'
   }
   // merge user options into defaults
-  Object.assign(this.options, _options)
-  let md = this.options.md
-  // Apply `v-pre` to `<pre>` and `<code>` tags
-  ensureVPre(md)
-  // Apply plugins to md instance
-  this.options.plugins.forEach(function (p) {
-    if (Array.isArray(p)) {
-      if (p[0]) {
-        md.use.apply(md, p)
+  this.options = Object.assign({}, defaultOptions, options)
+  this.markdown = new MarkdownIt(Object.assign({}, this.options.markdown))
+  ensureVPre(this.markdown)
+  if (this.options.plugins && this.options.plugins.length) {
+    let markdown = this.markdown
+    // Apply plugins to markdown instance
+    this.options.plugins.forEach(function (p) {
+      if (Array.isArray(p)) {
+        if (p[0]) {
+          markdown.use.apply(markdown, p)
+        }
+      } else if (p) {
+        markdown.use(p)
       }
-    } else if (p) {
-      md.use(p)
-    }
-  })
+    })
+  }
   this.reset()
 }
 
@@ -201,7 +205,7 @@ Parser.prototype.parse = function (source) {
   this.reset()
   this.source = source
   let result = this.options.live ? this.parseLives() : {template: source, script: '', style: ''}
-  let html = this.options.md.render(result.template)
+  let html = this.markdown.render(result.template)
   let vueFile = `<template><${this.options.wrapper}>${html}</${this.options.wrapper}></template>${result.style}${result.script}`
   return vueFile
 }
