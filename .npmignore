@@ -4,3 +4,4 @@ test/
 .eslintrc.js
 .travis.yml
 yarn.lock
+.yarnrc
