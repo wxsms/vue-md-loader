@@ -13,6 +13,11 @@ Webpack loader for converting Markdown files to Vue components.
 * **Live demo** support. Extremely useful for document examples.
 * Hot reload.
 
+## Example
+
+* [Example project](https://github.com/wxsms/vue-md-loader/tree/master/example)
+* [https://github.com/wxsms/uiv](https://github.com/wxsms/uiv)
+
 ## Install
 
 NPM:
@@ -28,8 +33,6 @@ yarn add vue-md-loader --dev
 ```
 
 ## Usage
-
-[Example project](https://github.com/wxsms/vue-md-loader/tree/master/example)
 
 ### Basic
 
