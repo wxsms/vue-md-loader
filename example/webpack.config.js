@@ -41,6 +41,10 @@ module.exports = {
               liveTemplateProcessor: function (template) {
                 return `<div class="live-wrapper">${template}</div>`
               },
+              rules: {
+                'table_open': () => '<div class="table-responsive"><table class="table">',
+                'table_close': () => '</table></div>'
+              },
               plugins: [
                 [
                   require('markdown-it-anchor'),

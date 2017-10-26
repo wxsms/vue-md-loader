@@ -31,34 +31,44 @@ const ensureVPre = function (markdown) {
   }
 }
 
-function Parser (options) {
+function Parser (_options) {
   // default options
   const defaultOptions = {
-    // live options
-    live: true,
+    live: true, // enable live
     livePattern: /<!--[\s]*?([-\w]+?).vue[\s]*?-->/i,
     liveTemplateProcessor: null,
-    // markdown options
-    markdown: Object.assign({}, DEFAULT_MARKDOWN_OPTIONS),
-    // markdown plugins
-    plugins: [],
-    // others
-    wrapper: 'section'
+    markdown: Object.assign({}, DEFAULT_MARKDOWN_OPTIONS), // Markdown-It options
+    rules: {}, // Markdown-It rules
+    plugins: [], // Markdown-It plugins
+    wrapper: 'section' // content wrapper
   }
   // merge user options into defaults
-  this.options = Object.assign({}, defaultOptions, options)
-  this.markdown = new MarkdownIt(Object.assign({}, this.options.markdown))
+  const options = Object.assign({}, defaultOptions, _options)
+  options.markdown = Object.assign({}, options.markdown)
+  this.options = options
+  // init MarkdownIt instance
+  this.markdown = new MarkdownIt(this.options.markdown)
+  // v-pre must be set
   ensureVPre(this.markdown)
+  // apply rules
+  if (this.options.rules) {
+    let rendererRules = this.markdown.renderer.rules
+    let userRules = this.options.rules
+    for (let key in userRules) {
+      if (userRules.hasOwnProperty(key) && typeof userRules[key] === 'function') {
+        rendererRules[key] = userRules[key]
+      }
+    }
+  }
+  // install plugins
   if (this.options.plugins && this.options.plugins.length) {
-    let markdown = this.markdown
-    // Apply plugins to markdown instance
-    this.options.plugins.forEach(function (p) {
+    this.options.plugins.forEach(p => {
       if (Array.isArray(p)) {
         if (p[0]) {
-          markdown.use.apply(markdown, p)
+          this.markdown.use.apply(this.markdown, p)
         }
       } else if (p) {
-        markdown.use(p)
+        this.markdown.use(p)
       }
     })
   }
@@ -95,8 +105,7 @@ Parser.prototype.fetchLives = function () {
 }
 
 Parser.prototype.fetchLiveTemplates = function () {
-  let self = this
-  this.lives.forEach(function (live) {
+  this.lives.forEach(live => {
     // greedy
     let template = /<template>([\s\S]*)<\/template>/.exec(live[1])
     if (template) {
@@ -107,8 +116,8 @@ Parser.prototype.fetchLiveTemplates = function () {
       template = live[1]
     }
     // Wrap it by options
-    if (self.options.liveTemplateProcessor && typeof self.options.liveTemplateProcessor === 'function') {
-      template = self.options.liveTemplateProcessor(template)
+    if (this.options.liveTemplateProcessor && typeof this.options.liveTemplateProcessor === 'function') {
+      template = this.options.liveTemplateProcessor(template)
     }
     // mount it to the live obj
     live._template = template
@@ -116,14 +125,14 @@ Parser.prototype.fetchLiveTemplates = function () {
 }
 
 Parser.prototype.fetchLiveScripts = function () {
-  this.lives.forEach(function (live) {
+  this.lives.forEach(live => {
     // mount script inside live block
     live._script = /<script.*?>([\S\s]+?)<\/script>/.exec(live[1])
   })
 }
 
 Parser.prototype.fetchLiveStyles = function () {
-  this.lives.forEach(function (live) {
+  this.lives.forEach(live => {
     // mount style inside live block
     live._style = /<style.*?>([\S\s]+?)<\/style>/.exec(live[1])
   })
@@ -160,7 +169,7 @@ Parser.prototype.assembleLiveTemplates = function () {
 
 Parser.prototype.assembleLiveStyles = function () {
   let style = ''
-  this.lives.forEach(function (live) {
+  this.lives.forEach(live => {
     style += live._style ? live._style[0] : ''
   })
   return style
@@ -170,8 +179,7 @@ Parser.prototype.assembleLiveScripts = function () {
   let script = '<script>'
   let exports = ''
   let beforeExports = []
-  let self = this
-  this.lives.forEach(function (live, index) {
+  this.lives.forEach((live, index) => {
     let componentOptions = null
     if (live._script) {
       let _script = live._script[1]
@@ -189,11 +197,11 @@ Parser.prototype.assembleLiveScripts = function () {
       componentOptions = componentOptions ? `,${componentOptions[1]}` : ``
       exports += `'${live._templateName}':{${_template[1]}${componentOptions}}`
       // Add ',' if not the last live component
-      exports += index === self.lives.length - 1 ? '' : ','
+      exports += index === this.lives.length - 1 ? '' : ','
     }
   })
   exports = `export default {components:{${exports}}}`
-  beforeExports.forEach(function (code) {
+  beforeExports.forEach(code => {
     script += code + NEW_LINE
   })
   script += exports

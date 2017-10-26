@@ -141,9 +141,29 @@ String. Default: `section`
 
 The wrapper of entire markdown content, can be HTML tag name or Vue component name.
 
+### markdown
+
+Object.
+
+Markdown-It options. Default:
+
+```javascript
+{
+  html: true,
+  highlight: function (str, lang) {
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        return hljs.highlight(lang, str).value
+      } catch (__) {}
+    }
+    return ''
+  }
+}
+```
+
 ### plugins
 
-Array. Default: `[]`
+Array.
 
 Markdown-It plugins list. For example:
 
@@ -163,23 +183,16 @@ plugins: [
 // ...
 ```
 
-### markdown
+### rules
 
 Object.
 
-Markdown-It options. Default:
+Markdown-It renderer rules. For example:
 
 ```javascript
-{
-  html: true,
-  highlight: function (str, lang) {
-    if (lang && hljs.getLanguage(lang)) {
-      try {
-        return hljs.highlight(lang, str).value
-      } catch (__) {}
-    }
-    return ''
-  }
+rules: {
+  'table_open': () => '<div class="table-responsive"><table class="table">',
+  'table_close': () => '</table></div>'
 }
 ```
 
