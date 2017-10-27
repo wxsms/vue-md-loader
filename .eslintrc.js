@@ -8,15 +8,14 @@ module.exports = {
   },
   env: {
     browser: true,
-    jasmine: true
+    mocha: true
   },
   // https://github.com/feross/standard/blob/master/RULES.md#javascript-standard-style
-  extends: ['standard', 'plugin:jasmine/recommended'],
+  extends: ['standard'],
   // required to lint *.vue files
-  plugins: ['html', 'import', 'node', 'promise', 'standard', 'jasmine'],
+  plugins: ['html', 'import', 'node', 'promise', 'standard', 'mocha'],
   // add your custom rules here
   'rules': {
-    'jasmine/new-line-before-expect': 0,
     'no-unused-expressions': 0,
     // allow paren-less arrow functions
     'arrow-parens': 0,

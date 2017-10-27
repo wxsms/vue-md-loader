@@ -1,6 +1,5 @@
-const path = require('path')
-const fs = require('fs')
+const utils = require('./utils')
 
-fs.readdirSync(path.join(__dirname, './specs')).forEach(file => {
-  require('./specs/' + file)
+utils.getSpecFilesByDir(__dirname, './specs').forEach(file => {
+  require(file)
 })
