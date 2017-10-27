@@ -5,6 +5,10 @@ cache:
   - node_modules
 node_js:
   - "node"
+script:
+  - npm run lint
+  - npm run test
+after_success: 'npm run coveralls'
 deploy:
   - provider: npm
     email: "wxsms@foxmail.com"

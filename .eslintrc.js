@@ -16,6 +16,8 @@ module.exports = {
   plugins: ['html', 'import', 'node', 'promise', 'standard', 'jasmine'],
   // add your custom rules here
   'rules': {
+    'jasmine/new-line-before-expect': 0,
+    'no-unused-expressions': 0,
     // allow paren-less arrow functions
     'arrow-parens': 0,
     // allow async-await
