@@ -200,6 +200,28 @@ rules: {
 }
 ```
 
+### preProcess
+
+Function. For example:
+
+```javascript
+preProcess: function(source) {
+  // do anything
+  return source
+}
+```
+
+### afterProcess
+
+Function. For example:
+
+```javascript
+afterProcess: function(result) {
+  // do anything
+  return result
+}
+```
+
 ### live
 
 Boolean. Default: `true`
@@ -212,14 +234,14 @@ Regex. Default: `/<!--[\s]*?([-\w]+?).vue[\s]*?-->/i`
 
 A code block with `livePattern` inside itself becomes a live block. The matched body will become the live Vue component's name and reference.
 
-### liveTemplateProcessor
+### afterProcessLiveTemplate
 
 Function. Default: `null`
 
-Use this if you wish to change the live template manually (e.g. add wrappers). For example:
+Use this if you wish to change the live template manually after process (e.g. add wrappers). For example:
 
 ```javascript
-function wrapIt (template) {
+afterProcessLiveTemplate: function(template) {
   return `<div class="live-wrapper">${template}</div>`
 }
 ```

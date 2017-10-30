@@ -36,11 +36,13 @@ function Parser (_options) {
   const defaultOptions = {
     live: true, // enable live
     livePattern: /<!--[\s]*?([-\w]+?).vue[\s]*?-->/i,
-    liveTemplateProcessor: null,
+    afterProcessLiveTemplate: null,
     markdown: Object.assign({}, DEFAULT_MARKDOWN_OPTIONS), // Markdown-It options
     rules: {}, // Markdown-It rules
     plugins: [], // Markdown-It plugins
-    wrapper: 'section' // content wrapper
+    wrapper: 'section', // content wrapper
+    preProcess: null,
+    afterProcess: null
   }
   // merge user options into defaults
   const options = Object.assign({}, defaultOptions, _options)
@@ -116,8 +118,8 @@ Parser.prototype.fetchLiveTemplates = function () {
       template = live[1]
     }
     // Wrap it by options
-    if (this.options.liveTemplateProcessor && typeof this.options.liveTemplateProcessor === 'function') {
-      template = this.options.liveTemplateProcessor(template)
+    if (this.options.afterProcessLiveTemplate && typeof this.options.afterProcessLiveTemplate === 'function') {
+      template = this.options.afterProcessLiveTemplate(template)
     }
     // mount it to the live obj
     live._template = template
@@ -212,9 +214,15 @@ Parser.prototype.assembleLiveScripts = function () {
 Parser.prototype.parse = function (source) {
   this.reset()
   this.source = source
+  if (this.options.preProcess && typeof this.options.preProcess === 'function') {
+    this.source = this.options.preProcess(this.source)
+  }
   let result = this.options.live ? this.parseLives() : {template: source, script: '', style: ''}
   let html = this.markdown.render(result.template)
   let vueFile = `<template><${this.options.wrapper}>${html}</${this.options.wrapper}></template>${result.style}${result.script}`
+  if (this.options.afterProcess && typeof this.options.afterProcess === 'function') {
+    vueFile = this.options.afterProcess(vueFile)
+  }
   return vueFile
 }
 
