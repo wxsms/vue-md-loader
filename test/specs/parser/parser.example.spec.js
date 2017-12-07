@@ -7,7 +7,7 @@ const Parser = require('../../../src/parser')
 
 const markdown = fs.readFileSync(path.resolve(__dirname, '../../../example/src/markdown.md'), 'UTF-8')
 const options = {
-  liveTemplateProcessor: function (template) {
+  afterProcessLiveTemplate: function (template) {
     return `<div class="live-wrapper">${template}</div>`
   },
   rules: {
@@ -44,7 +44,7 @@ describe('#example', () => {
     expect(cheerio('style', html).length).to.above(1)
   })
 
-  it('should be ale to use `liveTemplateProcessor`', () => {
+  it('should be ale to use `afterProcessLiveTemplate`', () => {
     let match = /<div class=[\\]?"live-wrapper[\\]?">[\s\S]*?<\/div>/
     expect(match.exec(html)).to.exist
   })

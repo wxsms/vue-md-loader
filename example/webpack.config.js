@@ -38,7 +38,15 @@ module.exports = {
           {
             loader: path.resolve(__dirname, '../index.js'),
             options: {
-              liveTemplateProcessor: function (template) {
+              preProcess (source) {
+                // console.log('pre', source)
+                return source
+              },
+              afterProcess (result) {
+                // console.log('after', result)
+                return result
+              },
+              afterProcessLiveTemplate (template) {
                 return `<div class="live-wrapper">${template}</div>`
               },
               rules: {
