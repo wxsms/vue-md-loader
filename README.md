@@ -54,6 +54,11 @@ module.exports = {
 }
 ```
 
+Note that to get code highlighting to work, you need to:
+
+* include one of the highlight.js css files into your project, for example: `highlight.js/styles/github-gist.css`.
+* specify a lang in code block. ref: [creating and highlighting code blocks](https://help.github.com/articles/creating-and-highlighting-code-blocks/).
+
 ### With Options
 
 ```javascript
