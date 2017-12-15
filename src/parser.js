@@ -8,7 +8,9 @@ const DEFAULT_MARKDOWN_OPTIONS = {
     if (lang && hljs.getLanguage(lang)) {
       try {
         return hljs.highlight(lang, str).value
-      } catch (__) {}
+      } catch (err) {
+        // ignore
+      }
     }
     return '' // use external default escaping
   }

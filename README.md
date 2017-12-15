@@ -7,7 +7,7 @@
 
 ## Introduction
 
-Webpack loader for converting Markdown files to Vue components.
+Webpack loader for converting Markdown files to ALIVE Vue components.
 
 * Configurable **[Markdown-It](https://github.com/markdown-it/markdown-it)** parser.
 * Built-in **syntax highlighter** with **[highlightjs](https://highlightjs.org/)**.
@@ -237,7 +237,7 @@ Enable / Disable live detecting and assembling.
 
 Regex. Default: `/<!--[\s]*?([-\w]+?).vue[\s]*?-->/i`
 
-A code block with `livePattern` inside itself becomes a live block. The matched body will become the live Vue component's name and reference (note that they must be unique within the same page).
+A code block with `livePattern` inside itself becomes a live block. The matched body will become the live Vue component's name and reference (note that they must be unique to each other within the same page).
 
 ### afterProcessLiveTemplate
 
