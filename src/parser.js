@@ -43,6 +43,7 @@ function Parser (_options) {
     rules: {}, // Markdown-It rules
     plugins: [], // Markdown-It plugins
     wrapper: 'section', // content wrapper
+    wrapperCls: 'markdown-section',
     preProcess: null,
     afterProcess: null
   }
@@ -221,7 +222,7 @@ Parser.prototype.parse = function (source) {
   }
   let result = this.options.live ? this.parseLives() : {template: source, script: '', style: ''}
   let html = this.markdown.render(result.template)
-  let vueFile = `<template><${this.options.wrapper}>${html}</${this.options.wrapper}></template>${result.style}${result.script}`
+  let vueFile = `<template><${this.options.wrapper} class="${this.options.wrapperCls}">${html}</${this.options.wrapper}></template>${result.style}${result.script}`
   if (this.options.afterProcess && typeof this.options.afterProcess === 'function') {
     vueFile = this.options.afterProcess(vueFile)
   }
