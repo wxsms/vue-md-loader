@@ -44,6 +44,7 @@ function Parser (_options) {
     plugins: [], // Markdown-It plugins
     wrapper: 'section', // content wrapper
     preProcess: null,
+    process: null,
     afterProcess: null
   }
   // merge user options into defaults
@@ -219,7 +220,14 @@ Parser.prototype.parse = function (source) {
   if (this.options.preProcess && typeof this.options.preProcess === 'function') {
     this.source = this.options.preProcess(this.source)
   }
-  let result = this.options.live ? this.parseLives() : {template: source, script: '', style: ''}
+  let result
+  if (this.options.process && typeof this.options.process === 'function') {
+    result = this.options.process(this.source)
+    result.script = `<script>${result.script || ''}</script>`
+    result.style = `<style>${result.style || ''}</style>`
+  } else {
+    result = this.options.live ? this.parseLives() : {template: this.source, script: '', style: ''}
+  }
   let html = this.markdown.render(result.template)
   let vueFile = `<template><${this.options.wrapper}>${html}</${this.options.wrapper}></template>${result.style}${result.script}`
   if (this.options.afterProcess && typeof this.options.afterProcess === 'function') {
