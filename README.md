@@ -216,6 +216,28 @@ preProcess: function(source) {
 }
 ```
 
+### process
+
+Function. For example
+```javascript
+// This is useful when used with front-matter-loader to set the page title in nuxt projects
+process: function(source){
+  let attrs = (source && source.attributes) || {}
+  attrs.title = attrs.title || ""
+  return {
+    template: source.body,
+    style: "",
+    script: `export default {
+      head(){
+        return {
+          title: '${attrs.title}'
+        }
+      }
+    }`
+  }
+}
+```
+
 ### afterProcess
 
 Function. For example:
