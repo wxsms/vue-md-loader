@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <markdown></markdown>
+    <markdown />
   </div>
 </template>
 
 <script>
-  import Markdown from './markdown.md'
-  import 'highlight.js/styles/github-gist.css'
+import Markdown from './markdown.md'
+import 'highlight.js/styles/github-gist.css'
 
-  export default {
-    components: {Markdown}
-  }
+export default {
+  components: { Markdown }
+}
 </script>
 
 <style>

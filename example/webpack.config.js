@@ -11,7 +11,7 @@ module.exports = {
   devtool: '#cheap-module-eval-source-map',
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      vue$: 'vue/dist/vue.esm.js'
     }
   },
   plugins: [
@@ -54,8 +54,8 @@ module.exports = {
                 return `<div class="live-wrapper">${template}</div>`
               },
               rules: {
-                'table_open': () => '<div class="table-responsive"><table class="table">',
-                'table_close': () => '</table></div>'
+                table_open: () => '<div class="table-responsive"><table class="table">',
+                table_close: () => '</table></div>'
               },
               plugins: [
                 [

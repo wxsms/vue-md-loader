@@ -11,8 +11,8 @@ const options = {
     return `<div class="live-wrapper">${template}</div>`
   },
   rules: {
-    'table_open': () => '<div class="table-responsive"><table class="table">',
-    'table_close': () => '</table></div>'
+    table_open: () => '<div class="table-responsive"><table class="table">',
+    table_close: () => '</table></div>'
   },
   plugins: [
     [
@@ -45,13 +45,13 @@ describe('#example', () => {
   })
 
   it('should be ale to use `afterProcessLiveTemplate`', () => {
-    let match = /<div class=[\\]?"live-wrapper[\\]?">[\s\S]*?<\/div>/
+    const match = /<div class=[\\]?"live-wrapper[\\]?">[\s\S]*?<\/div>/
     expect(match.exec(html)).to.exist
   })
 
   it('should be ale to use `markdown-it-anchor` plugin', () => {
-    let anchors = $('[id]:header')
-    let link = anchors.find('a.header-anchor')
+    const anchors = $('[id]:header')
+    const link = anchors.find('a.header-anchor')
     expect(anchors.length).to.above(0)
     expect(anchors.length).to.equal(link.length)
   })

@@ -2,8 +2,8 @@
 
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
   parserOptions: {
+    parser: 'babel-eslint',
     sourceType: 'module'
   },
   env: {
@@ -11,9 +11,9 @@ module.exports = {
     mocha: true
   },
   // https://github.com/feross/standard/blob/master/RULES.md#javascript-standard-style
-  extends: ['standard'],
+  extends: ['standard', 'plugin:vue/recommended'],
   // required to lint *.vue files
-  plugins: ['html', 'import', 'node', 'promise', 'standard', 'mocha'],
+  plugins: ['import', 'node', 'promise', 'standard', 'mocha'],
   // add your custom rules here
   'rules': {
     'no-unused-expressions': 0,
