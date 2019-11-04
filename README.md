@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/wxsms/vue-md-loader.svg?branch=master)](https://travis-ci.org/wxsms/vue-md-loader)
 [![Coverage Status](https://coveralls.io/repos/github/wxsms/vue-md-loader/badge.svg?branch=master)](https://coveralls.io/github/wxsms/vue-md-loader?branch=master)
+[![NPM Downloads](https://img.shields.io/npm/dm/vue-md-loader.svg)](https://www.npmjs.com/package/vue-md-loader)
 [![NPM Version](https://img.shields.io/npm/v/vue-md-loader.svg)](https://www.npmjs.com/package/vue-md-loader)
 [![License](https://img.shields.io/github/license/wxsms/vue-md-loader.svg)](https://github.com/wxsms/vue-md-loader)
 
