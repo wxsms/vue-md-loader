@@ -1,3 +1,11 @@
+# vue-md-loader
+
+Webpack loader for converting Markdown files to ALIVE Vue components.
+
+github repo: [https://github.com/wxsms/vue-md-loader](https://github.com/wxsms/vue-md-loader)
+
+source of this page: [https://github.com/wxsms/vue-md-loader/blob/master/example/src/markdown.md](https://github.com/wxsms/vue-md-loader/blob/master/example/src/markdown.md)
+
 # Hello World!
 
 Just testing...

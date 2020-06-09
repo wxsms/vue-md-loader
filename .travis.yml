@@ -10,10 +10,19 @@ node_js:
 script:
   - npm run lint
   - npm run test
+  - npm run build:example
 after_success: 'npm run coveralls'
+
 deploy:
   - provider: npm
     email: "wxsms@foxmail.com"
     api_key: $NPM_TOKEN
     on:
       tags: true
+  - provider: pages
+    verbose: true
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    local_dir: example
+    on:
+      branch: master

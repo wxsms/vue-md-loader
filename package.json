@@ -11,8 +11,8 @@
     "report-dir": "./test/coverage/"
   },
   "scripts": {
-    "dev:example": "cd example && webpack-dev-server --hot --inline --port 8888",
-    "build:example": "cd example && webpack --mode=production",
+    "dev:example": "cd example && cross-env NODE_ENV=development webpack-dev-server --hot --inline --port 8888",
+    "build:example": "cd example && cross-env NODE_ENV=production webpack",
     "lint": "eslint --ext .js,.vue --config .eslintrc.js index.js src test/specs test/index.js example",
     "test": "nyc mocha",
     "coveralls": "cat test/coverage/lcov.info | ./node_modules/.bin/coveralls"
@@ -45,6 +45,7 @@
     "chai": "^4.1.2",
     "cheerio": "^1.0.0-rc.2",
     "coveralls": "^3.1.0",
+    "cross-env": "^7.0.2",
     "css-loader": "^3.5.3",
     "eslint": "^7.2.0",
     "eslint-config-standard": "^14.1.1",

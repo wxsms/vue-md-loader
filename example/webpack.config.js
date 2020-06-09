@@ -2,13 +2,14 @@ const path = require('path')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
+  mode: process.env.NODE_ENV,
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
     filename: 'build.js'
   },
-  devtool: '#cheap-module-eval-source-map',
+  devtool: process.env.NODE_ENV === 'development' ? '#cheap-module-eval-source-map' : undefined,
   resolve: {
     alias: {
       vue$: 'vue/dist/vue.esm.js'
