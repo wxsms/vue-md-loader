@@ -11,7 +11,8 @@
     "report-dir": "./test/coverage/"
   },
   "scripts": {
-    "dev": "cd example && webpack-dev-server --hot --inline --port 8888",
+    "dev:example": "cd example && webpack-dev-server --hot --inline --port 8888",
+    "build:example": "cd example && webpack --mode=production",
     "lint": "eslint --ext .js,.vue --config .eslintrc.js index.js src test/specs test/index.js example",
     "test": "nyc mocha",
     "coveralls": "cat test/coverage/lcov.info | ./node_modules/.bin/coveralls"
@@ -37,6 +38,7 @@
   },
   "homepage": "https://github.com/wxsms/vue-md-loader#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.10.2",
     "babel-core": "^6.26.0",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
