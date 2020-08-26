@@ -25,11 +25,6 @@ jobs:
       - uses: c-hive/gha-yarn-cache@v1
       - run: yarn --frozen-lockfile
       - run: npm run build:example
-  deploy:
-    needs:
-      - build
-    runs-on: ubuntu-latest
-    steps:
       - name: GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2.1.2
         env:
