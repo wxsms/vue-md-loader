@@ -13,7 +13,7 @@
   "scripts": {
     "dev:example": "cd example && cross-env NODE_ENV=development webpack-dev-server --hot --inline --port 8888",
     "build:example": "cd example && cross-env NODE_ENV=production webpack",
-    "lint": "eslint --ext .js,.vue --config .eslintrc.js index.js src test/specs test/index.js example",
+    "lint": "eslint --ext .js,.vue --config .eslintrc.js index.js src example",
     "test": "nyc mocha",
     "coveralls": "cat test/coverage/lcov.info | ./node_modules/.bin/coveralls"
   },
