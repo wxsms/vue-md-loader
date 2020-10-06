@@ -2979,10 +2979,10 @@ eslint-plugin-es@^3.0.0:
     eslint-utils "^2.0.0"
     regexpp "^3.0.0"
 
-eslint-plugin-html@6.0.2:
-  version "6.0.2"
-  resolved "https://registry.npm.taobao.org/eslint-plugin-html/download/eslint-plugin-html-6.0.2.tgz#fcbd293e218d03dd72c147fc999d185c6f5989fe"
-  integrity sha1-/L0pPiGNA91ywUf8mZ0YXG9Zif4=
+eslint-plugin-html@6.1.0:
+  version "6.1.0"
+  resolved "https://registry.npm.taobao.org/eslint-plugin-html/download/eslint-plugin-html-6.1.0.tgz#0e0d4845d4b3eb6e199652385e272f7b722673db"
+  integrity sha1-Dg1IRdSz624ZllI4Xicve3Imc9s=
   dependencies:
     htmlparser2 "^4.1.0"
 
