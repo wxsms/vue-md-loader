@@ -23,6 +23,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: master
       - uses: c-hive/gha-yarn-cache@v1
       - run: yarn --frozen-lockfile
       - name: Changelog
