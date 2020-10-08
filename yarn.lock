@@ -3074,13 +3074,13 @@ eslint-plugin-import@2.22.1:
     resolve "^1.17.0"
     tsconfig-paths "^3.9.0"
 
-eslint-plugin-mocha@7.0.1:
-  version "7.0.1"
-  resolved "https://registry.npm.taobao.org/eslint-plugin-mocha/download/eslint-plugin-mocha-7.0.1.tgz#b2e9e8ebef7836f999a83f8bab25d0e0c05f0d28"
-  integrity sha1-suno6+94NvmZqD+LqyXQ4MBfDSg=
+eslint-plugin-mocha@8.0.0:
+  version "8.0.0"
+  resolved "https://registry.npm.taobao.org/eslint-plugin-mocha/download/eslint-plugin-mocha-8.0.0.tgz#7ec5d228bcb3735301701dfbc3376320a1ca3791"
+  integrity sha1-fsXSKLyzc1MBcB37wzdjIKHKN5E=
   dependencies:
-    eslint-utils "^2.0.0"
-    ramda "^0.27.0"
+    eslint-utils "^2.1.0"
+    ramda "^0.27.1"
 
 eslint-plugin-node@11.1.0:
   version "11.1.0"
@@ -6028,10 +6028,10 @@ querystringify@^2.1.1:
   resolved "https://registry.npm.taobao.org/querystringify/download/querystringify-2.1.1.tgz#60e5a5fd64a7f8bfa4d2ab2ed6fdf4c85bad154e"
   integrity sha1-YOWl/WSn+L+k0qsu1v30yFutFU4=
 
-ramda@^0.27.0:
-  version "0.27.0"
-  resolved "https://registry.npm.taobao.org/ramda/download/ramda-0.27.0.tgz#915dc29865c0800bf3f69b8fd6c279898b59de43"
-  integrity sha1-kV3CmGXAgAvz9puP1sJ5iYtZ3kM=
+ramda@^0.27.1:
+  version "0.27.1"
+  resolved "https://registry.npm.taobao.org/ramda/download/ramda-0.27.1.tgz?cache=0&sync_timestamp=1596097105508&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Framda%2Fdownload%2Framda-0.27.1.tgz#66fc2df3ef873874ffc2da6aa8984658abacf5c9"
+  integrity sha1-Zvwt8++HOHT/wtpqqJhGWKus9ck=
 
 randombytes@^2.0.0, randombytes@^2.0.1, randombytes@^2.0.5, randombytes@^2.1.0:
   version "2.1.0"
