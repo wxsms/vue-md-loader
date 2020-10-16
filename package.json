@@ -71,6 +71,6 @@
   "dependencies": {
     "highlight.js": "^10.0.3",
     "loader-utils": "^2.0.0",
-    "markdown-it": "^11.0.0"
+    "markdown-it": "^12.0.0"
   }
 }
