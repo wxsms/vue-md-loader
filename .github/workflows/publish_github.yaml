@@ -21,8 +21,5 @@ jobs:
           FILE: package.json
       - uses: c-hive/gha-yarn-cache@v1
       - run: yarn --frozen-lockfile
-      - uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          registry: https://npm.pkg.github.com/
-          check-version: false
+      - run: echo //npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }} >> .npmrc
+      - run: npm publish --registry=https://npm.pkg.github.com
