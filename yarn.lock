@@ -3993,9 +3993,9 @@ he@1.2.0, he@^1.1.0:
   integrity sha1-hK5l+n6vsWX922FWauFLrwVmTw8=
 
 highlight.js@^10.0.3:
-  version "10.4.0"
-  resolved "https://registry.npm.taobao.org/highlight.js/download/highlight.js-10.4.0.tgz#ef3ce475e5dfa7a48484260b49ea242ddab823a0"
-  integrity sha1-7zzkdeXfp6SEhCYLSeokLdq4I6A=
+  version "10.4.1"
+  resolved "https://registry.npm.taobao.org/highlight.js/download/highlight.js-10.4.1.tgz#d48fbcf4a9971c4361b3f95f302747afe19dbad0"
+  integrity sha1-1I+89KmXHENhs/lfMCdHr+GdutA=
 
 hmac-drbg@^1.0.0:
   version "1.0.1"
