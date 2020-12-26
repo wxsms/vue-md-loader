@@ -1084,6 +1084,11 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@discoveryjs/json-ext@^0.5.0":
+  version "0.5.1"
+  resolved "https://registry.npm.taobao.org/@discoveryjs/json-ext/download/@discoveryjs/json-ext-0.5.1.tgz#cf87081ac9b0f3eb3b5740415b50b7966bac8fc5"
+  integrity sha1-z4cIGsmw8+s7V0BBW1C3lmusj8U=
+
 "@eslint/eslintrc@^0.2.2":
   version "0.2.2"
   resolved "https://registry.npm.taobao.org/@eslint/eslintrc/download/@eslint/eslintrc-0.2.2.tgz#d01fc791e2fc33e88a29d6f3dc7e93d0cd784b76"
@@ -1320,17 +1325,17 @@
     "@webassemblyjs/wast-parser" "1.9.0"
     "@xtuc/long" "4.2.2"
 
-"@webpack-cli/info@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.npm.taobao.org/@webpack-cli/info/download/@webpack-cli/info-1.1.0.tgz#c596d5bc48418b39df00c5ed7341bf0f102dbff1"
-  integrity sha1-xZbVvEhBiznfAMXtc0G/DxAtv/E=
+"@webpack-cli/info@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.npm.taobao.org/@webpack-cli/info/download/@webpack-cli/info-1.2.0.tgz?cache=0&sync_timestamp=1608919275368&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40webpack-cli%2Finfo%2Fdownload%2F%40webpack-cli%2Finfo-1.2.0.tgz#6051d6adf3618df664f4945a2b76355c00f83f0d"
+  integrity sha1-YFHWrfNhjfZk9JRaK3Y1XAD4Pw0=
   dependencies:
     envinfo "^7.7.3"
 
-"@webpack-cli/serve@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.npm.taobao.org/@webpack-cli/serve/download/@webpack-cli/serve-1.1.0.tgz#13ad38f89b6e53d1133bac0006a128217a6ebf92"
-  integrity sha1-E604+JtuU9ETO6wABqEoIXpuv5I=
+"@webpack-cli/serve@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.npm.taobao.org/@webpack-cli/serve/download/@webpack-cli/serve-1.2.0.tgz?cache=0&sync_timestamp=1608919275762&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40webpack-cli%2Fserve%2Fdownload%2F%40webpack-cli%2Fserve-1.2.0.tgz#8cb2c1e95426f5caed1f3bf9d7ccf3ea41d85f52"
+  integrity sha1-jLLB6VQm9crtHzv518zz6kHYX1I=
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
@@ -1532,11 +1537,6 @@ arr-union@^3.1.0:
   version "3.1.0"
   resolved "https://registry.npm.taobao.org/arr-union/download/arr-union-3.1.0.tgz#e39b09aea9def866a8f206e288af63919bae39c4"
   integrity sha1-45sJrqne+Gao8gbiiK9jkZuuOcQ=
-
-array-back@^4.0.0, array-back@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.npm.taobao.org/array-back/download/array-back-4.0.1.tgz#9b80312935a52062e1a233a9c7abeb5481b30e90"
-  integrity sha1-m4AxKTWlIGLhojOpx6vrVIGzDpA=
 
 array-flatten@1.1.1:
   version "1.1.1"
@@ -2381,16 +2381,6 @@ combined-stream@^1.0.6, combined-stream@~1.0.6:
   dependencies:
     delayed-stream "~1.0.0"
 
-command-line-usage@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.npm.taobao.org/command-line-usage/download/command-line-usage-6.1.0.tgz#f28376a3da3361ff3d36cfd31c3c22c9a64c7cb6"
-  integrity sha1-8oN2o9ozYf89Ns/THDwiyaZMfLY=
-  dependencies:
-    array-back "^4.0.0"
-    chalk "^2.4.2"
-    table-layout "^1.0.0"
-    typical "^5.2.0"
-
 commander@^2.20.0:
   version "2.20.3"
   resolved "https://registry.npm.taobao.org/commander/download/commander-2.20.3.tgz?cache=0&sync_timestamp=1587781810870&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcommander%2Fdownload%2Fcommander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
@@ -2740,11 +2730,6 @@ deep-equal@^1.0.1:
     object-is "^1.0.1"
     object-keys "^1.1.1"
     regexp.prototype.flags "^1.2.0"
-
-deep-extend@~0.6.0:
-  version "0.6.0"
-  resolved "https://registry.npm.taobao.org/deep-extend/download/deep-extend-0.6.0.tgz#c4fa7c95404a17a9c3e8ca7e1537312b736330ac"
-  integrity sha1-xPp8lUBKF6nD6Mp+FTcxK3NjMKw=
 
 deep-is@^0.1.3:
   version "0.1.3"
@@ -3573,6 +3558,11 @@ fast-levenshtein@^2.0.6:
   version "2.0.6"
   resolved "https://registry.npm.taobao.org/fast-levenshtein/download/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
   integrity sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
+
+fastest-levenshtein@^1.0.12:
+  version "1.0.12"
+  resolved "https://registry.npm.taobao.org/fastest-levenshtein/download/fastest-levenshtein-1.0.12.tgz#9990f7d3a88cc5a9ffd1f1745745251700d497e2"
+  integrity sha1-mZD306iMxan/0fF0V0UlFwDUl+I=
 
 faye-websocket@^0.10.0:
   version "0.10.0"
@@ -4773,11 +4763,6 @@ lcov-parse@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/lcov-parse/download/lcov-parse-1.0.0.tgz#eb0d46b54111ebc561acb4c408ef9363bdc8f7e0"
   integrity sha1-6w1GtUER68VhrLTECO+TY73I9+A=
-
-leven@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.npm.taobao.org/leven/download/leven-3.1.0.tgz#77891de834064cccba82ae7842bb6b14a13ed7f2"
-  integrity sha1-d4kd6DQGTMy6gq54QrtrFKE+1/I=
 
 levn@^0.4.1:
   version "0.4.1"
@@ -6131,11 +6116,6 @@ rechoir@^0.7.0:
   dependencies:
     resolve "^1.9.0"
 
-reduce-flatten@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npm.taobao.org/reduce-flatten/download/reduce-flatten-2.0.0.tgz#734fd84e65f375d7ca4465c69798c25c9d10ae27"
-  integrity sha1-c0/YTmXzddfKRGXGl5jCXJ0Qric=
-
 regenerate-unicode-properties@^8.2.0:
   version "8.2.0"
   resolved "https://registry.npm.taobao.org/regenerate-unicode-properties/download/regenerate-unicode-properties-8.2.0.tgz#e5de7111d655e7ba60c057dbe9ff37c87e65cdec"
@@ -7001,16 +6981,6 @@ supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-table-layout@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.npm.taobao.org/table-layout/download/table-layout-1.0.1.tgz?cache=0&sync_timestamp=1584186510062&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftable-layout%2Fdownload%2Ftable-layout-1.0.1.tgz#8411181ee951278ad0638aea2f779a9ce42894f9"
-  integrity sha1-hBEYHulRJ4rQY4rqL3eanOQolPk=
-  dependencies:
-    array-back "^4.0.1"
-    deep-extend "~0.6.0"
-    typical "^5.2.0"
-    wordwrapjs "^4.0.0"
-
 table@^6.0.4:
   version "6.0.4"
   resolved "https://registry.npm.taobao.org/table/download/table-6.0.4.tgz?cache=0&sync_timestamp=1605825218994&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftable%2Fdownload%2Ftable-6.0.4.tgz#c523dd182177e926c723eb20e1b341238188aa0d"
@@ -7217,11 +7187,6 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.npm.taobao.org/typedarray/download/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
-
-typical@^5.0.0, typical@^5.2.0:
-  version "5.2.0"
-  resolved "https://registry.npm.taobao.org/typical/download/typical-5.2.0.tgz#4daaac4f2b5315460804f0acf6cb69c52bb93066"
-  integrity sha1-TaqsTytTFUYIBPCs9stpxSu5MGY=
 
 uc.micro@^1.0.1, uc.micro@^1.0.5:
   version "1.0.6"
@@ -7481,21 +7446,21 @@ wbuf@^1.1.0, wbuf@^1.7.3:
   dependencies:
     minimalistic-assert "^1.0.0"
 
-webpack-cli@4.2.0:
-  version "4.2.0"
-  resolved "https://registry.npm.taobao.org/webpack-cli/download/webpack-cli-4.2.0.tgz?cache=0&sync_timestamp=1604517455003&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fwebpack-cli%2Fdownload%2Fwebpack-cli-4.2.0.tgz#10a09030ad2bd4d8b0f78322fba6ea43ec56aaaa"
-  integrity sha1-EKCQMK0r1Niw94Mi+6bqQ+xWqqo=
+webpack-cli@4.3.0:
+  version "4.3.0"
+  resolved "https://registry.npm.taobao.org/webpack-cli/download/webpack-cli-4.3.0.tgz?cache=0&sync_timestamp=1608919276191&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fwebpack-cli%2Fdownload%2Fwebpack-cli-4.3.0.tgz#e39303bf9f8002de122903e97029f3443d0f9174"
+  integrity sha1-45MDv5+AAt4SKQPpcCnzRD0PkXQ=
   dependencies:
-    "@webpack-cli/info" "^1.1.0"
-    "@webpack-cli/serve" "^1.1.0"
+    "@discoveryjs/json-ext" "^0.5.0"
+    "@webpack-cli/info" "^1.2.0"
+    "@webpack-cli/serve" "^1.2.0"
     colorette "^1.2.1"
-    command-line-usage "^6.1.0"
     commander "^6.2.0"
     enquirer "^2.3.6"
     execa "^4.1.0"
+    fastest-levenshtein "^1.0.12"
     import-local "^3.0.2"
     interpret "^2.2.0"
-    leven "^3.1.0"
     rechoir "^0.7.0"
     v8-compile-cache "^2.2.0"
     webpack-merge "^4.2.2"
@@ -7653,14 +7618,6 @@ word-wrap@^1.2.3:
   version "1.2.3"
   resolved "https://registry.npm.taobao.org/word-wrap/download/word-wrap-1.2.3.tgz#610636f6b1f703891bd34771ccb17fb93b47079c"
   integrity sha1-YQY29rH3A4kb00dxzLF/uTtHB5w=
-
-wordwrapjs@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.npm.taobao.org/wordwrapjs/download/wordwrapjs-4.0.0.tgz#9aa9394155993476e831ba8e59fb5795ebde6800"
-  integrity sha1-mqk5QVWZNHboMbqOWftXleveaAA=
-  dependencies:
-    reduce-flatten "^2.0.0"
-    typical "^5.0.0"
 
 worker-farm@^1.7.0:
   version "1.7.0"
