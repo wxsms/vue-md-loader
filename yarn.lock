@@ -4929,10 +4929,10 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
-markdown-it-anchor@6.0.1:
-  version "6.0.1"
-  resolved "https://registry.npm.taobao.org/markdown-it-anchor/download/markdown-it-anchor-6.0.1.tgz#f54b78757d0b61455faf8ced775b39498bd6d6f9"
-  integrity sha1-9Ut4dX0LYUVfr4ztd1s5SYvW1vk=
+markdown-it-anchor@7.0.0:
+  version "7.0.0"
+  resolved "https://registry.npm.taobao.org/markdown-it-anchor/download/markdown-it-anchor-7.0.0.tgz?cache=0&sync_timestamp=1609771470478&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmarkdown-it-anchor%2Fdownload%2Fmarkdown-it-anchor-7.0.0.tgz#6c43e6a3d3a0b56d0f7e04af7a122834ebbcc311"
+  integrity sha1-bEPmo9OgtW0PfgSvehIoNOu8wxE=
 
 markdown-it@^12.0.0:
   version "12.0.0"
