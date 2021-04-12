@@ -2739,10 +2739,10 @@ crypto-browserify@^3.11.0:
     randombytes "^2.0.0"
     randomfill "^1.0.3"
 
-css-loader@5.2.0:
-  version "5.2.0"
-  resolved "https://registry.npm.taobao.org/css-loader/download/css-loader-5.2.0.tgz?cache=0&sync_timestamp=1616605570874&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcss-loader%2Fdownload%2Fcss-loader-5.2.0.tgz#a9ecda190500863673ce4434033710404efbff00"
-  integrity sha1-qezaGQUAhjZzzkQ0AzcQQE77/wA=
+css-loader@5.2.1:
+  version "5.2.1"
+  resolved "https://registry.npm.taobao.org/css-loader/download/css-loader-5.2.1.tgz#15fbd5b6ac4c1b170a098f804c5abd0722f2aa73"
+  integrity sha1-FfvVtqxMGxcKCY+ATFq9ByLyqnM=
   dependencies:
     camelcase "^6.2.0"
     cssesc "^3.0.0"
