@@ -69,7 +69,7 @@
     "webpack-dev-server": "3.11.2"
   },
   "dependencies": {
-    "highlight.js": "^10.0.3",
+    "highlight.js": "^10.4.1",
     "loader-utils": "^2.0.0",
     "markdown-it": "^12.0.0"
   }
