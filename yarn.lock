@@ -2440,28 +2440,29 @@ check-error@^1.0.2:
   resolved "https://registry.npm.taobao.org/check-error/download/check-error-1.0.2.tgz#574d312edd88bb5dd8912e9286dd6c0aed4aac82"
   integrity sha1-V00xLt2Iu13YkS6Sht1sCu1KrII=
 
-cheerio-select@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.npm.taobao.org/cheerio-select/download/cheerio-select-1.3.0.tgz#26a50968260b7e4281238c1e7da7ed2766652f3b"
-  integrity sha1-JqUJaCYLfkKBI4wefaftJ2ZlLzs=
+cheerio-select@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.npm.taobao.org/cheerio-select/download/cheerio-select-1.4.0.tgz?cache=0&sync_timestamp=1618575389312&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcheerio-select%2Fdownload%2Fcheerio-select-1.4.0.tgz#3a16f21e37a2ef0f211d6d1aa4eff054bb22cdc9"
+  integrity sha1-OhbyHjei7w8hHW0apO/wVLsizck=
   dependencies:
-    css-select "^4.0.0"
+    css-select "^4.1.2"
     css-what "^5.0.0"
     domelementtype "^2.2.0"
-    domhandler "^4.1.0"
-    domutils "^2.5.2"
+    domhandler "^4.2.0"
+    domutils "^2.6.0"
 
-cheerio@1.0.0-rc.6:
-  version "1.0.0-rc.6"
-  resolved "https://registry.npm.taobao.org/cheerio/download/cheerio-1.0.0-rc.6.tgz#a5ae81ab483aeefa1280c325543c601145506240"
-  integrity sha1-pa6Bq0g67voSgMMlVDxgEUVQYkA=
+cheerio@1.0.0-rc.9:
+  version "1.0.0-rc.9"
+  resolved "https://registry.nlark.com/cheerio/download/cheerio-1.0.0-rc.9.tgz#a3ae6b7ce7af80675302ff836f628e7cb786a67f"
+  integrity sha1-o65rfOevgGdTAv+Db2KOfLeGpn8=
   dependencies:
-    cheerio-select "^1.3.0"
+    cheerio-select "^1.4.0"
     dom-serializer "^1.3.1"
-    domhandler "^4.1.0"
+    domhandler "^4.2.0"
     htmlparser2 "^6.1.0"
     parse5 "^6.0.1"
     parse5-htmlparser2-tree-adapter "^6.0.1"
+    tslib "^2.2.0"
 
 chokidar@3.5.1:
   version "3.5.1"
@@ -2889,15 +2890,15 @@ css-loader@5.2.4:
     schema-utils "^3.0.0"
     semver "^7.3.5"
 
-css-select@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.npm.taobao.org/css-select/download/css-select-4.0.0.tgz?cache=0&sync_timestamp=1617437442336&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcss-select%2Fdownload%2Fcss-select-4.0.0.tgz#9b7b53bd82e4b348a6e0924ce37645e5db43af8e"
-  integrity sha1-m3tTvYLks0im4JJM43ZF5dtDr44=
+css-select@^4.1.2:
+  version "4.1.2"
+  resolved "https://registry.npm.taobao.org/css-select/download/css-select-4.1.2.tgz#8b52b6714ed3a80d8221ec971c543f3b12653286"
+  integrity sha1-i1K2cU7TqA2CIeyXHFQ/OxJlMoY=
   dependencies:
     boolbase "^1.0.0"
     css-what "^5.0.0"
-    domhandler "^4.1.0"
-    domutils "^2.5.1"
+    domhandler "^4.2.0"
+    domutils "^2.6.0"
     nth-check "^2.0.0"
 
 css-what@^5.0.0:
@@ -3201,6 +3202,13 @@ domhandler@^4.1.0:
   dependencies:
     domelementtype "^2.2.0"
 
+domhandler@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.npm.taobao.org/domhandler/download/domhandler-4.2.0.tgz?cache=0&sync_timestamp=1618563925219&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdomhandler%2Fdownload%2Fdomhandler-4.2.0.tgz#f9768a5f034be60a89a27c2e4d0f74eba0d8b059"
+  integrity sha1-+XaKXwNL5gqJonwuTQ9066DYsFk=
+  dependencies:
+    domelementtype "^2.2.0"
+
 domutils@^2.4.4:
   version "2.4.4"
   resolved "https://registry.npm.taobao.org/domutils/download/domutils-2.4.4.tgz?cache=0&sync_timestamp=1607393161685&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdomutils%2Fdownload%2Fdomutils-2.4.4.tgz#282739c4b150d022d34699797369aad8d19bbbd3"
@@ -3210,7 +3218,7 @@ domutils@^2.4.4:
     domelementtype "^2.0.1"
     domhandler "^4.0.0"
 
-domutils@^2.5.1, domutils@^2.5.2:
+domutils@^2.5.2:
   version "2.5.2"
   resolved "https://registry.npm.taobao.org/domutils/download/domutils-2.5.2.tgz?cache=0&sync_timestamp=1617913408804&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdomutils%2Fdownload%2Fdomutils-2.5.2.tgz#37ef8ba087dff1a17175e7092e8a042e4b050e6c"
   integrity sha1-N++LoIff8aFxdecJLooELksFDmw=
@@ -3218,6 +3226,15 @@ domutils@^2.5.1, domutils@^2.5.2:
     dom-serializer "^1.0.1"
     domelementtype "^2.2.0"
     domhandler "^4.1.0"
+
+domutils@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.npm.taobao.org/domutils/download/domutils-2.6.0.tgz#2e15c04185d43fb16ae7057cb76433c6edb938b7"
+  integrity sha1-LhXAQYXUP7Fq5wV8t2Qzxu25OLc=
+  dependencies:
+    dom-serializer "^1.0.1"
+    domelementtype "^2.2.0"
+    domhandler "^4.2.0"
 
 duplexify@^3.4.2, duplexify@^3.6.0:
   version "3.7.1"
@@ -7460,6 +7477,11 @@ tslib@^1.9.0:
   version "1.13.0"
   resolved "https://registry.npm.taobao.org/tslib/download/tslib-1.13.0.tgz?cache=0&sync_timestamp=1589411820927&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftslib%2Fdownload%2Ftslib-1.13.0.tgz#c881e13cc7015894ed914862d276436fa9a47043"
   integrity sha1-yIHhPMcBWJTtkUhi0nZDb6mkcEM=
+
+tslib@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.nlark.com/tslib/download/tslib-2.2.0.tgz?cache=0&sync_timestamp=1618847298334&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftslib%2Fdownload%2Ftslib-2.2.0.tgz#fb2c475977e35e241311ede2693cee1ec6698f5c"
+  integrity sha1-+yxHWXfjXiQTEe3iaTzuHsZpj1w=
 
 tty-browserify@0.0.0:
   version "0.0.0"
