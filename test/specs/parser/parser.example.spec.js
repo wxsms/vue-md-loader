@@ -1,7 +1,7 @@
 const path = require('path')
 const fs = require('fs')
 const expect = require('chai').expect
-const cheerio = require('cheerio')
+const cheerio = require('cheerio').default
 const utils = require('../../utils')
 const Parser = require('../../../src/parser')
 
