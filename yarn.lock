@@ -2761,14 +2761,6 @@ constants-browserify@^1.0.0:
   resolved "https://registry.npm.taobao.org/constants-browserify/download/constants-browserify-1.0.0.tgz#c20b96d8c617748aaf1c16021760cd27fcb8cb75"
   integrity sha1-wguW2MYXdIqvHBYCF2DNJ/y4y3U=
 
-contains-path@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npm.taobao.org/contains-path/download/contains-path-1.0.0.tgz#3458b332185603e8eed18f518d4a10888a3abc91"
-  integrity sha1-NFizMhhWA+ju0Y9RjUoQiIo6vJE=
-  dependencies:
-    normalize-path "^2.1.1"
-    path-starts-with "^1.0.0"
-
 content-disposition@0.5.3:
   version "0.5.3"
   resolved "https://registry.npm.taobao.org/content-disposition/download/content-disposition-0.5.3.tgz#e130caf7e7279087c5616c2007d0485698984fbd"
@@ -3521,14 +3513,13 @@ eslint-plugin-html@6.1.2:
   dependencies:
     htmlparser2 "^6.0.1"
 
-eslint-plugin-import@2.23.2:
-  version "2.23.2"
-  resolved "https://registry.nlark.com/eslint-plugin-import/download/eslint-plugin-import-2.23.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Feslint-plugin-import%2Fdownload%2Feslint-plugin-import-2.23.2.tgz#ee15dd68fc7a1a1ba4c653c734e0d01c100d3484"
-  integrity sha1-7hXdaPx6GhukxlPHNODQHBANNIQ=
+eslint-plugin-import@2.23.3:
+  version "2.23.3"
+  resolved "https://registry.nlark.com/eslint-plugin-import/download/eslint-plugin-import-2.23.3.tgz?cache=0&sync_timestamp=1621628754750&other_urls=https%3A%2F%2Fregistry.nlark.com%2Feslint-plugin-import%2Fdownload%2Feslint-plugin-import-2.23.3.tgz#8a1b073289fff03c4af0f04b6df956b7d463e191"
+  integrity sha1-ihsHMon/8DxK8PBLbflWt9Rj4ZE=
   dependencies:
     array-includes "^3.1.3"
     array.prototype.flat "^1.2.4"
-    contains-path "^1.0.0"
     debug "^2.6.9"
     doctrine "^2.1.0"
     eslint-import-resolver-node "^0.3.4"
@@ -6187,13 +6178,6 @@ path-parse@^1.0.6:
   version "1.0.6"
   resolved "https://registry.npm.taobao.org/path-parse/download/path-parse-1.0.6.tgz#d62dbb5679405d72c4737ec58600e9ddcf06d24c"
   integrity sha1-1i27VnlAXXLEc37FhgDp3c8G0kw=
-
-path-starts-with@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.nlark.com/path-starts-with/download/path-starts-with-1.0.0.tgz#b28243015e8b138de572682ac52da42e646ad84e"
-  integrity sha1-soJDAV6LE43lcmgqxS2kLmRq2E4=
-  dependencies:
-    normalize-path "^2.1.1"
 
 path-to-regexp@0.1.7:
   version "0.1.7"
