@@ -2929,10 +2929,10 @@ crypto-browserify@^3.11.0:
     randombytes "^2.0.0"
     randomfill "^1.0.3"
 
-css-loader@5.2.5:
-  version "5.2.5"
-  resolved "https://registry.nlark.com/css-loader/download/css-loader-5.2.5.tgz#cdd18d6fe42748990793b4a7ec32eb16f36ba9d7"
-  integrity sha1-zdGNb+QnSJkHk7Sn7DLrFvNrqdc=
+css-loader@5.2.6:
+  version "5.2.6"
+  resolved "https://registry.nlark.com/css-loader/download/css-loader-5.2.6.tgz?cache=0&sync_timestamp=1621865043272&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcss-loader%2Fdownload%2Fcss-loader-5.2.6.tgz#c3c82ab77fea1f360e587d871a6811f4450cc8d1"
+  integrity sha1-w8gqt3/qHzYOWH2HGmgR9EUMyNE=
   dependencies:
     icss-utils "^5.1.0"
     loader-utils "^2.0.0"
