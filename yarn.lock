@@ -3544,12 +3544,12 @@ eslint-plugin-import@2.23.3:
     resolve "^1.20.0"
     tsconfig-paths "^3.9.0"
 
-eslint-plugin-mocha@8.2.0:
-  version "8.2.0"
-  resolved "https://registry.nlark.com/eslint-plugin-mocha/download/eslint-plugin-mocha-8.2.0.tgz#1d9724edcef37583921ef853494200c2b8a3730d"
-  integrity sha1-HZck7c7zdYOSHvhTSUIAwrijcw0=
+eslint-plugin-mocha@9.0.0:
+  version "9.0.0"
+  resolved "https://registry.nlark.com/eslint-plugin-mocha/download/eslint-plugin-mocha-9.0.0.tgz?cache=0&sync_timestamp=1622045319715&other_urls=https%3A%2F%2Fregistry.nlark.com%2Feslint-plugin-mocha%2Fdownload%2Feslint-plugin-mocha-9.0.0.tgz#b4457d066941eecb070dc06ed301c527d9c61b60"
+  integrity sha1-tEV9BmlB7ssHDcBu0wHFJ9nGG2A=
   dependencies:
-    eslint-utils "^2.1.0"
+    eslint-utils "^3.0.0"
     ramda "^0.27.1"
 
 eslint-plugin-node@11.1.0:
@@ -3621,6 +3621,13 @@ eslint-utils@^2.1.0:
   integrity sha1-0t5eA0JOcH3BDHQGjd7a5wh0Gyc=
   dependencies:
     eslint-visitor-keys "^1.1.0"
+
+eslint-utils@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.nlark.com/eslint-utils/download/eslint-utils-3.0.0.tgz?cache=0&sync_timestamp=1620975590529&other_urls=https%3A%2F%2Fregistry.nlark.com%2Feslint-utils%2Fdownload%2Feslint-utils-3.0.0.tgz#8aebaface7345bb33559db0a1f13a1d2d48c3672"
+  integrity sha1-iuuvrOc0W7M1WdsKHxOh0tSMNnI=
+  dependencies:
+    eslint-visitor-keys "^2.0.0"
 
 eslint-visitor-keys@^1.0.0, eslint-visitor-keys@^1.1.0:
   version "1.2.0"
