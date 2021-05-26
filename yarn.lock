@@ -3544,10 +3544,10 @@ eslint-plugin-import@2.23.3:
     resolve "^1.20.0"
     tsconfig-paths "^3.9.0"
 
-eslint-plugin-mocha@8.1.0:
-  version "8.1.0"
-  resolved "https://registry.npm.taobao.org/eslint-plugin-mocha/download/eslint-plugin-mocha-8.1.0.tgz#b9aebbede46a808e46e622c8fd99d2a2f353e725"
-  integrity sha1-ua677eRqgI5G5iLI/ZnSovNT5yU=
+eslint-plugin-mocha@8.2.0:
+  version "8.2.0"
+  resolved "https://registry.nlark.com/eslint-plugin-mocha/download/eslint-plugin-mocha-8.2.0.tgz#1d9724edcef37583921ef853494200c2b8a3730d"
+  integrity sha1-HZck7c7zdYOSHvhTSUIAwrijcw0=
   dependencies:
     eslint-utils "^2.1.0"
     ramda "^0.27.1"
