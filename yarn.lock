@@ -2556,24 +2556,24 @@ check-error@^1.0.2:
   resolved "https://registry.npm.taobao.org/check-error/download/check-error-1.0.2.tgz#574d312edd88bb5dd8912e9286dd6c0aed4aac82"
   integrity sha1-V00xLt2Iu13YkS6Sht1sCu1KrII=
 
-cheerio-select@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.npm.taobao.org/cheerio-select/download/cheerio-select-1.4.0.tgz?cache=0&sync_timestamp=1618575389312&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcheerio-select%2Fdownload%2Fcheerio-select-1.4.0.tgz#3a16f21e37a2ef0f211d6d1aa4eff054bb22cdc9"
-  integrity sha1-OhbyHjei7w8hHW0apO/wVLsizck=
+cheerio-select@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.nlark.com/cheerio-select/download/cheerio-select-1.5.0.tgz#faf3daeb31b17c5e1a9dabcee288aaf8aafa5823"
+  integrity sha1-+vPa6zGxfF4anavO4oiq+Kr6WCM=
   dependencies:
-    css-select "^4.1.2"
-    css-what "^5.0.0"
+    css-select "^4.1.3"
+    css-what "^5.0.1"
     domelementtype "^2.2.0"
     domhandler "^4.2.0"
-    domutils "^2.6.0"
+    domutils "^2.7.0"
 
-cheerio@1.0.0-rc.9:
-  version "1.0.0-rc.9"
-  resolved "https://registry.nlark.com/cheerio/download/cheerio-1.0.0-rc.9.tgz#a3ae6b7ce7af80675302ff836f628e7cb786a67f"
-  integrity sha1-o65rfOevgGdTAv+Db2KOfLeGpn8=
+cheerio@1.0.0-rc.10:
+  version "1.0.0-rc.10"
+  resolved "https://registry.nlark.com/cheerio/download/cheerio-1.0.0-rc.10.tgz#2ba3dcdfcc26e7956fc1f440e61d51c643379f3e"
+  integrity sha1-K6Pc38wm55VvwfRA5h1RxkM3nz4=
   dependencies:
-    cheerio-select "^1.4.0"
-    dom-serializer "^1.3.1"
+    cheerio-select "^1.5.0"
+    dom-serializer "^1.3.2"
     domhandler "^4.2.0"
     htmlparser2 "^6.1.0"
     parse5 "^6.0.1"
@@ -3000,10 +3000,10 @@ css-loader@5.2.6:
     schema-utils "^3.0.0"
     semver "^7.3.5"
 
-css-select@^4.1.2:
-  version "4.1.2"
-  resolved "https://registry.npm.taobao.org/css-select/download/css-select-4.1.2.tgz#8b52b6714ed3a80d8221ec971c543f3b12653286"
-  integrity sha1-i1K2cU7TqA2CIeyXHFQ/OxJlMoY=
+css-select@^4.1.3:
+  version "4.1.3"
+  resolved "https://registry.nlark.com/css-select/download/css-select-4.1.3.tgz?cache=0&sync_timestamp=1622994276976&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcss-select%2Fdownload%2Fcss-select-4.1.3.tgz#a70440f70317f2669118ad74ff105e65849c7067"
+  integrity sha1-pwRA9wMX8maRGK10/xBeZYSccGc=
   dependencies:
     boolbase "^1.0.0"
     css-what "^5.0.0"
@@ -3015,6 +3015,11 @@ css-what@^5.0.0:
   version "5.0.0"
   resolved "https://registry.npm.taobao.org/css-what/download/css-what-5.0.0.tgz?cache=0&sync_timestamp=1615262862801&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcss-what%2Fdownload%2Fcss-what-5.0.0.tgz#f0bf4f8bac07582722346ab243f6a35b512cfc47"
   integrity sha1-8L9Pi6wHWCciNGqyQ/ajW1Es/Ec=
+
+css-what@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.nlark.com/css-what/download/css-what-5.0.1.tgz?cache=0&sync_timestamp=1622227030976&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcss-what%2Fdownload%2Fcss-what-5.0.1.tgz#3efa820131f4669a8ac2408f9c32e7c7de9f4cad"
+  integrity sha1-PvqCATH0ZpqKwkCPnDLnx96fTK0=
 
 cssesc@^3.0.0:
   version "3.0.0"
@@ -3261,13 +3266,13 @@ dom-serializer@^1.0.1:
     domhandler "^3.0.0"
     entities "^2.0.0"
 
-dom-serializer@^1.3.1:
-  version "1.3.1"
-  resolved "https://registry.npm.taobao.org/dom-serializer/download/dom-serializer-1.3.1.tgz#d845a1565d7c041a95e5dab62184ab41e3a519be"
-  integrity sha1-2EWhVl18BBqV5dq2IYSrQeOlGb4=
+dom-serializer@^1.3.2:
+  version "1.3.2"
+  resolved "https://registry.nlark.com/dom-serializer/download/dom-serializer-1.3.2.tgz?cache=0&sync_timestamp=1621256900132&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fdom-serializer%2Fdownload%2Fdom-serializer-1.3.2.tgz#6206437d32ceefaec7161803230c7a20bc1b4d91"
+  integrity sha1-YgZDfTLO767HFhgDIwx6ILwbTZE=
   dependencies:
     domelementtype "^2.0.1"
-    domhandler "^4.0.0"
+    domhandler "^4.2.0"
     entities "^2.0.0"
 
 domain-browser@^1.1.1:
@@ -3340,6 +3345,15 @@ domutils@^2.6.0:
   version "2.6.0"
   resolved "https://registry.npm.taobao.org/domutils/download/domutils-2.6.0.tgz#2e15c04185d43fb16ae7057cb76433c6edb938b7"
   integrity sha1-LhXAQYXUP7Fq5wV8t2Qzxu25OLc=
+  dependencies:
+    dom-serializer "^1.0.1"
+    domelementtype "^2.2.0"
+    domhandler "^4.2.0"
+
+domutils@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.nlark.com/domutils/download/domutils-2.7.0.tgz#8ebaf0c41ebafcf55b0b72ec31c56323712c5442"
+  integrity sha1-jrrwxB66/PVbC3LsMcVjI3EsVEI=
   dependencies:
     dom-serializer "^1.0.1"
     domelementtype "^2.2.0"
