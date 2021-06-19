@@ -5368,10 +5368,10 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
-markdown-it-anchor@7.1.0:
-  version "7.1.0"
-  resolved "https://registry.npm.taobao.org/markdown-it-anchor/download/markdown-it-anchor-7.1.0.tgz#30fb21497bf59e83ff4d1ddc052d821962e2489e"
-  integrity sha1-MPshSXv1noP/TR3cBS2CGWLiSJ4=
+markdown-it-anchor@8.0.1:
+  version "8.0.1"
+  resolved "https://registry.nlark.com/markdown-it-anchor/download/markdown-it-anchor-8.0.1.tgz#21fb43cfc0866ee45853f37dab12241d99ebbf1f"
+  integrity sha1-IftDz8CGbuRYU/N9qxIkHZnrvx8=
 
 markdown-it@^12.0.0:
   version "12.0.0"
