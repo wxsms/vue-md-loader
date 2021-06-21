@@ -45,6 +45,11 @@
   resolved "https://registry.nlark.com/@babel/compat-data/download/@babel/compat-data-7.14.5.tgz#8ef4c18e58e801c5c95d3c1c0f2874a2680fadea"
   integrity sha1-jvTBjljoAcXJXTwcDyh0omgPreo=
 
+"@babel/compat-data@^7.14.7":
+  version "7.14.7"
+  resolved "https://registry.nlark.com/@babel/compat-data/download/@babel/compat-data-7.14.7.tgz?cache=0&sync_timestamp=1624312556795&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fcompat-data%2Fdownload%2F%40babel%2Fcompat-data-7.14.7.tgz#7b047d7a3a89a67d2258dc61f604f098f1bc7e08"
+  integrity sha1-ewR9ejqJpn0iWNxh9gTwmPG8fgg=
+
 "@babel/core@^7.7.5":
   version "7.10.2"
   resolved "https://registry.npm.taobao.org/@babel/core/download/@babel/core-7.10.2.tgz#bd6786046668a925ac2bd2fd95b579b92a23b36a"
@@ -522,10 +527,10 @@
     "@babel/helper-skip-transparent-expression-wrappers" "^7.14.5"
     "@babel/plugin-proposal-optional-chaining" "^7.14.5"
 
-"@babel/plugin-proposal-async-generator-functions@^7.14.5":
-  version "7.14.5"
-  resolved "https://registry.nlark.com/@babel/plugin-proposal-async-generator-functions/download/@babel/plugin-proposal-async-generator-functions-7.14.5.tgz?cache=0&sync_timestamp=1623280497754&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fplugin-proposal-async-generator-functions%2Fdownload%2F%40babel%2Fplugin-proposal-async-generator-functions-7.14.5.tgz#4024990e3dd74181f4f426ea657769ff49a2df39"
-  integrity sha1-QCSZDj3XQYH09CbqZXdp/0mi3zk=
+"@babel/plugin-proposal-async-generator-functions@^7.14.7":
+  version "7.14.7"
+  resolved "https://registry.nlark.com/@babel/plugin-proposal-async-generator-functions/download/@babel/plugin-proposal-async-generator-functions-7.14.7.tgz?cache=0&sync_timestamp=1624312557089&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fplugin-proposal-async-generator-functions%2Fdownload%2F%40babel%2Fplugin-proposal-async-generator-functions-7.14.7.tgz#784a48c3d8ed073f65adcf30b57bcbf6c8119ace"
+  integrity sha1-eEpIw9jtBz9lrc8wtXvL9sgRms4=
   dependencies:
     "@babel/helper-plugin-utils" "^7.14.5"
     "@babel/helper-remap-async-to-generator" "^7.14.5"
@@ -596,12 +601,12 @@
     "@babel/helper-plugin-utils" "^7.14.5"
     "@babel/plugin-syntax-numeric-separator" "^7.10.4"
 
-"@babel/plugin-proposal-object-rest-spread@^7.14.5":
-  version "7.14.5"
-  resolved "https://registry.nlark.com/@babel/plugin-proposal-object-rest-spread/download/@babel/plugin-proposal-object-rest-spread-7.14.5.tgz?cache=0&sync_timestamp=1623280365961&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fplugin-proposal-object-rest-spread%2Fdownload%2F%40babel%2Fplugin-proposal-object-rest-spread-7.14.5.tgz#e581d5ccdfa187ea6ed73f56c6a21c1580b90fbf"
-  integrity sha1-5YHVzN+hh+pu1z9WxqIcFYC5D78=
+"@babel/plugin-proposal-object-rest-spread@^7.14.7":
+  version "7.14.7"
+  resolved "https://registry.nlark.com/@babel/plugin-proposal-object-rest-spread/download/@babel/plugin-proposal-object-rest-spread-7.14.7.tgz?cache=0&sync_timestamp=1624312560247&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fplugin-proposal-object-rest-spread%2Fdownload%2F%40babel%2Fplugin-proposal-object-rest-spread-7.14.7.tgz#5920a2b3df7f7901df0205974c0641b13fd9d363"
+  integrity sha1-WSCis99/eQHfAgWXTAZBsT/Z02M=
   dependencies:
-    "@babel/compat-data" "^7.14.5"
+    "@babel/compat-data" "^7.14.7"
     "@babel/helper-compilation-targets" "^7.14.5"
     "@babel/helper-plugin-utils" "^7.14.5"
     "@babel/plugin-syntax-object-rest-spread" "^7.8.3"
@@ -806,10 +811,10 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.14.5"
 
-"@babel/plugin-transform-destructuring@^7.14.5":
-  version "7.14.5"
-  resolved "https://registry.nlark.com/@babel/plugin-transform-destructuring/download/@babel/plugin-transform-destructuring-7.14.5.tgz#d32ad19ff1a6da1e861dc62720d80d9776e3bf35"
-  integrity sha1-0yrRn/Gm2h6GHcYnINgNl3bjvzU=
+"@babel/plugin-transform-destructuring@^7.14.7":
+  version "7.14.7"
+  resolved "https://registry.nlark.com/@babel/plugin-transform-destructuring/download/@babel/plugin-transform-destructuring-7.14.7.tgz?cache=0&sync_timestamp=1624312558389&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fplugin-transform-destructuring%2Fdownload%2F%40babel%2Fplugin-transform-destructuring-7.14.7.tgz#0ad58ed37e23e22084d109f185260835e5557576"
+  integrity sha1-CtWO034j4iCE0QnxhSYINeVVdXY=
   dependencies:
     "@babel/helper-plugin-utils" "^7.14.5"
 
@@ -911,10 +916,10 @@
     "@babel/helper-module-transforms" "^7.14.5"
     "@babel/helper-plugin-utils" "^7.14.5"
 
-"@babel/plugin-transform-named-capturing-groups-regex@^7.14.5":
-  version "7.14.5"
-  resolved "https://registry.nlark.com/@babel/plugin-transform-named-capturing-groups-regex/download/@babel/plugin-transform-named-capturing-groups-regex-7.14.5.tgz?cache=0&sync_timestamp=1623280496056&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fplugin-transform-named-capturing-groups-regex%2Fdownload%2F%40babel%2Fplugin-transform-named-capturing-groups-regex-7.14.5.tgz#d537e8ee083ee6f6aa4f4eef9d2081d555746e4c"
-  integrity sha1-1Tfo7gg+5vaqT07vnSCB1VV0bkw=
+"@babel/plugin-transform-named-capturing-groups-regex@^7.14.7":
+  version "7.14.7"
+  resolved "https://registry.nlark.com/@babel/plugin-transform-named-capturing-groups-regex/download/@babel/plugin-transform-named-capturing-groups-regex-7.14.7.tgz?cache=0&sync_timestamp=1624312558636&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fplugin-transform-named-capturing-groups-regex%2Fdownload%2F%40babel%2Fplugin-transform-named-capturing-groups-regex-7.14.7.tgz#60c06892acf9df231e256c24464bfecb0908fd4e"
+  integrity sha1-YMBokqz53yMeJWwkRkv+ywkI/U4=
   dependencies:
     "@babel/helper-create-regexp-features-plugin" "^7.14.5"
 
@@ -968,10 +973,10 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.14.5"
 
-"@babel/plugin-transform-spread@^7.14.5":
-  version "7.14.5"
-  resolved "https://registry.nlark.com/@babel/plugin-transform-spread/download/@babel/plugin-transform-spread-7.14.5.tgz?cache=0&sync_timestamp=1623280496151&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fplugin-transform-spread%2Fdownload%2F%40babel%2Fplugin-transform-spread-7.14.5.tgz#bd269fb4119754d2ce7f4cc39a96b4f71baae356"
-  integrity sha1-vSaftBGXVNLOf0zDmpa09xuq41Y=
+"@babel/plugin-transform-spread@^7.14.6":
+  version "7.14.6"
+  resolved "https://registry.nlark.com/@babel/plugin-transform-spread/download/@babel/plugin-transform-spread-7.14.6.tgz#6bd40e57fe7de94aa904851963b5616652f73144"
+  integrity sha1-a9QOV/596UqpBIUZY7VhZlL3MUQ=
   dependencies:
     "@babel/helper-plugin-utils" "^7.14.5"
     "@babel/helper-skip-transparent-expression-wrappers" "^7.14.5"
@@ -1012,17 +1017,17 @@
     "@babel/helper-create-regexp-features-plugin" "^7.14.5"
     "@babel/helper-plugin-utils" "^7.14.5"
 
-"@babel/preset-env@7.14.5":
-  version "7.14.5"
-  resolved "https://registry.nlark.com/@babel/preset-env/download/@babel/preset-env-7.14.5.tgz?cache=0&sync_timestamp=1623280499238&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fpreset-env%2Fdownload%2F%40babel%2Fpreset-env-7.14.5.tgz#c0c84e763661fd0e74292c3d511cb33b0c668997"
-  integrity sha1-wMhOdjZh/Q50KSw9URyzOwxmiZc=
+"@babel/preset-env@7.14.7":
+  version "7.14.7"
+  resolved "https://registry.nlark.com/@babel/preset-env/download/@babel/preset-env-7.14.7.tgz?cache=0&sync_timestamp=1624312534130&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fpreset-env%2Fdownload%2F%40babel%2Fpreset-env-7.14.7.tgz#5c70b22d4c2d893b03d8c886a5c17422502b932a"
+  integrity sha1-XHCyLUwtiTsD2MiGpcF0IlArkyo=
   dependencies:
-    "@babel/compat-data" "^7.14.5"
+    "@babel/compat-data" "^7.14.7"
     "@babel/helper-compilation-targets" "^7.14.5"
     "@babel/helper-plugin-utils" "^7.14.5"
     "@babel/helper-validator-option" "^7.14.5"
     "@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining" "^7.14.5"
-    "@babel/plugin-proposal-async-generator-functions" "^7.14.5"
+    "@babel/plugin-proposal-async-generator-functions" "^7.14.7"
     "@babel/plugin-proposal-class-properties" "^7.14.5"
     "@babel/plugin-proposal-class-static-block" "^7.14.5"
     "@babel/plugin-proposal-dynamic-import" "^7.14.5"
@@ -1031,7 +1036,7 @@
     "@babel/plugin-proposal-logical-assignment-operators" "^7.14.5"
     "@babel/plugin-proposal-nullish-coalescing-operator" "^7.14.5"
     "@babel/plugin-proposal-numeric-separator" "^7.14.5"
-    "@babel/plugin-proposal-object-rest-spread" "^7.14.5"
+    "@babel/plugin-proposal-object-rest-spread" "^7.14.7"
     "@babel/plugin-proposal-optional-catch-binding" "^7.14.5"
     "@babel/plugin-proposal-optional-chaining" "^7.14.5"
     "@babel/plugin-proposal-private-methods" "^7.14.5"
@@ -1057,7 +1062,7 @@
     "@babel/plugin-transform-block-scoping" "^7.14.5"
     "@babel/plugin-transform-classes" "^7.14.5"
     "@babel/plugin-transform-computed-properties" "^7.14.5"
-    "@babel/plugin-transform-destructuring" "^7.14.5"
+    "@babel/plugin-transform-destructuring" "^7.14.7"
     "@babel/plugin-transform-dotall-regex" "^7.14.5"
     "@babel/plugin-transform-duplicate-keys" "^7.14.5"
     "@babel/plugin-transform-exponentiation-operator" "^7.14.5"
@@ -1069,7 +1074,7 @@
     "@babel/plugin-transform-modules-commonjs" "^7.14.5"
     "@babel/plugin-transform-modules-systemjs" "^7.14.5"
     "@babel/plugin-transform-modules-umd" "^7.14.5"
-    "@babel/plugin-transform-named-capturing-groups-regex" "^7.14.5"
+    "@babel/plugin-transform-named-capturing-groups-regex" "^7.14.7"
     "@babel/plugin-transform-new-target" "^7.14.5"
     "@babel/plugin-transform-object-super" "^7.14.5"
     "@babel/plugin-transform-parameters" "^7.14.5"
@@ -1077,7 +1082,7 @@
     "@babel/plugin-transform-regenerator" "^7.14.5"
     "@babel/plugin-transform-reserved-words" "^7.14.5"
     "@babel/plugin-transform-shorthand-properties" "^7.14.5"
-    "@babel/plugin-transform-spread" "^7.14.5"
+    "@babel/plugin-transform-spread" "^7.14.6"
     "@babel/plugin-transform-sticky-regex" "^7.14.5"
     "@babel/plugin-transform-template-literals" "^7.14.5"
     "@babel/plugin-transform-typeof-symbol" "^7.14.5"
@@ -1088,7 +1093,7 @@
     babel-plugin-polyfill-corejs2 "^0.2.2"
     babel-plugin-polyfill-corejs3 "^0.2.2"
     babel-plugin-polyfill-regenerator "^0.2.2"
-    core-js-compat "^3.14.0"
+    core-js-compat "^3.15.0"
     semver "^6.3.0"
 
 "@babel/preset-modules@^0.1.4":
@@ -2727,10 +2732,10 @@ copy-descriptor@^0.1.0:
   resolved "https://registry.npm.taobao.org/copy-descriptor/download/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
   integrity sha1-Z29us8OZl8LuGsOpJP1hJHSPV40=
 
-core-js-compat@^3.14.0:
-  version "3.14.0"
-  resolved "https://registry.nlark.com/core-js-compat/download/core-js-compat-3.14.0.tgz?cache=0&sync_timestamp=1622879586479&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcore-js-compat%2Fdownload%2Fcore-js-compat-3.14.0.tgz#b574dabf29184681d5b16357bd33d104df3d29a5"
-  integrity sha1-tXTavykYRoHVsWNXvTPRBN89KaU=
+core-js-compat@^3.15.0:
+  version "3.15.0"
+  resolved "https://registry.nlark.com/core-js-compat/download/core-js-compat-3.15.0.tgz?cache=0&sync_timestamp=1624210413625&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcore-js-compat%2Fdownload%2Fcore-js-compat-3.15.0.tgz#e14a371123db9d1c5b41206d3f420643d238b8fa"
+  integrity sha1-4Uo3ESPbnRxbQSBtP0IGQ9I4uPo=
   dependencies:
     browserslist "^4.16.6"
     semver "7.0.0"
