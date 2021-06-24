@@ -60,7 +60,7 @@
     "markdown-it-anchor": "8.0.3",
     "mocha": "9.0.1",
     "nyc": "15.1.0",
-    "style-loader": "2.0.0",
+    "style-loader": "3.0.0",
     "vue": "2.6.14",
     "vue-loader": "15.9.7",
     "vue-template-compiler": "2.6.14",
