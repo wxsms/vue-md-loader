@@ -2866,20 +2866,18 @@ crypto-browserify@^3.11.0:
     randombytes "^2.0.0"
     randomfill "^1.0.3"
 
-css-loader@5.2.7:
-  version "5.2.7"
-  resolved "https://registry.nlark.com/css-loader/download/css-loader-5.2.7.tgz?cache=0&sync_timestamp=1626181461689&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcss-loader%2Fdownload%2Fcss-loader-5.2.7.tgz#9b9f111edf6fb2be5dc62525644cbc9c232064ae"
-  integrity sha1-m58RHt9vsr5dxiUlZEy8nCMgZK4=
+css-loader@6.0.0:
+  version "6.0.0"
+  resolved "https://registry.nlark.com/css-loader/download/css-loader-6.0.0.tgz?cache=0&sync_timestamp=1626316236405&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcss-loader%2Fdownload%2Fcss-loader-6.0.0.tgz#e3f9131229df43e081876f434dc2f4605be9d5ae"
+  integrity sha1-4/kTEinfQ+CBh29DTcL0YFvp1a4=
   dependencies:
     icss-utils "^5.1.0"
-    loader-utils "^2.0.0"
     postcss "^8.2.15"
     postcss-modules-extract-imports "^3.0.0"
     postcss-modules-local-by-default "^4.0.0"
     postcss-modules-scope "^3.0.0"
     postcss-modules-values "^4.0.0"
     postcss-value-parser "^4.1.0"
-    schema-utils "^3.0.0"
     semver "^7.3.5"
 
 css-select@^4.1.3:
