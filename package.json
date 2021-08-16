@@ -56,7 +56,7 @@
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "5.1.0",
     "eslint-plugin-standard": "5.0.0",
-    "eslint-plugin-vue": "7.14.0",
+    "eslint-plugin-vue": "7.16.0",
     "markdown-it-anchor": "8.1.2",
     "mocha": "9.0.3",
     "nyc": "15.1.0",
