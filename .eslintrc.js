@@ -12,7 +12,7 @@ module.exports = {
   },
   extends: ['plugin:vue/recommended', 'plugin:prettier/recommended'],
   // required to lint *.vue files
-  plugins: ['import', 'node', 'promise', 'standard', 'mocha'],
+  plugins: ['import', 'node', 'promise', 'mocha'],
   // add your custom rules here
   rules: {
     'no-unused-expressions': 0,
