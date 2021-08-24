@@ -517,7 +517,7 @@ a:hover {
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: normal;
-  color: #159957
+  color: #159957;
 }
 
 .main-content p {
@@ -692,15 +692,7 @@ a:hover {
   margin-bottom: 1rem;
 }
 
-.header-anchor {
-  display: none;
-}
 
-h1:hover .header-anchor,
-h2:hover .header-anchor,
-h3:hover .header-anchor,
-h4:hover .header-anchor,
-h5:hover .header-anchor,
-h6:hover .header-anchor {
-  display: inline;
+a {
+  color: #159957;
 }

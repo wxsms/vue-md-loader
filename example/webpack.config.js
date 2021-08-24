@@ -1,5 +1,6 @@
 const path = require('path')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const anchor = require('markdown-it-anchor')
 
 module.exports = {
   mode: process.env.NODE_ENV,
@@ -9,7 +10,7 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'build.js'
   },
-  devtool: process.env.NODE_ENV === 'development' ? '#cheap-module-eval-source-map' : undefined,
+  devtool: process.env.NODE_ENV === 'development' ? 'eval-cheap-module-source-map' : undefined,
   resolve: {
     alias: {
       vue$: 'vue/dist/vue.esm.js'
@@ -38,7 +39,7 @@ module.exports = {
       },
       {
         test: /\.md$/,
-        loaders: [
+        use: [
           'vue-loader',
           {
             loader: path.resolve(__dirname, '../index.js'),
@@ -60,10 +61,12 @@ module.exports = {
               },
               plugins: [
                 [
-                  require('markdown-it-anchor'),
+                  anchor,
                   {
-                    permalink: true,
-                    permalinkSymbol: '&#128279;'
+                    permalink: anchor.permalink.headerLink({
+                      symbol: '&#128279;'
+                    }),
+                    // permalinkSymbol: '&#128279;'
                   }
                 ]
               ]

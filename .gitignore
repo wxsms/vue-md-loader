@@ -111,3 +111,4 @@ typings/
 
 .idea/
 test/coverage/
+example/dist
