@@ -13,7 +13,7 @@ const DEFAULT_MARKDOWN_OPTIONS = {
       }
     }
     return '' // use external default escaping
-  }
+  },
 }
 
 // https://github.com/QingWei-Li/vue-markdown-loader/blob/master/lib/markdown-compiler.js
@@ -26,14 +26,16 @@ const ensureVPre = function (markdown) {
       if (typeof rendererRules[rule] === 'function') {
         const saved = rendererRules[rule]
         rendererRules[rule] = function () {
-          return saved.apply(this, arguments).replace(/(<pre|<code)/g, '$1 v-pre')
+          return saved
+            .apply(this, arguments)
+            .replace(/(<pre|<code)/g, '$1 v-pre')
         }
       }
     })
   }
 }
 
-function Parser (_options) {
+function Parser(_options) {
   // default options
   const defaultOptions = {
     live: true, // enable live
@@ -45,7 +47,7 @@ function Parser (_options) {
     wrapper: 'section', // content wrapper
     preProcess: null,
     process: null,
-    afterProcess: null
+    afterProcess: null,
   }
   // merge user options into defaults
   const options = Object.assign({}, defaultOptions, _options)
@@ -67,7 +69,7 @@ function Parser (_options) {
   }
   // install plugins
   if (this.options.plugins && this.options.plugins.length) {
-    this.options.plugins.forEach(p => {
+    this.options.plugins.forEach((p) => {
       if (Array.isArray(p)) {
         if (p[0]) {
           this.markdown.use.apply(this.markdown, p)
@@ -91,7 +93,7 @@ Parser.prototype.parseLives = function () {
 }
 
 Parser.prototype.fetchLives = function () {
-  const PRE_REGEX = /```.*?[\n\r]([\S\s]+?)[\n\r]```/igm
+  const PRE_REGEX = /```.*?[\n\r]([\S\s]+?)[\n\r]```/gim
   this.lives = []
   let live = null
   do {
@@ -110,7 +112,7 @@ Parser.prototype.fetchLives = function () {
 }
 
 Parser.prototype.fetchLiveTemplates = function () {
-  this.lives.forEach(live => {
+  this.lives.forEach((live) => {
     // greedy
     let template = /<template>([\s\S]*)<\/template>/.exec(live[1])
     if (template) {
@@ -121,7 +123,10 @@ Parser.prototype.fetchLiveTemplates = function () {
       template = live[1]
     }
     // Wrap it by options
-    if (this.options.afterProcessLiveTemplate && typeof this.options.afterProcessLiveTemplate === 'function') {
+    if (
+      this.options.afterProcessLiveTemplate &&
+      typeof this.options.afterProcessLiveTemplate === 'function'
+    ) {
       template = this.options.afterProcessLiveTemplate(template)
     }
     // mount it to the live obj
@@ -130,14 +135,14 @@ Parser.prototype.fetchLiveTemplates = function () {
 }
 
 Parser.prototype.fetchLiveScripts = function () {
-  this.lives.forEach(live => {
+  this.lives.forEach((live) => {
     // mount script inside live block
     live._script = /<script.*?>([\S\s]+?)<\/script>/.exec(live[1])
   })
 }
 
 Parser.prototype.fetchLiveStyles = function () {
-  this.lives.forEach(live => {
+  this.lives.forEach((live) => {
     // mount style inside live block
     live._style = /<style.*?>([\S\s]+?)<\/style>/.exec(live[1])
   })
@@ -151,7 +156,7 @@ Parser.prototype.assembleLives = function () {
   return {
     script: script,
     style: style,
-    template: template
+    template: template,
   }
 }
 
@@ -164,9 +169,11 @@ Parser.prototype.assembleLiveTemplates = function () {
     // Insert component before it's live block
     template =
       template.slice(0, live.index) +
-      NEW_LINE + NEW_LINE +
+      NEW_LINE +
+      NEW_LINE +
       _template +
-      NEW_LINE + NEW_LINE +
+      NEW_LINE +
+      NEW_LINE +
       template.slice(live.index)
   }
   return template
@@ -174,7 +181,7 @@ Parser.prototype.assembleLiveTemplates = function () {
 
 Parser.prototype.assembleLiveStyles = function () {
   let style = ''
-  this.lives.forEach(live => {
+  this.lives.forEach((live) => {
     style += live._style ? live._style[0] : ''
   })
   return style
@@ -197,7 +204,9 @@ Parser.prototype.assembleLiveScripts = function () {
       componentOptions = /export[\s]+?default[\s]*?{([\s\S]*)}/.exec(_script)
     }
     // Get "template": "......"
-    const _template = /^{([\s\S]*?)}$/.exec(JSON.stringify({ template: live._template }))
+    const _template = /^{([\s\S]*?)}$/.exec(
+      JSON.stringify({ template: live._template })
+    )
     if (_template) {
       componentOptions = componentOptions ? `,${componentOptions[1]}` : ''
       exports += `'${live._templateName}':{${_template[1]}${componentOptions}}`
@@ -206,7 +215,7 @@ Parser.prototype.assembleLiveScripts = function () {
     }
   })
   exports = `export default {components:{${exports}}}`
-  beforeExports.forEach(code => {
+  beforeExports.forEach((code) => {
     script += code + NEW_LINE
   })
   script += exports
@@ -217,7 +226,10 @@ Parser.prototype.assembleLiveScripts = function () {
 Parser.prototype.parse = function (source) {
   this.reset()
   this.source = source
-  if (this.options.preProcess && typeof this.options.preProcess === 'function') {
+  if (
+    this.options.preProcess &&
+    typeof this.options.preProcess === 'function'
+  ) {
     this.source = this.options.preProcess(this.source)
   }
   let result
@@ -226,11 +238,16 @@ Parser.prototype.parse = function (source) {
     result.script = `<script>${result.script || ''}</script>`
     result.style = `<style>${result.style || ''}</style>`
   } else {
-    result = this.options.live ? this.parseLives() : { template: this.source, script: '', style: '' }
+    result = this.options.live
+      ? this.parseLives()
+      : { template: this.source, script: '', style: '' }
   }
   const html = this.markdown.render(result.template)
   let vueFile = `<template><${this.options.wrapper}>${html}</${this.options.wrapper}></template>${result.style}${result.script}`
-  if (this.options.afterProcess && typeof this.options.afterProcess === 'function') {
+  if (
+    this.options.afterProcess &&
+    typeof this.options.afterProcess === 'function'
+  ) {
     vueFile = this.options.afterProcess(vueFile)
   }
   return vueFile
