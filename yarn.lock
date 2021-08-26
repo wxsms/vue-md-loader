@@ -3903,10 +3903,10 @@ map-age-cleaner@^0.1.3:
   dependencies:
     p-defer "^1.0.0"
 
-markdown-it-anchor@8.2.0:
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/markdown-it-anchor/-/markdown-it-anchor-8.2.0.tgz#86d12a1a4e7d6dca853e40d4a99775cc0f483ec6"
-  integrity sha512-bjNOCwKHIqTpDQnvzlsYll9Bht8IjFvaT7+VYtI5DDaD1xWw1rQZnrksUIqZGhkiiAoqXGOfxpmI5rrMAwvQXg==
+markdown-it-anchor@8.3.0:
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/markdown-it-anchor/-/markdown-it-anchor-8.3.0.tgz#9e1a71766f778c382e5b6d3808d8c4d3a3b4ae30"
+  integrity sha512-YXMxKqZDH/MM/sFBZe+JQ/XFa7i8mIWZYkcY7jCGmpNNqcj2iS9Wyxy5devkUoL14NJOUt5IleD99D8StAwkXg==
 
 markdown-it@^12.0.0:
   version "12.2.0"
