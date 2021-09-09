@@ -61,7 +61,7 @@
     "markdown-it-anchor": "8.3.0",
     "mocha": "9.1.1",
     "nyc": "15.1.0",
-    "prettier": "2.3.2",
+    "prettier": "2.4.0",
     "style-loader": "3.2.1",
     "vue": "2.6.14",
     "vue-loader": "15.9.8",
