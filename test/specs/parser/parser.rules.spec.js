@@ -13,12 +13,15 @@ describe('#rules', () => {
     const codes = $('pre, code')
     for (let i = 0; i < codes.length; i++) {
       const $code = $(codes[i])
+      // eslint-disable-next-line no-unused-expressions
       expect($code.attr('v-pre')).to.exist
     }
   })
 
   it('should be able to apply rule', () => {
-    const parser = new Parser({ rules: { table_open: () => '<table class="table">' } })
+    const parser = new Parser({
+      rules: { table_open: () => '<table class="table">' },
+    })
     const html = parser.parse(markdown)
     const $ = utils.loadHtml(html)
     expect($('table').length).to.equal($('.table').length)

@@ -5,24 +5,27 @@ const cheerio = require('cheerio').default
 const utils = require('../../utils')
 const Parser = require('../../../src/parser')
 
-const markdown = fs.readFileSync(path.resolve(__dirname, '../../../example/src/markdown.md'), 'UTF-8')
+const markdown = fs.readFileSync(
+  path.resolve(__dirname, '../../../example/src/markdown.md'),
+  'UTF-8'
+)
 const options = {
   afterProcessLiveTemplate: function (template) {
     return `<div class="live-wrapper">${template}</div>`
   },
   rules: {
     table_open: () => '<div class="table-responsive"><table class="table">',
-    table_close: () => '</table></div>'
+    table_close: () => '</table></div>',
   },
   plugins: [
     [
       require('markdown-it-anchor'),
       {
         permalink: true,
-        permalinkSymbol: '&#128279;'
-      }
-    ]
-  ]
+        permalinkSymbol: '&#128279;',
+      },
+    ],
+  ],
 }
 
 describe('#example', () => {
@@ -46,6 +49,7 @@ describe('#example', () => {
 
   it('should be ale to use `afterProcessLiveTemplate`', () => {
     const match = /<div class=[\\]?"live-wrapper[\\]?">[\s\S]*?<\/div>/
+    // eslint-disable-next-line no-unused-expressions
     expect(match.exec(html)).to.exist
   })
 
