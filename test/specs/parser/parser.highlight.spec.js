@@ -16,8 +16,11 @@ describe('#highlight', () => {
   it('should highlight with lang if exist', () => {
     const code = $('code')
     expect(code).to.have.lengthOf.least(3)
+    // eslint-disable-next-line no-unused-expressions
     expect($(code.get(0)).hasClass('language-html')).to.be.true
+    // eslint-disable-next-line no-unused-expressions
     expect($(code.get(1)).hasClass('language-javascript')).to.be.true
+    // eslint-disable-next-line no-unused-expressions
     expect($(code.get(2)).attr('class')).not.exist
   })
 })

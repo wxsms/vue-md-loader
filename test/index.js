@@ -1,5 +1,5 @@
 const utils = require('./utils')
 
-utils.getSpecFilesByDir(__dirname, './specs').forEach(file => {
+utils.getSpecFilesByDir(__dirname, './specs').forEach((file) => {
   require(file)
 })

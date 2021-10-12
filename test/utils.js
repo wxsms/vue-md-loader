@@ -5,7 +5,7 @@ const specRegex = /^.+\.spec\.js$/
 
 module.exports.getSpecFilesByDir = (dirname, dir) => {
   let arr = []
-  fs.readdirSync(path.join(dirname, dir)).forEach(file => {
+  fs.readdirSync(path.join(dirname, dir)).forEach((file) => {
     if (specRegex.test(file)) {
       arr.push(dir + '/' + file)
     }

@@ -8,7 +8,7 @@ const markdown = fs.readFileSync(path.resolve(__dirname, 'test.md'), 'UTF-8')
 describe('#plugins', () => {
   it('should be able to apply plugin', () => {
     const parser = new Parser({
-      plugins: [require('markdown-it-anchor')]
+      plugins: [require('markdown-it-anchor')],
     })
     const html = parser.parse(markdown)
     const $ = utils.loadHtml(html)
@@ -23,10 +23,10 @@ describe('#plugins', () => {
           require('markdown-it-anchor'),
           {
             permalink: true,
-            permalinkSymbol: '&#128279;'
-          }
-        ]
-      ]
+            permalinkSymbol: '&#128279;',
+          },
+        ],
+      ],
     })
     const html = parser.parse(markdown)
     const $ = utils.loadHtml(html)
@@ -38,7 +38,7 @@ describe('#plugins', () => {
 
   it('should be ok if plugin invalid', () => {
     const parser = new Parser({
-      plugins: [null, [null, null]]
+      plugins: [null, [null, null]],
     })
     const html = parser.parse(markdown)
     const $ = utils.loadHtml(html)

@@ -13,7 +13,7 @@
   "scripts": {
     "dev:example": "cd example && cross-env NODE_ENV=development webpack-dev-server --hot --port 8888 --static .",
     "build:example": "cd example && cross-env NODE_ENV=production webpack",
-    "lint": "eslint --ext .js,.vue --config .eslintrc.js index.js src example",
+    "lint": "eslint --ext .js,.vue .",
     "lint:fix": "npm run lint -- --fix",
     "test": "nyc mocha",
     "coveralls": "cat test/coverage/lcov.info | ./node_modules/.bin/coveralls"
@@ -50,10 +50,8 @@
     "css-loader": "6.4.0",
     "eslint": "8.0.0",
     "eslint-config-prettier": "8.3.0",
-    "eslint-loader": "4.0.2",
     "eslint-plugin-html": "6.2.0",
     "eslint-plugin-import": "2.24.2",
-    "eslint-plugin-mocha": "9.0.0",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-promise": "5.1.0",
