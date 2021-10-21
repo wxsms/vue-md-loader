@@ -5,6 +5,6 @@ module.exports = function (source) {
   if (this.cacheable) {
     this.cacheable()
   }
-  const options = loaderUtils.getOptions(this)
+  const options = this.getOptions()
   return new Parser(options).parse(source)
 }
