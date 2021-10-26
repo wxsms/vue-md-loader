@@ -1,14 +1,14 @@
 <template>
-  <Markdown/>
+  <Markdown />
 </template>
 
 <script>
-import Markdown from './markdown.md';
+import Markdown from './markdown.md'
 
 export default {
   name: 'App',
   components: {
-    Markdown
-  }
-};
+    Markdown,
+  },
+}
 </script>

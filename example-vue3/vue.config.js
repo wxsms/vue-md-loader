@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   runtimeCompiler: true,
-  chainWebpack: config => {
+  chainWebpack: (config) => {
     config.module
       .rule('markdown')
       .test(/\.md$/)
@@ -14,5 +14,5 @@ module.exports = {
       .use('vue-md-loader')
       .loader(path.resolve(__dirname, '../index.js'))
       .end()
-  }
+  },
 }
