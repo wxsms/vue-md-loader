@@ -14,10 +14,10 @@
   resolved "https://registry.nlark.com/@babel/compat-data/download/@babel/compat-data-7.15.0.tgz#2dbaf8b85334796cafbb0f5793a90a2fc010b176"
   integrity sha1-Lbr4uFM0eWyvuw9Xk6kKL8AQsXY=
 
-"@babel/core@^7.12.16":
+"@babel/core@7.15.8", "@babel/core@^7.12.16":
   version "7.15.8"
-  resolved "https://registry.npmmirror.com/@babel/core/download/@babel/core-7.15.8.tgz?cache=0&sync_timestamp=1633553719287&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40babel%2Fcore%2Fdownload%2F%40babel%2Fcore-7.15.8.tgz#195b9f2bffe995d2c6c159e72fe525b4114e8c10"
-  integrity sha1-GVufK//pldLGwVnnL+UltBFOjBA=
+  resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.15.8.tgz#195b9f2bffe995d2c6c159e72fe525b4114e8c10"
+  integrity sha512-3UG9dsxvYBMYwRv+gS41WKHno4K60/9GPy1CJaH6xy3Elq8CTtvtjT5R5jmNhXfCYLX2mTw+7/aq5ak/gOE0og==
   dependencies:
     "@babel/code-frame" "^7.15.8"
     "@babel/generator" "^7.15.8"
@@ -35,10 +35,10 @@
     semver "^6.3.0"
     source-map "^0.5.0"
 
-"@babel/eslint-parser@^7.12.16":
+"@babel/eslint-parser@7.15.8":
   version "7.15.8"
-  resolved "https://registry.npmmirror.com/@babel/eslint-parser/download/@babel/eslint-parser-7.15.8.tgz?cache=0&sync_timestamp=1633554384451&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40babel%2Feslint-parser%2Fdownload%2F%40babel%2Feslint-parser-7.15.8.tgz#8988660b59d739500b67d0585fd4daca218d9f11"
-  integrity sha1-iYhmC1nXOVALZ9BYX9TayiGNnxE=
+  resolved "https://registry.yarnpkg.com/@babel/eslint-parser/-/eslint-parser-7.15.8.tgz#8988660b59d739500b67d0585fd4daca218d9f11"
+  integrity sha512-fYP7QFngCvgxjUuw8O057SVH5jCXsbFFOoE77CFDcvzwBVgTOkMD/L4mIC5Ud1xf8chK/no2fRbSSn1wvNmKuQ==
   dependencies:
     eslint-scope "^5.1.1"
     eslint-visitor-keys "^2.1.0"
@@ -1280,10 +1280,10 @@
   resolved "https://registry.npmmirror.com/@vue/cli-overlay/download/@vue/cli-overlay-5.0.0-beta.6.tgz?cache=0&sync_timestamp=1634195756779&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40vue%2Fcli-overlay%2Fdownload%2F%40vue%2Fcli-overlay-5.0.0-beta.6.tgz#13ce603060c448b8d84642e9b2f85aacc94fbbc1"
   integrity sha1-E85gMGDESLjYRkLpsvharMlPu8E=
 
-"@vue/cli-plugin-babel@~5.0.0-beta.6":
+"@vue/cli-plugin-babel@5.0.0-beta.6":
   version "5.0.0-beta.6"
-  resolved "https://registry.npmmirror.com/@vue/cli-plugin-babel/download/@vue/cli-plugin-babel-5.0.0-beta.6.tgz#967e9e54e5f8cec4af91df63d7da459c788fde48"
-  integrity sha1-ln6eVOX4zsSvkd9j19pFnHiP3kg=
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-babel/-/cli-plugin-babel-5.0.0-beta.6.tgz#967e9e54e5f8cec4af91df63d7da459c788fde48"
+  integrity sha512-IrQ/cuEMjYBUs9ujNJUwj6tkBCTwHb9ZteLayIwmZku92aTwVK7PuW76HnW8T1un/y3NvN545cpZ9vyickf9qQ==
   dependencies:
     "@babel/core" "^7.12.16"
     "@vue/babel-preset-app" "^5.0.0-beta.6"
@@ -1292,10 +1292,10 @@
     thread-loader "^3.0.0"
     webpack "^5.22.0"
 
-"@vue/cli-plugin-eslint@~5.0.0-beta.6":
+"@vue/cli-plugin-eslint@5.0.0-beta.6":
   version "5.0.0-beta.6"
-  resolved "https://registry.npmmirror.com/@vue/cli-plugin-eslint/download/@vue/cli-plugin-eslint-5.0.0-beta.6.tgz#b1eb0e1f3d01b3e219a7a77d387843b572efad13"
-  integrity sha1-sesOHz0Bs+IZp6d9OHhDtXLvrRM=
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-eslint/-/cli-plugin-eslint-5.0.0-beta.6.tgz#b1eb0e1f3d01b3e219a7a77d387843b572efad13"
+  integrity sha512-kCoz/1UvN3yGNhHysIY3v2cxJq4JQuTLi8ftezrkm53jykKtZo9pGhvs77W4q89i5thZ08jj408nQUCwdq5KQw==
   dependencies:
     "@vue/cli-shared-utils" "^5.0.0-beta.6"
     eslint-webpack-plugin "2.4.3"
@@ -1316,10 +1316,10 @@
   resolved "https://registry.npmmirror.com/@vue/cli-plugin-vuex/download/@vue/cli-plugin-vuex-5.0.0-beta.6.tgz?cache=0&sync_timestamp=1634195758860&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40vue%2Fcli-plugin-vuex%2Fdownload%2F%40vue%2Fcli-plugin-vuex-5.0.0-beta.6.tgz#31e79bb285c6d04ecc75f1340896b1e220d13693"
   integrity sha1-MeebsoXG0E7MdfE0CJax4iDRNpM=
 
-"@vue/cli-service@~5.0.0-beta.6":
+"@vue/cli-service@5.0.0-beta.6":
   version "5.0.0-beta.6"
-  resolved "https://registry.npmmirror.com/@vue/cli-service/download/@vue/cli-service-5.0.0-beta.6.tgz?cache=0&sync_timestamp=1634195857791&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40vue%2Fcli-service%2Fdownload%2F%40vue%2Fcli-service-5.0.0-beta.6.tgz#14670e7e298a5c3502729a17c761067b9950bbe3"
-  integrity sha1-FGcOfimKXDUCcpoXx2EGe5lQu+M=
+  resolved "https://registry.yarnpkg.com/@vue/cli-service/-/cli-service-5.0.0-beta.6.tgz#14670e7e298a5c3502729a17c761067b9950bbe3"
+  integrity sha512-9EUs9kjJ4Tob8uWHoUIc2OgSpwWfTirIiY5kthJ++SlxlBiVjqkrxxVnWh2tB21O77G4Cz3DqNRxL+GYtZ0dMw==
   dependencies:
     "@babel/helper-compilation-targets" "^7.12.16"
     "@soda/friendly-errors-webpack-plugin" "^1.8.0"
@@ -1417,7 +1417,7 @@
     "@vue/compiler-core" "3.2.20"
     "@vue/shared" "3.2.20"
 
-"@vue/compiler-sfc@3.2.20", "@vue/compiler-sfc@^3.2.6":
+"@vue/compiler-sfc@3.2.20":
   version "3.2.20"
   resolved "https://registry.npmmirror.com/@vue/compiler-sfc/download/@vue/compiler-sfc-3.2.20.tgz?cache=0&sync_timestamp=1633712700556&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40vue%2Fcompiler-sfc%2Fdownload%2F%40vue%2Fcompiler-sfc-3.2.20.tgz#2d7668e76f066c566dd7c09c15c9acce4e876e0a"
   integrity sha1-LXZo528GbFZt18CcFcmszk6Hbgo=
@@ -2324,10 +2324,10 @@ core-js-compat@^3.16.0, core-js-compat@^3.16.2, core-js-compat@^3.8.3:
     browserslist "^4.17.5"
     semver "7.0.0"
 
-core-js@^3.8.3:
+core-js@3.19.0, core-js@^3.8.3:
   version "3.19.0"
-  resolved "https://registry.npmmirror.com/core-js/download/core-js-3.19.0.tgz?cache=0&sync_timestamp=1635142915013&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fcore-js%2Fdownload%2Fcore-js-3.19.0.tgz#9e40098a9bc326c7e81b486abbd5e12b9d275176"
-  integrity sha1-nkAJipvDJsfoG0hqu9XhK50nUXY=
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.19.0.tgz#9e40098a9bc326c7e81b486abbd5e12b9d275176"
+  integrity sha512-L1TpFRWXZ76vH1yLM+z6KssLZrP8Z6GxxW4auoCj+XiViOzNPJCAuTIkn03BGdFe6Z5clX5t64wRIRypsZQrUg==
 
 core-util-is@~1.0.0:
   version "1.0.3"
@@ -3216,15 +3216,15 @@ he@^1.2.0:
   resolved "https://registry.nlark.com/he/download/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha1-hK5l+n6vsWX922FWauFLrwVmTw8=
 
+highlight.js@11.3.1:
+  version "11.3.1"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-11.3.1.tgz#813078ef3aa519c61700f84fe9047231c5dc3291"
+  integrity sha512-PUhCRnPjLtiLHZAQ5A/Dt5F8cWZeMyj9KRsACsWT+OD6OP0x6dp5OmT5jdx0JgEyPxPZZIPQpRN2TciUT7occw==
+
 highlight.js@^10.7.1:
   version "10.7.3"
   resolved "https://registry.npmmirror.com/highlight.js/download/highlight.js-10.7.3.tgz#697272e3991356e40c3cac566a74eef681756531"
   integrity sha1-aXJy45kTVuQMPKxWanTu9oF1ZTE=
-
-highlight.js@^11.3.1:
-  version "11.3.1"
-  resolved "https://registry.npmmirror.com/highlight.js/download/highlight.js-11.3.1.tgz#813078ef3aa519c61700f84fe9047231c5dc3291"
-  integrity sha1-gTB47zqlGcYXAPhP6QRyMcXcMpE=
 
 hosted-git-info@^2.1.4:
   version "2.8.9"
@@ -5693,10 +5693,10 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.npm.taobao.org/vue-template-es2015-compiler/download/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha1-HuO8mhbsv1EYvjNLsV+cRvgvWCU=
 
-vue@^3.2.6:
+vue@3.2.20:
   version "3.2.20"
-  resolved "https://registry.npmmirror.com/vue/download/vue-3.2.20.tgz?cache=0&sync_timestamp=1633712555314&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fvue%2Fdownload%2Fvue-3.2.20.tgz#940f8aa8bf3e3be78243ca582bad41fcd45ae3e6"
-  integrity sha1-lA+KqL8+O+eCQ8pYK61B/NRa4+Y=
+  resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.20.tgz#940f8aa8bf3e3be78243ca582bad41fcd45ae3e6"
+  integrity sha512-81JjEP4OGk9oO8+CU0h2nFPGgJBm9mNa3kdCX2k6FuRdrWrC+CNe+tOnuIeTg8EWwQuI+wwdra5Q7vSzp7p4Iw==
   dependencies:
     "@vue/compiler-dom" "3.2.20"
     "@vue/compiler-sfc" "3.2.20"
