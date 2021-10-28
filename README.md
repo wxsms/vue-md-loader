@@ -13,6 +13,7 @@ Webpack loader for converting Markdown files to ALIVE Vue components.
 * Configurable **[Markdown-It](https://github.com/markdown-it/markdown-it)** parser.
 * Built-in **syntax highlighter** with **[highlightjs](https://highlightjs.org/)**.
 * **Live demo** support. Extremely useful for document examples.
+* Vue 3 & vue-cli usage support.
 * Hot reload.
 
 ## Example
