@@ -1372,15 +1372,10 @@ acorn-import-assertions@^1.7.6:
   resolved "https://registry.yarnpkg.com/acorn-import-assertions/-/acorn-import-assertions-1.7.6.tgz#580e3ffcae6770eebeec76c3b9723201e9d01f78"
   integrity sha512-FlVvVFA1TX6l3lp8VjDnYYq7R1nyW6x3svAt4nDgrWQ9SBaSh9CnbwgSUTasgfNfOG5HlM1ehugCvM+hjo56LA==
 
-acorn-jsx@^5.2.0, acorn-jsx@^5.3.1:
+acorn-jsx@^5.3.1:
   version "5.3.2"
   resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-5.3.2.tgz#7ed5bb55908b3b2f1bc55c6af1653bada7f07937"
   integrity sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==
-
-acorn@^7.1.1:
-  version "7.4.1"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.4.1.tgz#feaed255973d2e77555b83dbc08851a6c63520fa"
-  integrity sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==
 
 acorn@^8.4.1:
   version "8.4.1"
@@ -2711,17 +2706,17 @@ eslint-plugin-promise@5.1.1:
   resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-5.1.1.tgz#9674d11c056d1bafac38e4a3a9060be740988d90"
   integrity sha512-XgdcdyNzHfmlQyweOPTxmc7pIsS6dE4MvwhXWMQ2Dxs1XAL2GJDilUsjWen6TWik0aSI+zD/PqocZBblcm9rdA==
 
-eslint-plugin-vue@7.20.0:
-  version "7.20.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-7.20.0.tgz#98c21885a6bfdf0713c3a92957a5afeaaeed9253"
-  integrity sha512-oVNDqzBC9h3GO+NTgWeLMhhGigy6/bQaQbHS+0z7C4YEu/qK/yxHvca/2PTZtGNPsCrHwOTgKMrwu02A9iPBmw==
+eslint-plugin-vue@8.0.3:
+  version "8.0.3"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-8.0.3.tgz#791cc4543940319e612ea61a1d779e8c87cf749a"
+  integrity sha512-Rlhhy5ltzde0sRwSkqHuNePTXLMMaJ5+qsQubM4RYloYsQ8cXlnJT5MDaCzSirkGADipOHtmQXIbbPFAzUrADg==
   dependencies:
-    eslint-utils "^2.1.0"
+    eslint-utils "^3.0.0"
     natural-compare "^1.4.0"
-    semver "^6.3.0"
-    vue-eslint-parser "^7.10.0"
+    semver "^7.3.5"
+    vue-eslint-parser "^8.0.1"
 
-eslint-scope@5.1.1, eslint-scope@^5.1.1:
+eslint-scope@5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-5.1.1.tgz#e786e59a66cb92b3f6c1fb0d508aab174848f48c"
   integrity sha512-2NxwbF/hZ0KpepYN0cNbo+FN6XoK7GaHlQhgx/hIZl6Va0bF45RQOOwhLIy8lQDbuCiadSLCBnH2CFYquit5bw==
@@ -2737,7 +2732,7 @@ eslint-scope@^6.0.0:
     esrecurse "^4.3.0"
     estraverse "^5.2.0"
 
-eslint-utils@^2.0.0, eslint-utils@^2.1.0:
+eslint-utils@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/eslint-utils/-/eslint-utils-2.1.0.tgz#d2de5e03424e707dc10c74068ddedae708741b27"
   integrity sha512-w94dQYoauyvlDc43XnGB8lU3Zt713vNChgt4EWwhXAP2XkBvndfxF0AgIqKOOasjPIPzj9JqgwkwbCYD0/V3Zg==
@@ -2809,15 +2804,6 @@ eslint@8.1.0:
     strip-json-comments "^3.1.0"
     text-table "^0.2.0"
     v8-compile-cache "^2.0.3"
-
-espree@^6.2.1:
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/espree/-/espree-6.2.1.tgz#77fc72e1fd744a2052c20f38a5b575832e82734a"
-  integrity sha512-ysCxRQY3WaXJz9tdbWOwuWr5Y/XrPTGX9Kiz3yoUXwW0VZ4w30HTkQLaGx/+ttFjF8i+ACbArnB4ce68a9m5hw==
-  dependencies:
-    acorn "^7.1.1"
-    acorn-jsx "^5.2.0"
-    eslint-visitor-keys "^1.1.0"
 
 espree@^9.0.0:
   version "9.0.0"
@@ -5691,18 +5677,18 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-vue-eslint-parser@^7.10.0:
-  version "7.10.0"
-  resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-7.10.0.tgz#ea4e4b10fd10aa35c8a79ac783488d8abcd29be8"
-  integrity sha512-7tc/ewS9Vq9Bn741pvpg8op2fWJPH3k32aL+jcIcWGCTzh/zXSdh7pZ5FV3W2aJancP9+ftPAv292zY5T5IPCg==
+vue-eslint-parser@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-8.0.1.tgz#25e08b20a414551531f3e19f999902e1ecf45f13"
+  integrity sha512-lhWjDXJhe3UZw2uu3ztX51SJAPGPey1Tff2RK3TyZURwbuI4vximQLzz4nQfCv8CZq4xx7uIiogHMMoSJPr33A==
   dependencies:
-    debug "^4.1.1"
-    eslint-scope "^5.1.1"
-    eslint-visitor-keys "^1.1.0"
-    espree "^6.2.1"
+    debug "^4.3.2"
+    eslint-scope "^6.0.0"
+    eslint-visitor-keys "^3.0.0"
+    espree "^9.0.0"
     esquery "^1.4.0"
     lodash "^4.17.21"
-    semver "^6.3.0"
+    semver "^7.3.5"
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
