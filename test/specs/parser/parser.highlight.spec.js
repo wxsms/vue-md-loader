@@ -8,7 +8,7 @@ const markdown = fs.readFileSync(path.resolve(__dirname, 'test.md'), 'UTF-8')
 
 describe('#highlight', () => {
   let parser, html, $
-  before(() => {
+  beforeEach(() => {
     parser = new Parser()
     html = parser.parse(markdown)
     $ = utils.loadHtml(html)

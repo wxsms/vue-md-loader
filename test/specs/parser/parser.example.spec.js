@@ -4,6 +4,7 @@ const expect = require('chai').expect
 const cheerio = require('cheerio').default
 const utils = require('../../utils')
 const Parser = require('../../../src/parser')
+const anchor = require('markdown-it-anchor')
 
 const markdown = fs.readFileSync(
   path.resolve(__dirname, '../../../example/src/markdown.md'),
@@ -19,10 +20,11 @@ const options = {
   },
   plugins: [
     [
-      require('markdown-it-anchor'),
+      anchor,
       {
-        permalink: true,
-        permalinkSymbol: '&#128279;',
+        permalink: anchor.permalink.headerLink({
+          symbol: '&#128279;',
+        }),
       },
     ],
   ],
@@ -31,7 +33,7 @@ const options = {
 describe('#example', () => {
   let html, parser, $
 
-  before(() => {
+  beforeEach(() => {
     parser = new Parser(options)
     html = parser.parse(markdown)
     $ = utils.loadHtml(html)

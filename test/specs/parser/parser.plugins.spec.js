@@ -3,12 +3,13 @@ const path = require('path')
 const expect = require('chai').expect
 const Parser = require('../../../src/parser')
 const utils = require('../../utils')
+const anchor = require('markdown-it-anchor')
 const markdown = fs.readFileSync(path.resolve(__dirname, 'test.md'), 'UTF-8')
 
 describe('#plugins', () => {
   it('should be able to apply plugin', () => {
     const parser = new Parser({
-      plugins: [require('markdown-it-anchor')],
+      plugins: [anchor],
     })
     const html = parser.parse(markdown)
     const $ = utils.loadHtml(html)
@@ -20,10 +21,11 @@ describe('#plugins', () => {
     const parser = new Parser({
       plugins: [
         [
-          require('markdown-it-anchor'),
+          anchor,
           {
-            permalink: true,
-            permalinkSymbol: '&#128279;',
+            permalink: anchor.permalink.headerLink({
+              symbol: '&#128279;',
+            }),
           },
         ],
       ],
