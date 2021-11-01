@@ -35,6 +35,12 @@
     "url": "https://github.com/wxsms/vue-md-loader/issues"
   },
   "homepage": "https://github.com/wxsms/vue-md-loader#readme",
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*",
+      "!tests/**/*"
+    ]
+  },
   "devDependencies": {
     "@babel/preset-env": "7.16.0",
     "babel-core": "6.26.3",
