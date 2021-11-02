@@ -221,7 +221,8 @@ preProcess: function(source) {
 
 ### process
 
-Function. For example
+Function. For example:
+
 ```javascript
 // This is useful when used with front-matter-loader to set the page title in nuxt projects
 process: function(source){

@@ -1,7 +1,6 @@
 const path = require('path')
 const fs = require('fs')
-const cheerio = require('cheerio').default
-const utils = require('./utils')
+const cheerio = require('cheerio')
 const Parser = require('../src/parser')
 const anchor = require('markdown-it-anchor')
 
@@ -9,6 +8,7 @@ const markdown = fs.readFileSync(
   path.resolve(__dirname, '../example/src/markdown.md'),
   'UTF-8'
 )
+
 const options = {
   afterProcessLiveTemplate: function (template) {
     return `<div class="live-wrapper">${template}</div>`
@@ -35,17 +35,17 @@ describe('#example', () => {
   beforeEach(() => {
     parser = new Parser(options)
     html = parser.parse(markdown)
-    $ = utils.loadHtml(html)
+    $ = cheerio.load(html)
   })
 
   it('should assemble correct script', () => {
     // 1 script tag at the end.
-    expect(cheerio('script', html).length).toEqual(1)
+    expect($('script').length).toEqual(1)
   })
 
   it('should assemble correct styles', () => {
     // 1 script tag at the end.
-    expect(cheerio('style', html).length).toBeGreaterThan(1)
+    expect($('style').length).toBeGreaterThan(1)
   })
 
   it('should be ale to use `afterProcessLiveTemplate`', () => {

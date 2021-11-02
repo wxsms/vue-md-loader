@@ -123,10 +123,7 @@ Parser.prototype.fetchLiveTemplates = function () {
       template = live[1]
     }
     // Wrap it by options
-    if (
-      this.options.afterProcessLiveTemplate &&
-      typeof this.options.afterProcessLiveTemplate === 'function'
-    ) {
+    if (typeof this.options.afterProcessLiveTemplate === 'function') {
       template = this.options.afterProcessLiveTemplate(template)
     }
     // mount it to the live obj
@@ -226,14 +223,11 @@ Parser.prototype.assembleLiveScripts = function () {
 Parser.prototype.parse = function (source) {
   this.reset()
   this.source = source
-  if (
-    this.options.preProcess &&
-    typeof this.options.preProcess === 'function'
-  ) {
+  if (typeof this.options.preProcess === 'function') {
     this.source = this.options.preProcess(this.source)
   }
   let result
-  if (this.options.process && typeof this.options.process === 'function') {
+  if (typeof this.options.process === 'function') {
     result = this.options.process(this.source)
     result.script = `<script>${result.script || ''}</script>`
     result.style = `<style>${result.style || ''}</style>`
@@ -244,10 +238,7 @@ Parser.prototype.parse = function (source) {
   }
   const html = this.markdown.render(result.template)
   let vueFile = `<template><${this.options.wrapper}>${html}</${this.options.wrapper}></template>${result.style}${result.script}`
-  if (
-    this.options.afterProcess &&
-    typeof this.options.afterProcess === 'function'
-  ) {
+  if (typeof this.options.afterProcess === 'function') {
     vueFile = this.options.afterProcess(vueFile)
   }
   return vueFile
