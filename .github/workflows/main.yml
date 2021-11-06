@@ -8,13 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: yarn --frozen-lockfile
+      - run: pnpm --frozen-lockfile
       - run: npm run lint
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: yarn --frozen-lockfile
+      - run: pnpm --frozen-lockfile
       - run: npm run test
       - name: Coveralls
         uses: coverallsapp/github-action@master
@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: yarn --frozen-lockfile
+      - run: pnpm --frozen-lockfile
       - run: npm run build:example
       - name: GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2.5.0
