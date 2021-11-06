@@ -11,9 +11,9 @@
     "dev:example": "cd example && cross-env NODE_ENV=development webpack-dev-server --hot --port 8888 --static .",
     "build:example": "cd example && cross-env NODE_ENV=production webpack",
     "lint": "eslint --ext .js,.vue .",
-    "lint:fix": "yarn lint --fix",
+    "lint:fix": "pnpm lint -- --fix",
     "test": "jest --coverage",
-    "test:watch": "yarn test --watch"
+    "test:watch": "pnpm test -- --watch"
   },
   "repository": {
     "type": "git",
