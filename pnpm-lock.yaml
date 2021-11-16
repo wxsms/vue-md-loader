@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@babel/preset-env': 7.16.0
+  '@babel/preset-env': 7.16.4
   babel-core: 6.26.3
   babel-eslint: 10.1.0
   babel-loader: 8.2.3
@@ -34,7 +34,7 @@ dependencies:
   markdown-it: 12.2.0
 
 devDependencies:
-  '@babel/preset-env': 7.16.0
+  '@babel/preset-env': 7.16.4
   babel-core: mirrors.tencent.com/babel-core/6.26.3
   babel-eslint: mirrors.tencent.com/babel-eslint/10.1.0_eslint@8.2.0
   babel-loader: mirrors.tencent.com/babel-loader/8.2.3_webpack@5.64.1
@@ -69,8 +69,8 @@ packages:
       '@babel/highlight': 7.16.0
     dev: true
 
-  /@babel/compat-data/7.16.0:
-    resolution: {integrity: sha512-DGjt2QZse5SGd9nfOSqO4WLJ8NN/oHkijbXbPrxuoJO3oIPJL3TciZs9FX+cOHNiY9E9l0opL8g7BmLe3T+9ew==}
+  /@babel/compat-data/7.16.4:
+    resolution: {integrity: sha512-1o/jo7D+kC9ZjHX5v+EHrdjl3PhxMrLSOTGsOdHJ+KL8HCaEK6ehrVL2RS6oHDZp+L7xLirLrPmQtEng769J/Q==}
     engines: {node: '>=6.9.0'}
     dev: true
 
@@ -80,7 +80,7 @@ packages:
     dependencies:
       '@babel/code-frame': 7.16.0
       '@babel/generator': 7.16.0
-      '@babel/helper-compilation-targets': 7.16.0_@babel+core@7.16.0
+      '@babel/helper-compilation-targets': 7.16.3_@babel+core@7.16.0
       '@babel/helper-module-transforms': 7.16.0
       '@babel/helpers': 7.16.0
       '@babel/parser': 7.16.2
@@ -102,7 +102,7 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/types': 7.16.0
-      jsesc: mirrors.tencent.com/jsesc/2.5.2
+      jsesc: 2.5.2
       source-map: 0.5.7
     dev: true
 
@@ -121,25 +121,25 @@ packages:
       '@babel/types': 7.16.0
     dev: true
 
-  /@babel/helper-compilation-targets/7.16.0:
-    resolution: {integrity: sha512-S7iaOT1SYlqK0sQaCi21RX4+13hmdmnxIEAnQUB/eh7GeAnRjOUgTYpLkUOiRXzD+yog1JxP0qyAQZ7ZxVxLVg==}
+  /@babel/helper-compilation-targets/7.16.3:
+    resolution: {integrity: sha512-vKsoSQAyBmxS35JUOOt+07cLc6Nk/2ljLIHwmq2/NM6hdioUaqEXq/S+nXvbvXbZkNDlWOymPanJGOc4CBjSJA==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0
     dependencies:
-      '@babel/compat-data': 7.16.0
+      '@babel/compat-data': 7.16.4
       '@babel/helper-validator-option': 7.14.5
       browserslist: 4.17.6
       semver: 6.3.0
     dev: true
 
-  /@babel/helper-compilation-targets/7.16.0_@babel+core@7.16.0:
-    resolution: {integrity: sha512-S7iaOT1SYlqK0sQaCi21RX4+13hmdmnxIEAnQUB/eh7GeAnRjOUgTYpLkUOiRXzD+yog1JxP0qyAQZ7ZxVxLVg==}
+  /@babel/helper-compilation-targets/7.16.3_@babel+core@7.16.0:
+    resolution: {integrity: sha512-vKsoSQAyBmxS35JUOOt+07cLc6Nk/2ljLIHwmq2/NM6hdioUaqEXq/S+nXvbvXbZkNDlWOymPanJGOc4CBjSJA==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0
     dependencies:
-      '@babel/compat-data': 7.16.0
+      '@babel/compat-data': 7.16.4
       '@babel/core': 7.16.0
       '@babel/helper-validator-option': 7.14.5
       browserslist: 4.17.6
@@ -169,15 +169,15 @@ packages:
       '@babel/core': ^7.0.0
     dependencies:
       '@babel/helper-annotate-as-pure': 7.16.0
-      regexpu-core: mirrors.tencent.com/regexpu-core/4.8.0
+      regexpu-core: 4.8.0
     dev: true
 
-  /@babel/helper-define-polyfill-provider/0.2.4:
-    resolution: {integrity: sha512-OrpPZ97s+aPi6h2n1OXzdhVis1SGSsMU2aMHgLcOKfsp4/v1NWpx3CWT3lBj5eeBq9cDkPkh+YCfdF7O12uNDQ==}
+  /@babel/helper-define-polyfill-provider/0.3.0:
+    resolution: {integrity: sha512-7hfT8lUljl/tM3h+izTX/pO3W3frz2ok6Pk+gzys8iJqDfZrZy2pXjRTZAvG2YmfHun1X4q8/UZRLatMfqc5Tg==}
     peerDependencies:
       '@babel/core': ^7.4.0-0
     dependencies:
-      '@babel/helper-compilation-targets': 7.16.0
+      '@babel/helper-compilation-targets': 7.16.3
       '@babel/helper-module-imports': 7.16.0
       '@babel/helper-plugin-utils': 7.14.5
       '@babel/traverse': 7.16.0
@@ -261,8 +261,8 @@ packages:
     engines: {node: '>=6.9.0'}
     dev: true
 
-  /@babel/helper-remap-async-to-generator/7.16.0:
-    resolution: {integrity: sha512-MLM1IOMe9aQBqMWxcRw8dcb9jlM86NIw7KA0Wri91Xkfied+dE0QuBFSBjMNvqzmS0OSIDsMNC24dBEkPUi7ew==}
+  /@babel/helper-remap-async-to-generator/7.16.4:
+    resolution: {integrity: sha512-vGERmmhR+s7eH5Y/cp8PCVzj4XEjerq8jooMfxFdA5xVtAk9Sh4AQsrWgiErUEBjtGrBtOFKDUcWQFW4/dFwMA==}
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/helper-annotate-as-pure': 7.16.0
@@ -373,14 +373,14 @@ packages:
       '@babel/plugin-proposal-optional-chaining': 7.16.0
     dev: true
 
-  /@babel/plugin-proposal-async-generator-functions/7.16.0:
-    resolution: {integrity: sha512-nyYmIo7ZqKsY6P4lnVmBlxp9B3a96CscbLotlsNuktMHahkDwoPYEjXrZHU0Tj844Z9f1IthVxQln57mhkcExw==}
+  /@babel/plugin-proposal-async-generator-functions/7.16.4:
+    resolution: {integrity: sha512-/CUekqaAaZCQHleSK/9HajvcD/zdnJiKRiuUFq8ITE+0HsPzquf53cpFiqAwl/UfmJbR6n5uGPQSPdrmKOvHHg==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/helper-plugin-utils': 7.14.5
-      '@babel/helper-remap-async-to-generator': 7.16.0
+      '@babel/helper-remap-async-to-generator': 7.16.4
       '@babel/plugin-syntax-async-generators': 7.8.4
     transitivePeerDependencies:
       - supports-color
@@ -477,11 +477,11 @@ packages:
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
-      '@babel/compat-data': 7.16.0
-      '@babel/helper-compilation-targets': 7.16.0
+      '@babel/compat-data': 7.16.4
+      '@babel/helper-compilation-targets': 7.16.3
       '@babel/helper-plugin-utils': 7.14.5
       '@babel/plugin-syntax-object-rest-spread': 7.8.3
-      '@babel/plugin-transform-parameters': 7.16.0
+      '@babel/plugin-transform-parameters': 7.16.3
     dev: true
 
   /@babel/plugin-proposal-optional-catch-binding/7.16.0:
@@ -792,7 +792,7 @@ packages:
     dependencies:
       '@babel/helper-module-imports': 7.16.0
       '@babel/helper-plugin-utils': 7.14.5
-      '@babel/helper-remap-async-to-generator': 7.16.0
+      '@babel/helper-remap-async-to-generator': 7.16.4
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -827,7 +827,7 @@ packages:
       '@babel/helper-plugin-utils': 7.14.5
       '@babel/helper-replace-supers': 7.16.0
       '@babel/helper-split-export-declaration': 7.16.0
-      globals: mirrors.tencent.com/globals/11.12.0
+      globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1000,8 +1000,8 @@ packages:
       - supports-color
     dev: true
 
-  /@babel/plugin-transform-parameters/7.16.0:
-    resolution: {integrity: sha512-XgnQEm1CevKROPx+udOi/8f8TiGhrUWiHiaUCIp47tE0tpFDjzXNTZc9E5CmCwxNjXTWEVqvRfWZYOTFvMa/ZQ==}
+  /@babel/plugin-transform-parameters/7.16.3:
+    resolution: {integrity: sha512-3MaDpJrOXT1MZ/WCmkOFo7EtmVVC8H4EUZVrHvFOsmwkk4lOjQj8rzv8JKUZV4YoQKeoIgk07GO+acPU9IMu/w==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -1024,7 +1024,7 @@ packages:
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
-      regenerator-transform: mirrors.tencent.com/regenerator-transform/0.14.5
+      regenerator-transform: 0.14.5
     dev: true
 
   /@babel/plugin-transform-reserved-words/7.16.0:
@@ -1101,19 +1101,19 @@ packages:
       '@babel/helper-plugin-utils': 7.14.5
     dev: true
 
-  /@babel/preset-env/7.16.0:
-    resolution: {integrity: sha512-cdTu/W0IrviamtnZiTfixPfIncr2M1VqRrkjzZWlr1B4TVYimCFK5jkyOdP4qw2MrlKHi+b3ORj6x8GoCew8Dg==}
+  /@babel/preset-env/7.16.4:
+    resolution: {integrity: sha512-v0QtNd81v/xKj4gNKeuAerQ/azeNn/G1B1qMLeXOcV8+4TWlD2j3NV1u8q29SDFBXx/NBq5kyEAO+0mpRgacjA==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
-      '@babel/compat-data': 7.16.0
-      '@babel/helper-compilation-targets': 7.16.0
+      '@babel/compat-data': 7.16.4
+      '@babel/helper-compilation-targets': 7.16.3
       '@babel/helper-plugin-utils': 7.14.5
       '@babel/helper-validator-option': 7.14.5
       '@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression': 7.16.2
       '@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining': 7.16.0
-      '@babel/plugin-proposal-async-generator-functions': 7.16.0
+      '@babel/plugin-proposal-async-generator-functions': 7.16.4
       '@babel/plugin-proposal-class-properties': 7.16.0
       '@babel/plugin-proposal-class-static-block': 7.16.0
       '@babel/plugin-proposal-dynamic-import': 7.16.0
@@ -1163,7 +1163,7 @@ packages:
       '@babel/plugin-transform-named-capturing-groups-regex': 7.16.0
       '@babel/plugin-transform-new-target': 7.16.0
       '@babel/plugin-transform-object-super': 7.16.0
-      '@babel/plugin-transform-parameters': 7.16.0
+      '@babel/plugin-transform-parameters': 7.16.3
       '@babel/plugin-transform-property-literals': 7.16.0
       '@babel/plugin-transform-regenerator': 7.16.0
       '@babel/plugin-transform-reserved-words': 7.16.0
@@ -1176,9 +1176,9 @@ packages:
       '@babel/plugin-transform-unicode-regex': 7.16.0
       '@babel/preset-modules': 0.1.5
       '@babel/types': 7.16.0
-      babel-plugin-polyfill-corejs2: 0.2.3
-      babel-plugin-polyfill-corejs3: 0.3.0
-      babel-plugin-polyfill-regenerator: 0.2.3
+      babel-plugin-polyfill-corejs2: 0.3.0
+      babel-plugin-polyfill-corejs3: 0.4.0
+      babel-plugin-polyfill-regenerator: 0.3.0
       core-js-compat: 3.19.1
       semver: 6.3.0
     transitivePeerDependencies:
@@ -1194,7 +1194,7 @@ packages:
       '@babel/plugin-proposal-unicode-property-regex': 7.16.0
       '@babel/plugin-transform-dotall-regex': 7.16.0
       '@babel/types': 7.16.0
-      esutils: mirrors.tencent.com/esutils/2.0.3
+      esutils: 2.0.3
     dev: true
 
   /@babel/runtime/7.16.0:
@@ -1225,7 +1225,7 @@ packages:
       '@babel/parser': 7.16.2
       '@babel/types': 7.16.0
       debug: 4.3.2
-      globals: mirrors.tencent.com/globals/11.12.0
+      globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1254,7 +1254,7 @@ packages:
       ajv: 6.12.6
       debug: 4.3.2
       espree: 9.0.0
-      globals: mirrors.tencent.com/globals/13.12.0
+      globals: 13.12.0
       ignore: 4.0.6
       import-fresh: 3.3.0
       js-yaml: 4.1.0
@@ -2038,35 +2038,35 @@ packages:
       '@types/babel__traverse': 7.14.2
     dev: true
 
-  /babel-plugin-polyfill-corejs2/0.2.3:
-    resolution: {integrity: sha512-NDZ0auNRzmAfE1oDDPW2JhzIMXUk+FFe2ICejmt5T4ocKgiQx3e0VCRx9NCAidcMtL2RUZaWtXnmjTCkx0tcbA==}
+  /babel-plugin-polyfill-corejs2/0.3.0:
+    resolution: {integrity: sha512-wMDoBJ6uG4u4PNFh72Ty6t3EgfA91puCuAwKIazbQlci+ENb/UU9A3xG5lutjUIiXCIn1CY5L15r9LimiJyrSA==}
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
-      '@babel/compat-data': 7.16.0
-      '@babel/helper-define-polyfill-provider': 0.2.4
+      '@babel/compat-data': 7.16.4
+      '@babel/helper-define-polyfill-provider': 0.3.0
       semver: 6.3.0
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /babel-plugin-polyfill-corejs3/0.3.0:
-    resolution: {integrity: sha512-JLwi9vloVdXLjzACL80j24bG6/T1gYxwowG44dg6HN/7aTPdyPbJJidf6ajoA3RPHHtW0j9KMrSOLpIZpAnPpg==}
+  /babel-plugin-polyfill-corejs3/0.4.0:
+    resolution: {integrity: sha512-YxFreYwUfglYKdLUGvIF2nJEsGwj+RhWSX/ije3D2vQPOXuyMLMtg/cCGMDpOA7Nd+MwlNdnGODbd2EwUZPlsw==}
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
-      '@babel/helper-define-polyfill-provider': 0.2.4
+      '@babel/helper-define-polyfill-provider': 0.3.0
       core-js-compat: 3.19.1
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /babel-plugin-polyfill-regenerator/0.2.3:
-    resolution: {integrity: sha512-JVE78oRZPKFIeUqFGrSORNzQnrDwZR16oiWeGM8ZyjBn2XAT5OjP+wXx5ESuo33nUsFUEJYjtklnsKbxW5L+7g==}
+  /babel-plugin-polyfill-regenerator/0.3.0:
+    resolution: {integrity: sha512-dhAPTDLGoMW5/84wkgwiLRwMnio2i1fUe53EuvtKMv0pn2p3S8OCoV1xAzfJPl0KOX7IB89s2ib85vbYiea3jg==}
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
-      '@babel/helper-define-polyfill-provider': 0.2.4
+      '@babel/helper-define-polyfill-provider': 0.3.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -3338,6 +3338,23 @@ packages:
       path-is-absolute: 1.0.1
     dev: true
 
+  /globals/11.12.0:
+    resolution: {integrity: sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==}
+    engines: {node: '>=4'}
+    dev: true
+
+  /globals/13.12.0:
+    resolution: {integrity: sha512-uS8X6lSKN2JumVoXrbUz+uG4BYG+eiawqm3qFcT7ammfbUHeCBoJMlHcec/S3krSk73/AE/f0szYFmgAA3kYZg==}
+    engines: {node: '>=8'}
+    dependencies:
+      type-fest: 0.20.2
+    dev: true
+
+  /globals/9.18.0:
+    resolution: {integrity: sha512-S0nG3CLEQiY/ILxqtztTWH/3iRRdyBLw6KMDxnKMchrtbj2OFmehVh0WUCfW3DUrIgx/qFrJPICrq4Z4sTR9UQ==}
+    engines: {node: '>=0.10.0'}
+    dev: true
+
   /globby/11.0.4:
     resolution: {integrity: sha512-9O4MVG9ioZJ08ffbcyVYyLOJLk5JQ688pJ4eMGLpdWLHq/Wr1D9BlriLQyL0E+jbkuePVZXYFj47QM/v093wHg==}
     engines: {node: '>=10'}
@@ -4417,6 +4434,22 @@ packages:
       - utf-8-validate
     dev: true
 
+  /jsesc/0.5.0:
+    resolution: {integrity: sha1-597mbjXW/Bb3EP6R1c9p9w8IkR0=}
+    hasBin: true
+    dev: true
+
+  /jsesc/1.3.0:
+    resolution: {integrity: sha1-RsP+yMGJKxKwgz25vHYiF226s0s=}
+    hasBin: true
+    dev: true
+
+  /jsesc/2.5.2:
+    resolution: {integrity: sha512-OYu7XEzjkCQ3C5Ps3QIZsQfNpqoJyZZA99wd9aWd05NCtC5pWOkShK2mkL6HXQR6/Cy2lbNdPlZBpuQHXE63gA==}
+    engines: {node: '>=4'}
+    hasBin: true
+    dev: true
+
   /json-parse-better-errors/1.0.2:
     resolution: {integrity: sha512-mrqyZKfX5EhL7hvqcV6WG1yYjnjeuYDzDhhcAAUrq8Po85NBQBJP+ZDUT75qZQ98IkUoBqdkExkukOU7Ts2wrw==}
     dev: true
@@ -5227,7 +5260,11 @@ packages:
     resolution: {integrity: sha512-3E12UeNSPfjrgwjkR81m5J7Aw/T55Tu7nUyZVQYCKEOs+2dkxEY+DpPtZzO4YruuiPb7NkYLVcyJC4+zCbk5pA==}
     engines: {node: '>=4'}
     dependencies:
-      regenerate: mirrors.tencent.com/regenerate/1.4.2
+      regenerate: 1.4.2
+    dev: true
+
+  /regenerate/1.4.2:
+    resolution: {integrity: sha512-zrceR/XhGYU/d/opr2EKO7aRHUeiBI8qjtfHqADTwZd6Szfy16la6kqD0MIUs5z5hx6AaKa+PixpPrR289+I0A==}
     dev: true
 
   /regenerator-runtime/0.11.1:
@@ -5236,6 +5273,12 @@ packages:
 
   /regenerator-runtime/0.13.9:
     resolution: {integrity: sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==}
+    dev: true
+
+  /regenerator-transform/0.14.5:
+    resolution: {integrity: sha512-eOf6vka5IO151Jfsw2NO9WpGX58W6wWmefK3I1zEGr0lOD0u8rwPaNqQL1aRxUaxLeKO3ArNh3VYg1KbaD+FFw==}
+    dependencies:
+      '@babel/runtime': 7.16.0
     dev: true
 
   /regexp.prototype.flags/1.3.1:
@@ -5249,6 +5292,29 @@ packages:
   /regexpp/3.2.0:
     resolution: {integrity: sha512-pq2bWo9mVD43nbts2wGv17XLiNLya+GklZ8kaDLV2Z08gDCsGpnKn9BFMepvWuHCbyVvY7J5o5+BVvoQbmlJLg==}
     engines: {node: '>=8'}
+    dev: true
+
+  /regexpu-core/4.8.0:
+    resolution: {integrity: sha512-1F6bYsoYiz6is+oz70NWur2Vlh9KWtswuRuzJOfeYUrfPX2o8n74AnUVaOGDbUqVGO9fNHu48/pjJO4sNVwsOg==}
+    engines: {node: '>=4'}
+    dependencies:
+      regenerate: 1.4.2
+      regenerate-unicode-properties: 9.0.0
+      regjsgen: 0.5.2
+      regjsparser: 0.7.0
+      unicode-match-property-ecmascript: 2.0.0
+      unicode-match-property-value-ecmascript: 2.0.0
+    dev: true
+
+  /regjsgen/0.5.2:
+    resolution: {integrity: sha512-OFFT3MfrH90xIW8OOSyUrk6QHD5E9JOTeGodiJeBS3J6IwlgzJMNE/1bZklWz5oTg+9dCMyEetclvCVXOPoN3A==}
+    dev: true
+
+  /regjsparser/0.7.0:
+    resolution: {integrity: sha512-A4pcaORqmNMDVwUjWoTzuhwMGpP+NykpfqAsEgI1FSH/EzC7lrN5TMd+kN8YCovX+jMpu8eaqXgXPCa0g8FQNQ==}
+    hasBin: true
+    dependencies:
+      jsesc: 0.5.0
     dev: true
 
   /require-directory/2.1.1:
@@ -6407,7 +6473,7 @@ packages:
       babel-runtime: mirrors.tencent.com/babel-runtime/6.26.0
       babel-types: mirrors.tencent.com/babel-types/6.26.0
       detect-indent: mirrors.tencent.com/detect-indent/4.0.0
-      jsesc: mirrors.tencent.com/jsesc/1.3.0
+      jsesc: 1.3.0
       lodash: 4.17.21
       source-map: 0.5.7
       trim-right: mirrors.tencent.com/trim-right/1.0.1
@@ -6493,7 +6559,7 @@ packages:
       babel-types: mirrors.tencent.com/babel-types/6.26.0
       babylon: mirrors.tencent.com/babylon/6.18.0
       debug: 2.6.9
-      globals: mirrors.tencent.com/globals/9.18.0
+      globals: 9.18.0
       invariant: mirrors.tencent.com/invariant/2.2.4
       lodash: 4.17.21
     dev: true
@@ -6678,13 +6744,6 @@ packages:
       is-glob: 4.0.3
     dev: true
 
-  mirrors.tencent.com/globals/11.12.0:
-    resolution: {integrity: sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/globals/-/globals-11.12.0.tgz}
-    name: globals
-    version: 11.12.0
-    engines: {node: '>=4'}
-    dev: true
-
   mirrors.tencent.com/globals/13.12.0:
     resolution: {integrity: sha512-uS8X6lSKN2JumVoXrbUz+uG4BYG+eiawqm3qFcT7ammfbUHeCBoJMlHcec/S3krSk73/AE/f0szYFmgAA3kYZg==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/globals/-/globals-13.12.0.tgz}
     name: globals
@@ -6692,13 +6751,6 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       type-fest: 0.20.2
-    dev: true
-
-  mirrors.tencent.com/globals/9.18.0:
-    resolution: {integrity: sha512-S0nG3CLEQiY/ILxqtztTWH/3iRRdyBLw6KMDxnKMchrtbj2OFmehVh0WUCfW3DUrIgx/qFrJPICrq4Z4sTR9UQ==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/globals/-/globals-9.18.0.tgz}
-    name: globals
-    version: 9.18.0
-    engines: {node: '>=0.10.0'}
     dev: true
 
   mirrors.tencent.com/home-or-tmp/2.0.0:
@@ -6750,28 +6802,6 @@ packages:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/js-tokens/-/js-tokens-4.0.0.tgz}
     name: js-tokens
     version: 4.0.0
-    dev: true
-
-  mirrors.tencent.com/jsesc/0.5.0:
-    resolution: {integrity: sha1-597mbjXW/Bb3EP6R1c9p9w8IkR0=, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/jsesc/-/jsesc-0.5.0.tgz}
-    name: jsesc
-    version: 0.5.0
-    hasBin: true
-    dev: true
-
-  mirrors.tencent.com/jsesc/1.3.0:
-    resolution: {integrity: sha1-RsP+yMGJKxKwgz25vHYiF226s0s=, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/jsesc/-/jsesc-1.3.0.tgz}
-    name: jsesc
-    version: 1.3.0
-    hasBin: true
-    dev: true
-
-  mirrors.tencent.com/jsesc/2.5.2:
-    resolution: {integrity: sha512-OYu7XEzjkCQ3C5Ps3QIZsQfNpqoJyZZA99wd9aWd05NCtC5pWOkShK2mkL6HXQR6/Cy2lbNdPlZBpuQHXE63gA==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/jsesc/-/jsesc-2.5.2.tgz}
-    name: jsesc
-    version: 2.5.2
-    engines: {node: '>=4'}
-    hasBin: true
     dev: true
 
   mirrors.tencent.com/json-schema-traverse/0.4.1:
@@ -6852,49 +6882,6 @@ packages:
     name: private
     version: 0.1.8
     engines: {node: '>= 0.6'}
-    dev: true
-
-  mirrors.tencent.com/regenerate/1.4.2:
-    resolution: {integrity: sha512-zrceR/XhGYU/d/opr2EKO7aRHUeiBI8qjtfHqADTwZd6Szfy16la6kqD0MIUs5z5hx6AaKa+PixpPrR289+I0A==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/regenerate/-/regenerate-1.4.2.tgz}
-    name: regenerate
-    version: 1.4.2
-    dev: true
-
-  mirrors.tencent.com/regenerator-transform/0.14.5:
-    resolution: {integrity: sha512-eOf6vka5IO151Jfsw2NO9WpGX58W6wWmefK3I1zEGr0lOD0u8rwPaNqQL1aRxUaxLeKO3ArNh3VYg1KbaD+FFw==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/regenerator-transform/-/regenerator-transform-0.14.5.tgz}
-    name: regenerator-transform
-    version: 0.14.5
-    dependencies:
-      '@babel/runtime': 7.16.0
-    dev: true
-
-  mirrors.tencent.com/regexpu-core/4.8.0:
-    resolution: {integrity: sha512-1F6bYsoYiz6is+oz70NWur2Vlh9KWtswuRuzJOfeYUrfPX2o8n74AnUVaOGDbUqVGO9fNHu48/pjJO4sNVwsOg==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/regexpu-core/-/regexpu-core-4.8.0.tgz}
-    name: regexpu-core
-    version: 4.8.0
-    engines: {node: '>=4'}
-    dependencies:
-      regenerate: mirrors.tencent.com/regenerate/1.4.2
-      regenerate-unicode-properties: 9.0.0
-      regjsgen: mirrors.tencent.com/regjsgen/0.5.2
-      regjsparser: mirrors.tencent.com/regjsparser/0.7.0
-      unicode-match-property-ecmascript: 2.0.0
-      unicode-match-property-value-ecmascript: 2.0.0
-    dev: true
-
-  mirrors.tencent.com/regjsgen/0.5.2:
-    resolution: {integrity: sha512-OFFT3MfrH90xIW8OOSyUrk6QHD5E9JOTeGodiJeBS3J6IwlgzJMNE/1bZklWz5oTg+9dCMyEetclvCVXOPoN3A==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/regjsgen/-/regjsgen-0.5.2.tgz}
-    name: regjsgen
-    version: 0.5.2
-    dev: true
-
-  mirrors.tencent.com/regjsparser/0.7.0:
-    resolution: {integrity: sha512-A4pcaORqmNMDVwUjWoTzuhwMGpP+NykpfqAsEgI1FSH/EzC7lrN5TMd+kN8YCovX+jMpu8eaqXgXPCa0g8FQNQ==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/regjsparser/-/regjsparser-0.7.0.tgz}
-    name: regjsparser
-    version: 0.7.0
-    hasBin: true
-    dependencies:
-      jsesc: mirrors.tencent.com/jsesc/0.5.0
     dev: true
 
   mirrors.tencent.com/repeating/2.0.1:
