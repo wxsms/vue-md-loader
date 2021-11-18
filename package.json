@@ -56,7 +56,7 @@
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-promise": "5.1.1",
-    "eslint-plugin-vue": "8.0.3",
+    "eslint-plugin-vue": "8.1.1",
     "jest": "27.3.1",
     "markdown-it-anchor": "8.4.1",
     "prettier": "2.4.1",

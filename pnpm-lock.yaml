@@ -15,7 +15,7 @@ specifiers:
   eslint-plugin-node: 11.1.0
   eslint-plugin-prettier: 4.0.0
   eslint-plugin-promise: 5.1.1
-  eslint-plugin-vue: 8.0.3
+  eslint-plugin-vue: 8.1.1
   highlight.js: ^11.0.0
   jest: 27.3.1
   markdown-it: ^12.0.0
@@ -48,7 +48,7 @@ devDependencies:
   eslint-plugin-node: 11.1.0_eslint@8.2.0
   eslint-plugin-prettier: 4.0.0_307f015733298e29da9050ea0cee5b9e
   eslint-plugin-promise: 5.1.1_eslint@8.2.0
-  eslint-plugin-vue: 8.0.3_eslint@8.2.0
+  eslint-plugin-vue: 8.1.1_eslint@8.2.0
   jest: 27.3.1
   markdown-it-anchor: 8.4.1_markdown-it@12.2.0
   prettier: 2.4.1
@@ -2936,8 +2936,8 @@ packages:
       eslint: mirrors.tencent.com/eslint/8.2.0
     dev: true
 
-  /eslint-plugin-vue/8.0.3_eslint@8.2.0:
-    resolution: {integrity: sha512-Rlhhy5ltzde0sRwSkqHuNePTXLMMaJ5+qsQubM4RYloYsQ8cXlnJT5MDaCzSirkGADipOHtmQXIbbPFAzUrADg==}
+  /eslint-plugin-vue/8.1.1_eslint@8.2.0:
+    resolution: {integrity: sha512-rx64IrlhdfPya6u2V5ukOGiLCTgaCBdMSpczLVqyo8A0l+Vbo+lzvIfEUfAQ2auj+MF6y0TwxLorzdCIzHunnw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^6.2.0 || ^7.0.0 || ^8.0.0
