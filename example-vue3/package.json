@@ -13,8 +13,8 @@
     "vue": "3.2.26"
   },
   "devDependencies": {
-    "@babel/core": "7.16.0",
-    "@babel/eslint-parser": "7.16.3",
+    "@babel/core": "7.16.5",
+    "@babel/eslint-parser": "7.16.5",
     "@vue/cli-plugin-babel": "5.0.0-rc.1",
     "@vue/cli-plugin-eslint": "5.0.0-rc.1",
     "@vue/cli-service": "5.0.0-rc.1",
