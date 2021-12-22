@@ -14,8 +14,10 @@ jobs:
           node-version: '12.x'
           registry-url: 'https://registry.npmjs.org'
       - uses: actions/checkout@v2
-      - uses: c-hive/gha-yarn-cache@v2
-      - run: yarn --frozen-lockfile
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: latest
+      - run: pnpm i --frozen-lockfile
       - name: Publish NPM
         run: npm publish
         env:
