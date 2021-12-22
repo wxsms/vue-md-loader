@@ -27,7 +27,7 @@ specifiers:
   vue-template-compiler: 2.6.14
   webpack: 5.65.0
   webpack-cli: 4.9.1
-  webpack-dev-server: 4.7.0
+  webpack-dev-server: 4.7.1
 
 dependencies:
   highlight.js: 11.3.1
@@ -57,8 +57,8 @@ devDependencies:
   vue-loader: 15.9.8_4d5b440fb4101b561c8f9c822d539ff3
   vue-template-compiler: 2.6.14
   webpack: 5.65.0_webpack-cli@4.9.1
-  webpack-cli: 4.9.1_f37e32fac346173e40a0d45a5997e15b
-  webpack-dev-server: 4.7.0_webpack-cli@4.9.1+webpack@5.65.0
+  webpack-cli: 4.9.1_b84c6ca1a0d1a6eaa102e036920cc264
+  webpack-dev-server: 4.7.1_webpack-cli@4.9.1+webpack@5.65.0
 
 packages:
 
@@ -1884,7 +1884,7 @@ packages:
       webpack-cli: 4.x.x
     dependencies:
       webpack: 5.65.0_webpack-cli@4.9.1
-      webpack-cli: 4.9.1_f37e32fac346173e40a0d45a5997e15b
+      webpack-cli: 4.9.1_b84c6ca1a0d1a6eaa102e036920cc264
     dev: true
 
   /@webpack-cli/info/1.4.0_webpack-cli@4.9.1:
@@ -1893,10 +1893,10 @@ packages:
       webpack-cli: 4.x.x
     dependencies:
       envinfo: mirrors.tencent.com/envinfo/7.8.1
-      webpack-cli: 4.9.1_f37e32fac346173e40a0d45a5997e15b
+      webpack-cli: 4.9.1_b84c6ca1a0d1a6eaa102e036920cc264
     dev: true
 
-  /@webpack-cli/serve/1.6.0_51fb9793760817f75d4f2bdb3a8ee527:
+  /@webpack-cli/serve/1.6.0_8901023807dfe689cb4e2c4e87ee3f8e:
     resolution: {integrity: sha512-ZkVeqEmRpBV2GHvjjUZqEai2PpUbuq8Bqd//vEYsp63J8WyexI8ppCqVS3Zs0QADf6aWuPdU+0XsPI647PVlQA==}
     peerDependencies:
       webpack-cli: 4.x.x
@@ -1905,8 +1905,8 @@ packages:
       webpack-dev-server:
         optional: true
     dependencies:
-      webpack-cli: 4.9.1_f37e32fac346173e40a0d45a5997e15b
-      webpack-dev-server: 4.7.0_webpack-cli@4.9.1+webpack@5.65.0
+      webpack-cli: 4.9.1_b84c6ca1a0d1a6eaa102e036920cc264
+      webpack-dev-server: 4.7.1_webpack-cli@4.9.1+webpack@5.65.0
     dev: true
 
   /@xtuc/ieee754/1.2.0:
@@ -5411,10 +5411,6 @@ packages:
     resolution: {integrity: sha512-RIdOzyoavK+hA18OGGWDqUTsCLhtA7IcZ/6NCs4fFJaHBDab+pDDmDIByWFRQJq2Cd7r1OoQxBGKOaztq+hjIQ==}
     dev: true
 
-  /punycode/1.3.2:
-    resolution: {integrity: sha1-llOgNvt8HuQjQvIyXM7v6jkmxI0=}
-    dev: true
-
   /punycode/2.1.1:
     resolution: {integrity: sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==}
     engines: {node: '>=6'}
@@ -5423,12 +5419,6 @@ packages:
   /qs/6.7.0:
     resolution: {integrity: sha512-VCdBRNFTX1fyE7Nb6FYoURo/SPe62QCaAyzJvUjwRaIsc+NePBEniHlvxFmmX56+HZphIGtV0XeCirBtpDrTyQ==}
     engines: {node: '>=0.6'}
-    dev: true
-
-  /querystring/0.2.0:
-    resolution: {integrity: sha1-sgmEkgO7Jd+CDadW50cAWHhSFiA=}
-    engines: {node: '>=0.4.x'}
-    deprecated: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
     dev: true
 
   /queue-microtask/1.2.3:
@@ -6226,13 +6216,6 @@ packages:
       punycode: 2.1.1
     dev: true
 
-  /url/0.11.0:
-    resolution: {integrity: sha1-ODjpfPxgUh63PFJajlW/3Z4uKPE=}
-    dependencies:
-      punycode: 1.3.2
-      querystring: 0.2.0
-    dev: true
-
   /util-deprecate/1.0.2:
     resolution: {integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=}
     dev: true
@@ -6376,7 +6359,7 @@ packages:
     engines: {node: '>=10.4'}
     dev: true
 
-  /webpack-cli/4.9.1_f37e32fac346173e40a0d45a5997e15b:
+  /webpack-cli/4.9.1_b84c6ca1a0d1a6eaa102e036920cc264:
     resolution: {integrity: sha512-JYRFVuyFpzDxMDB+v/nanUdQYcZtqFPGzmlW4s+UkPMFhSpfRNmf1z4AwYcHJVdvEFAM7FFCQdNTpsBYhDLusQ==}
     engines: {node: '>=10.13.0'}
     hasBin: true
@@ -6399,7 +6382,7 @@ packages:
       '@discoveryjs/json-ext': 0.5.5
       '@webpack-cli/configtest': 1.1.0_webpack-cli@4.9.1+webpack@5.65.0
       '@webpack-cli/info': 1.4.0_webpack-cli@4.9.1
-      '@webpack-cli/serve': 1.6.0_51fb9793760817f75d4f2bdb3a8ee527
+      '@webpack-cli/serve': 1.6.0_8901023807dfe689cb4e2c4e87ee3f8e
       colorette: 2.0.16
       commander: mirrors.tencent.com/commander/7.2.0
       execa: 5.1.1
@@ -6408,7 +6391,7 @@ packages:
       interpret: 2.2.0
       rechoir: 0.7.1
       webpack: 5.65.0_webpack-cli@4.9.1
-      webpack-dev-server: 4.7.0_webpack-cli@4.9.1+webpack@5.65.0
+      webpack-dev-server: 4.7.1_webpack-cli@4.9.1+webpack@5.65.0
       webpack-merge: 5.8.0
     dev: true
 
@@ -6426,8 +6409,8 @@ packages:
       webpack: 5.65.0_webpack-cli@4.9.1
     dev: true
 
-  /webpack-dev-server/4.7.0_webpack-cli@4.9.1+webpack@5.65.0:
-    resolution: {integrity: sha512-ldR+a54iygMxUawTzMlWD/JblePhNRVGHxTHQz9EAvsbH7HZbX53OxV6Y092x+tgN5umv885i2X4wfdo/ynEQA==}
+  /webpack-dev-server/4.7.1_webpack-cli@4.9.1+webpack@5.65.0:
+    resolution: {integrity: sha512-bkoNgFyqlF/CT726Axtf/ELHHYsTZJWz3QJ6HqstWPbalhjAPunlPH9bwt/Lr5cLb+uoLmsta6svVplVzq8beA==}
     engines: {node: '>= 12.13.0'}
     hasBin: true
     peerDependencies:
@@ -6464,9 +6447,8 @@ packages:
       sockjs: 0.3.21
       spdy: 4.0.2
       strip-ansi: 7.0.1
-      url: 0.11.0
       webpack: 5.65.0_webpack-cli@4.9.1
-      webpack-cli: 4.9.1_f37e32fac346173e40a0d45a5997e15b
+      webpack-cli: 4.9.1_b84c6ca1a0d1a6eaa102e036920cc264
       webpack-dev-middleware: 5.3.0_webpack@5.65.0
       ws: 8.2.3
     transitivePeerDependencies:
@@ -6522,7 +6504,7 @@ packages:
       tapable: 2.2.1
       terser-webpack-plugin: 5.2.4_webpack@5.65.0
       watchpack: 2.3.1
-      webpack-cli: 4.9.1_f37e32fac346173e40a0d45a5997e15b
+      webpack-cli: 4.9.1_b84c6ca1a0d1a6eaa102e036920cc264
       webpack-sources: 3.2.2
     transitivePeerDependencies:
       - '@swc/core'
