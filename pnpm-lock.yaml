@@ -14,7 +14,7 @@ specifiers:
   eslint-plugin-import: 2.25.4
   eslint-plugin-node: 11.1.0
   eslint-plugin-prettier: 4.0.0
-  eslint-plugin-promise: 5.2.0
+  eslint-plugin-promise: 6.0.0
   eslint-plugin-vue: 8.2.0
   highlight.js: ^11.0.0
   jest: 27.4.7
@@ -47,7 +47,7 @@ devDependencies:
   eslint-plugin-import: 2.25.4_eslint@8.6.0
   eslint-plugin-node: 11.1.0_eslint@8.6.0
   eslint-plugin-prettier: 4.0.0_1c588f61426b1faf18812943f1678311
-  eslint-plugin-promise: 5.2.0_eslint@8.6.0
+  eslint-plugin-promise: 6.0.0_eslint@8.6.0
   eslint-plugin-vue: 8.2.0_eslint@8.6.0
   jest: 27.4.7
   markdown-it-anchor: 8.4.1_markdown-it@12.2.0
@@ -3144,11 +3144,11 @@ packages:
       prettier-linter-helpers: 1.0.0
     dev: true
 
-  /eslint-plugin-promise/5.2.0_eslint@8.6.0:
-    resolution: {integrity: sha512-SftLb1pUG01QYq2A/hGAWfDRXqYD82zE7j7TopDOyNdU+7SvvoXREls/+PRTY17vUXzXnZA/zfnyKgRH6x4JJw==}
-    engines: {node: ^10.12.0 || >=12.0.0}
+  /eslint-plugin-promise/6.0.0_eslint@8.6.0:
+    resolution: {integrity: sha512-7GPezalm5Bfi/E22PnQxDWH2iW9GTvAlUNTztemeHb6c1BniSyoeTrM87JkC0wYdi6aQrZX9p2qEiAno8aTcbw==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
-      eslint: ^7.0.0
+      eslint: ^7.0.0 || ^8.0.0
     dependencies:
       eslint: 8.6.0
     dev: true
