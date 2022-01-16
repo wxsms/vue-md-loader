@@ -10,7 +10,7 @@
   "dependencies": {
     "core-js": "3.20.3",
     "highlight.js": "11.4.0",
-    "vue": "3.2.26"
+    "vue": "3.2.27"
   },
   "devDependencies": {
     "@babel/core": "7.16.7",
@@ -18,7 +18,7 @@
     "@vue/cli-plugin-babel": "5.0.0-rc.2",
     "@vue/cli-plugin-eslint": "5.0.0-rc.2",
     "@vue/cli-service": "5.0.0-rc.2",
-    "@vue/compiler-sfc": "3.2.26"
+    "@vue/compiler-sfc": "3.2.27"
   },
   "browserslist": [
     "> 1%",
