@@ -16,9 +16,9 @@ specifiers:
   eslint-plugin-prettier: 4.0.0
   eslint-plugin-promise: 6.0.0
   eslint-plugin-vue: 8.3.0
-  highlight.js: ^11.0.0
+  highlight.js: 11.4.0
   jest: 27.4.7
-  markdown-it: ^12.0.0
+  markdown-it: 12.3.2
   markdown-it-anchor: 8.4.1
   prettier: 2.5.1
   style-loader: 3.3.1
@@ -30,8 +30,8 @@ specifiers:
   webpack-dev-server: 4.7.3
 
 dependencies:
-  highlight.js: 11.3.1
-  markdown-it: 12.2.0
+  highlight.js: 11.4.0
+  markdown-it: 12.3.2
 
 devDependencies:
   '@babel/preset-env': 7.16.11
@@ -50,7 +50,7 @@ devDependencies:
   eslint-plugin-promise: 6.0.0_eslint@8.7.0
   eslint-plugin-vue: 8.3.0_eslint@8.7.0
   jest: 27.4.7
-  markdown-it-anchor: 8.4.1_markdown-it@12.2.0
+  markdown-it-anchor: 8.4.1_markdown-it@12.3.2
   prettier: 2.5.1
   style-loader: 3.3.1_webpack@5.67.0
   vue: 2.6.14
@@ -3675,8 +3675,8 @@ packages:
     hasBin: true
     dev: true
 
-  /highlight.js/11.3.1:
-    resolution: {integrity: sha512-PUhCRnPjLtiLHZAQ5A/Dt5F8cWZeMyj9KRsACsWT+OD6OP0x6dp5OmT5jdx0JgEyPxPZZIPQpRN2TciUT7occw==}
+  /highlight.js/11.4.0:
+    resolution: {integrity: sha512-nawlpCBCSASs7EdvZOYOYVkJpGmAOKMYZgZtUqSRqodZE0GRVcFKwo1RcpeOemqh9hyttTdd5wDBwHkuSyUfnA==}
     engines: {node: '>=12.0.0'}
     dev: false
 
@@ -4815,17 +4815,17 @@ packages:
       tmpl: 1.0.5
     dev: true
 
-  /markdown-it-anchor/8.4.1_markdown-it@12.2.0:
+  /markdown-it-anchor/8.4.1_markdown-it@12.3.2:
     resolution: {integrity: sha512-sLODeRetZ/61KkKLJElaU3NuU2z7MhXf12Ml1WJMSdwpngeofneCRF+JBbat8HiSqhniOMuTemXMrsI7hA6XyA==}
     peerDependencies:
       '@types/markdown-it': '*'
       markdown-it: '*'
     dependencies:
-      markdown-it: 12.2.0
+      markdown-it: 12.3.2
     dev: true
 
-  /markdown-it/12.2.0:
-    resolution: {integrity: sha512-Wjws+uCrVQRqOoJvze4HCqkKl1AsSh95iFAeQDwnyfxM09divCBSXlDR1uTvyUP3Grzpn4Ru8GeCxYPM8vkCQg==}
+  /markdown-it/12.3.2:
+    resolution: {integrity: sha512-TchMembfxfNVpHkbtriWltGWc+m3xszaRD0CZup7GFFhzIgQqxIfn3eGj1yZpfuflzPvfkt611B2Q/Bsk1YnGg==}
     hasBin: true
     dependencies:
       argparse: 2.0.1
