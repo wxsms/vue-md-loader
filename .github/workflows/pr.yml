@@ -22,11 +22,6 @@ jobs:
           version: latest
       - run: pnpm i --frozen-lockfile
       - run: npm run test
-      - name: Coveralls
-        uses: coverallsapp/github-action@master
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          path-to-lcov: ./coverage/lcov.info
   build:
     runs-on: ubuntu-latest
     steps:
