@@ -1,6 +1,6 @@
 {
   "name": "vue-md-loader",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Webpack loader for converting Markdown files to ALIVE Vue components.",
   "main": "index.js",
   "files": [
