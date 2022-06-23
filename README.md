@@ -5,6 +5,11 @@
 [![NPM Version](https://img.shields.io/npm/v/vue-md-loader.svg)](https://www.npmjs.com/package/vue-md-loader)
 [![License](https://img.shields.io/github/license/wxsms/vue-md-loader.svg)](https://github.com/wxsms/vue-md-loader)
 
+| loader version | webpack version |
+|-------------   |----------------    |
+| 2.x            | 5                  |
+| 1.x            | 4 and lower        |
+
 ## Introduction
 
 Webpack loader for converting Markdown files to ALIVE Vue components.
