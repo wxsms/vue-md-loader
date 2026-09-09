@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: pnpm/action-setup@v2.0.1
         with:
-          version: latest
+          version: 8  # lockfileVersion 6.0 requires pnpm 8
       - run: pnpm i --frozen-lockfile
       - name: Publish NPM
         run: npm publish
