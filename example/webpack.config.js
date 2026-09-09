@@ -7,8 +7,7 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    // hosted under a GitHub Pages sub-path
-    publicPath: '/vue-md-loader/dist/',
+    publicPath: '/dist/',
     filename: 'build.js',
   },
   devtool:
