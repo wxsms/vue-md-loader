@@ -5,14 +5,19 @@ on:
     tags:
       - 'v*'
 
+permissions:
+  id-token: write  # Required for OIDC
+  contents: read
+
 jobs:
   deploy_npm:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v6
         with:
-          node-version: lts/*
-          registry-url: https://registry.npmjs.org
+          node-version: '24'
+          registry-url: 'https://registry.npmjs.org'
+          package-manager-cache: false  # never use caching in release builds
       - uses: actions/checkout@v2
       - uses: pnpm/action-setup@v2.0.1
         with:
@@ -20,5 +25,4 @@ jobs:
       - run: pnpm i --frozen-lockfile
       - name: Publish NPM
         run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
