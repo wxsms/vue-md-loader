@@ -15,7 +15,7 @@ jobs:
           ref: master
       - uses: pnpm/action-setup@v2.0.1
         with:
-          version: 8  # lockfileVersion 6.0 requires pnpm 8
+          version: 10  # lockfileVersion 9.0 requires pnpm >= 9
       - run: pnpm i --frozen-lockfile
       - name: Changelog
         uses: scottbrenner/generate-changelog-action@master
