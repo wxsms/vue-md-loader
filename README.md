@@ -1,6 +1,7 @@
 # vue-md-loader
 
 ![CI](https://github.com/wxsms/vue-md-loader/workflows/CI/badge.svg)
+[![Coverage](https://codecov.io/gh/wxsms/vue-md-loader/branch/master/graph/badge.svg)](https://codecov.io/gh/wxsms/vue-md-loader)
 [![NPM Downloads](https://img.shields.io/npm/dm/vue-md-loader.svg)](https://www.npmjs.com/package/vue-md-loader)
 [![NPM Version](https://img.shields.io/npm/v/vue-md-loader.svg)](https://www.npmjs.com/package/vue-md-loader)
 [![License](https://img.shields.io/github/license/wxsms/vue-md-loader.svg)](https://github.com/wxsms/vue-md-loader)
