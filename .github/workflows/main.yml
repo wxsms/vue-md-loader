@@ -29,6 +29,22 @@ jobs:
           node-version: 24
       - run: pnpm i --frozen-lockfile
       - run: npm run test
+  coverage:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: pnpm i --frozen-lockfile
+      - run: npm run test
+      - uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: false
   build-and-deploy:
     runs-on: ubuntu-22.04
     steps:
